@@ -11,4 +11,4 @@ theme:
     code: Roboto Mono
   favicon: assets/favicon.ico
   icon:
-    logo: assets/favicon.ico
+    logo: logo
