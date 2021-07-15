@@ -1,5 +1,5 @@
-site_name: My Docs
-site_url: https://example.com/
+site_name: COMPASS CTF
+site_url: https://lyther.github.io/wiki/
 
 theme:
   name: material
@@ -9,6 +9,6 @@ theme:
   font:
     text: Roboto
     code: Roboto Mono
-  favicon: assets/favicon.png
+  favicon: assets/favicon.ico
   icon:
-    logo: logo
+    logo: assets/favicon.ico

@@ -1,17 +1,10 @@
-# Welcome to MkDocs
+# COMPASS CTF
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+COMPASS CTF is a CTF team belongs to the Southern University of Science and Technology (SUSTech). Our members are from COMPASS lab.
 
-## Commands
+Visit our lab website: http://compass.sustech.edu.cn/
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+## Team Members
 
-## Project layout
+* TBA
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
