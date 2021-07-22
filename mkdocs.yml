@@ -43,3 +43,8 @@ nav:
     - writeup/Web Exploitation/It is my Birthday.md
     - writeup/Web Exploitation/Most Cookies.md
     - writeup/Web Exploitation/Scavenger Hunt.md
+- Website:
+  - Platform:
+    - website/Platform/CTFlearn.md
+    - website/Platform/ctftime.md
+    - website/Platform/TryHackMe.md
