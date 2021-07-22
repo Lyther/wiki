@@ -1,14 +1,45 @@
-site_name: COMPASS CTF
+site_name: COMPASS CTF Wiki
 site_url: https://lyther.github.io/wiki/
+site_description: Wiki project for COMPASS CTF, for usage of information sharing, collection, and reference. The contents are contributed by the students of COMPASS CTF team.
+copyright: COMPASS & SUSTech 2021 CTF team
 
 theme:
   name: material
-
-  # Default values, taken from mkdocs_theme.yml
   language: en
   font:
     text: Roboto
     code: Roboto Mono
   favicon: assets/favicon.ico
+  palette:
+    primary: white
+    accent: cyan
+    scheme: preference
   icon:
     logo: logo
+
+nav:
+- Abstract:
+  - index.md
+- Writeup:
+  - Binary Exploitation:
+    - writeup/Binary Exploitation/collision.md
+    - writeup/Binary Exploitation/fd.md
+  - Cryptography:
+    - writeup/Cryptography/Dachshund Attacks.md
+  - Forensics:
+    - writeup/Forensics/Disk, disk, sleuth! II.md
+    - writeup/Forensics/Disk, disk, sleuth!.md
+    - writeup/Forensics/MacroHard WeakEdge.md
+    - writeup/Forensics/Milkslap.md
+    - writeup/Forensics/Wireshark doo dooo do doo.md
+  - General Skills:
+    - writeup/General Skills/2Warm.md
+    - writeup/General Skills/Lets Warm Up.md
+  - Reverse Engineering:
+    - writeup/Reverse Engineering/Shop.md
+    - writeup/Reverse Engineering/speeds and feeds.md
+  - Web Exploitation:
+    - writeup/Web Exploitation/Cookies.md
+    - writeup/Web Exploitation/It is my Birthday.md
+    - writeup/Web Exploitation/Most Cookies.md
+    - writeup/Web Exploitation/Scavenger Hunt.md
