@@ -22,10 +22,16 @@ nav:
   - index.md
 - Writeup:
   - Binary Exploitation:
+    - writeup/Binary Exploitation/beginner-generic-pwn-number-0.md
     - writeup/Binary Exploitation/collision.md
     - writeup/Binary Exploitation/fd.md
+    - writeup/Binary Exploitation/printf-please.md
+    - writeup/Binary Exploitation/ret2generic-flag-reader.md
+    - writeup/Binary Exploitation/ret2the-unknown.md
+    - writeup/Binary Exploitation/simultaneity.md
   - Cryptography:
     - writeup/Cryptography/Dachshund Attacks.md
+    - writeup/Cryptography/scissor.md
   - Forensics:
     - writeup/Forensics/Disk, disk, sleuth! II.md
     - writeup/Forensics/Disk, disk, sleuth!.md
@@ -36,10 +42,14 @@ nav:
     - writeup/General Skills/2Warm.md
     - writeup/General Skills/Lets Warm Up.md
   - Reverse Engineering:
+    - writeup/Reverse Engineering/bread-making.md
+    - writeup/Reverse Engineering/dimensionality.md
     - writeup/Reverse Engineering/Shop.md
     - writeup/Reverse Engineering/speeds and feeds.md
+    - writeup/Reverse Engineering/wstrings.md
   - Web Exploitation:
     - writeup/Web Exploitation/Cookies.md
+    - writeup/Web Exploitation/inspect-me.md
     - writeup/Web Exploitation/It is my Birthday.md
     - writeup/Web Exploitation/Most Cookies.md
     - writeup/Web Exploitation/Scavenger Hunt.md
