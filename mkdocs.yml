@@ -20,41 +20,55 @@ theme:
 nav:
 - Abstract:
   - index.md
+- Website:
+  - Forum:
+    - Website/Forum/kanxue.md
+  - Platform:
+    - Website/Platform/CTFHub.md
+    - Website/Platform/CTFlearn.md
+    - Website/Platform/ctftime.md
+    - Website/Platform/ichunqiu.md
+    - Website/Platform/picoCTF.md
+    - Website/Platform/pwnabletw.md
+    - Website/Platform/TryHackMe.md
+    - Website/Platform/World of Attack&Defense.md
+  - Tutorial:
+    - Website/Tutorial/CTF Field Guide.md
+    - Website/Tutorial/CTF Wiki.md
+    - Website/Tutorial/ctf101.md
+    - Website/Tutorial/how to become a hacker.md
+    - Website/Tutorial/linux.md
+    - Website/Tutorial/python.md
 - Writeup:
   - Binary Exploitation:
-    - writeup/Binary Exploitation/beginner-generic-pwn-number-0.md
-    - writeup/Binary Exploitation/collision.md
-    - writeup/Binary Exploitation/fd.md
-    - writeup/Binary Exploitation/printf-please.md
-    - writeup/Binary Exploitation/ret2generic-flag-reader.md
-    - writeup/Binary Exploitation/ret2the-unknown.md
-    - writeup/Binary Exploitation/simultaneity.md
+    - Writeup/Binary Exploitation/beginner-generic-pwn-number-0.md
+    - Writeup/Binary Exploitation/collision.md
+    - Writeup/Binary Exploitation/fd.md
+    - Writeup/Binary Exploitation/printf-please.md
+    - Writeup/Binary Exploitation/ret2generic-flag-reader.md
+    - Writeup/Binary Exploitation/ret2the-unknown.md
+    - Writeup/Binary Exploitation/simultaneity.md
   - Cryptography:
-    - writeup/Cryptography/Dachshund Attacks.md
-    - writeup/Cryptography/scissor.md
+    - Writeup/Cryptography/Dachshund Attacks.md
+    - Writeup/Cryptography/scissor.md
   - Forensics:
-    - writeup/Forensics/Disk, disk, sleuth! II.md
-    - writeup/Forensics/Disk, disk, sleuth!.md
-    - writeup/Forensics/MacroHard WeakEdge.md
-    - writeup/Forensics/Milkslap.md
-    - writeup/Forensics/Wireshark doo dooo do doo.md
+    - Writeup/Forensics/Disk, disk, sleuth! II.md
+    - Writeup/Forensics/Disk, disk, sleuth!.md
+    - Writeup/Forensics/MacroHard WeakEdge.md
+    - Writeup/Forensics/Milkslap.md
+    - Writeup/Forensics/Wireshark doo dooo do doo.md
   - General Skills:
-    - writeup/General Skills/2Warm.md
-    - writeup/General Skills/Lets Warm Up.md
+    - Writeup/General Skills/2Warm.md
+    - Writeup/General Skills/Lets Warm Up.md
   - Reverse Engineering:
-    - writeup/Reverse Engineering/bread-making.md
-    - writeup/Reverse Engineering/dimensionality.md
-    - writeup/Reverse Engineering/Shop.md
-    - writeup/Reverse Engineering/speeds and feeds.md
-    - writeup/Reverse Engineering/wstrings.md
+    - Writeup/Reverse Engineering/bread-making.md
+    - Writeup/Reverse Engineering/dimensionality.md
+    - Writeup/Reverse Engineering/Shop.md
+    - Writeup/Reverse Engineering/speeds and feeds.md
+    - Writeup/Reverse Engineering/wstrings.md
   - Web Exploitation:
-    - writeup/Web Exploitation/Cookies.md
-    - writeup/Web Exploitation/inspect-me.md
-    - writeup/Web Exploitation/It is my Birthday.md
-    - writeup/Web Exploitation/Most Cookies.md
-    - writeup/Web Exploitation/Scavenger Hunt.md
-- Website:
-  - Platform:
-    - website/Platform/CTFlearn.md
-    - website/Platform/ctftime.md
-    - website/Platform/TryHackMe.md
+    - Writeup/Web Exploitation/Cookies.md
+    - Writeup/Web Exploitation/inspect-me.md
+    - Writeup/Web Exploitation/It is my Birthday.md
+    - Writeup/Web Exploitation/Most Cookies.md
+    - Writeup/Web Exploitation/Scavenger Hunt.md
