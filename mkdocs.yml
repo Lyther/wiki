@@ -20,6 +20,11 @@ theme:
 nav:
 - Abstract:
   - index.md
+- Tutorial:
+  - Material:
+    - Tutorial/Material/OS.md
+  - Schedule:
+    - Tutorial/Schedule/Summer.md
 - Website:
   - Forum:
     - Website/Forum/kanxue.md
