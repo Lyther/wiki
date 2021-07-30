@@ -13,12 +13,10 @@ Computer Systems: A Programmer's Perspective
 1. Overview of Operating Systems
 2. Storage of Information and Program
 3. CPU Structure and Compiling of Program
-4. Storage
+4. Storage Hierarchy
 5. Running of Program
 6. Exception and Interrupt Handling
-7. Virtual Memory Control
 8. IO and Networking
-9. Parallel and Concurrent
 
 ## Download
 
