@@ -33,7 +33,19 @@ nav:
     - Book/Computer and System Principle/Windows Internals.md
     - Book/Computer and System Principle/代码揭秘.md
     - Book/Computer and System Principle/深入理解Android内核设计思想.md
+- Tool:
+  - Cryptography:
+    - Tool/Cryptography/SageMathCell.md
+  - Reverse Engineering:
+    - Tool/Reverse Engineering/Bytecode Viewer.md
+    - Tool/Reverse Engineering/DiE.md
+    - Tool/Reverse Engineering/ExeInfoPE.md
 - Tutorial:
+  - CS315:
+    - Tutorial/CS315/Overview.md
+    - Tutorial/CS315/Week 1.md
+    - Tutorial/CS315/Week 2.md
+    - Tutorial/CS315/Week 3.md
   - Material:
     - Tutorial/Material/OS.md
     - Tutorial/Material/Network.md
@@ -69,6 +81,7 @@ nav:
     - Writeup/Binary Exploitation/simultaneity.md
   - Cryptography:
     - Writeup/Cryptography/Dachshund Attacks.md
+    - Writeup/Cryptography/MedicalImage.md
     - Writeup/Cryptography/scissor.md
   - Forensics:
     - Writeup/Forensics/Disk, disk, sleuth! II.md
