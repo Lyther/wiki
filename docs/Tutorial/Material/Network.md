@@ -19,9 +19,6 @@ Computer Networking: A Top-Down Approach
 3. Transmission Layer: TCP & UDP
 4. Network Layer: IP
 5. Link Layer and LAN
-6. WiFi and Mobile Network
-7. Multimedia Network
-8. Network Security
 
 ## Download
 

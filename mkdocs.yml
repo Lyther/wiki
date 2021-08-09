@@ -33,6 +33,10 @@ nav:
     - Book/Computer and System Principle/Windows Internals.md
     - Book/Computer and System Principle/代码揭秘.md
     - Book/Computer and System Principle/深入理解Android内核设计思想.md
+  - Network:
+    - Book/Network/Computer Networking.md
+    - Book/Network/Practical Packet Analysis.md
+    - Book/Network/TCP IP Illustrated.md
 - Tool:
   - Cryptography:
     - Tool/Cryptography/SageMathCell.md
