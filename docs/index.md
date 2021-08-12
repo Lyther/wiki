@@ -6,7 +6,11 @@ Visit our lab website: [COMPASS](http://compass.sustech.edu.cn/)
 
 ## Team Members
 
-* TBA
+### 金肇轩
+
+<img src="assets/金肇轩.jpg" alt="image" style="zoom:20%;" />
+
+* 一个永远不会煎荷包蛋的人
 
 ## Activities
 
