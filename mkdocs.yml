@@ -21,18 +21,18 @@ nav:
 - Abstract:
   - index.md
 - Book:
-  - Computer and System Principle:
-    - Book/Computer and System Principle/Android Dalvik虚拟机结构及机制剖析.md
-    - Book/Computer and System Principle/Android Internals.md
-    - Book/Computer and System Principle/Android系统源代码情景分析.md
-    - Book/Computer and System Principle/Code.md
-    - Book/Computer and System Principle/Computer Systems.md
-    - Book/Computer and System Principle/Linux Kernel Development.md
-    - Book/Computer and System Principle/Mac OS X and iOS Internals.md
-    - Book/Computer and System Principle/Understanding the Linux Kernel.md
-    - Book/Computer and System Principle/Windows Internals.md
-    - Book/Computer and System Principle/代码揭秘.md
-    - Book/Computer and System Principle/深入理解Android内核设计思想.md
+  - Computer and System:
+    - Book/Computer and System/Android Dalvik虚拟机结构及机制剖析.md
+    - Book/Computer and System/Android Internals.md
+    - Book/Computer and System/Android系统源代码情景分析.md
+    - Book/Computer and System/Code.md
+    - Book/Computer and System/Computer Systems.md
+    - Book/Computer and System/Linux Kernel Development.md
+    - Book/Computer and System/Mac OS X and iOS Internals.md
+    - Book/Computer and System/Understanding the Linux Kernel.md
+    - Book/Computer and System/Windows Internals.md
+    - Book/Computer and System/代码揭秘.md
+    - Book/Computer and System/深入理解Android内核设计思想.md
   - Network:
     - Book/Network/Computer Networking.md
     - Book/Network/Practical Packet Analysis.md
