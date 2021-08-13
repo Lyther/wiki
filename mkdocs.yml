@@ -53,6 +53,7 @@ nav:
   - Material:
     - Tutorial/Material/OS.md
     - Tutorial/Material/Network.md
+    - Tutorial/Material/Cryptography.md
   - Schedule:
     - Tutorial/Schedule/Summer.md
 - Website:
