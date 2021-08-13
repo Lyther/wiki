@@ -4,13 +4,7 @@ COMPASS CTF is a CTF team belongs to the Southern University of Science and Tech
 
 Visit our lab website: [COMPASS](http://compass.sustech.edu.cn/)
 
-## Team Members
-
-### 金肇轩
-
-<img src="assets/金肇轩.jpg" alt="image" style="zoom:20%;" />
-
-* 一个永远不会煎荷包蛋的人
+![COMPASS](http://compass.sustech.edu.cn/pictures/logo.png)
 
 ## Activities
 
