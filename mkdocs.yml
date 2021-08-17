@@ -33,6 +33,11 @@ nav:
     - Book/Computer and System/Windows Internals.md
     - Book/Computer and System/代码揭秘.md
     - Book/Computer and System/深入理解Android内核设计思想.md
+  - Cryptography:
+    - Book/Cryptography/Foundations of Cryptography.md
+    - Book/Cryptography/Introduction to Modern Cryptography.md
+    - Book/Cryptography/Understanding Cryptography.md
+    - Book/Cryptography/图解密码技术.md
   - Network:
     - Book/Network/Computer Networking.md
     - Book/Network/Practical Packet Analysis.md
@@ -60,6 +65,7 @@ nav:
   - Forum:
     - Website/Forum/kanxue.md
   - Platform:
+    - Website/Platform/Cryptopals.md
     - Website/Platform/CTFHub.md
     - Website/Platform/CTFlearn.md
     - Website/Platform/ctftime.md

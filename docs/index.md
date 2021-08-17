@@ -6,6 +6,18 @@ Visit our lab website: [COMPASS](http://compass.sustech.edu.cn/)
 
 ![COMPASS](http://compass.sustech.edu.cn/pictures/logo.png)
 
+## Members
+
+* 肖兆祺 11810517
+  * 邹泽桦 11810224
+  * 孙涛 11810206
+  * 朱宏 12012624
+* 李照 30016794
+  * 金肇轩 11911413
+  * 韩梓辰 11910607
+* 邬一帆 11912909
+  * 陈梓涵 11910507
+
 ## Activities
 
 * Daily challenge: challenges are published every day. You can log into [Challenge Platform](http://ctf.infury.org:8000/) and finish our daily challenges.
