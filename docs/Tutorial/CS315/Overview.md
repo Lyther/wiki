@@ -30,21 +30,21 @@ In this guide/wiki/handbook you'll learn the techniques, thought processes, and 
 
 CTFs in CS315 Course aims to provide an experimental environment. Instructions of CTF components in CS315 are as follow:
 
-| Date    | Topic                          | Reading & Notes (tentative)                                  | Labs |
-| ------- | ------------------------------ | ------------------------------------------------------------ | ---- |
-| Week 1  | CTF Introduction and Forensics | * CTF Overview.<br />* Jeopardy: Find flag.                  |      |
-| Week 2  | PWN: Basic Buffer Overflow     | * Crash: Trigger a Segmentation Fault<br />* Exploit: Set the value to private variable |      |
-| Week 3  | PWN: Advanced Buffer Overflow  | * Shellcode: get a shell                                     |      |
-| Week 4  | WEB: Information Discovery     |                                                              |      |
-| Week 5  | WEB: Vulnerability Exploit     |                                                              |      |
-| Week 6  | RE: De-compiling Program       |                                                              |      |
-| Week 7  | IOT: Attacking IoT             |                                                              |      |
-| Week 8  | WLAN: Attacking WiFi           |                                                              |      |
-| Week 9  | MISC: Defense with IDS         |                                                              |      |
-| Week 10 | PWN: Privilege Escalation      |                                                              |      |
-| Week 11 | PWN: Format String             |                                                              |      |
-| Week 12 | WEB: Attacking Websites        |                                                              |      |
-| Week 13 | PWN: ROL and ROP               |                                                              |      |
-| Week 14 | PWN: Advanced ROP              |                                                              |      |
-| Week 15 | Attack and Defense CTF         |                                                              |      |
+| Date    | Topic                          | Content                                                      | File                   |
+| ------- | ------------------------------ | ------------------------------------------------------------ | ---------------------- |
+| Week 1  | CTF Introduction and Forensics | 1. Introduce CTF<br />2. Basic Forensics<br />3. Network traffic analysis | [Week 1.md](Week 1.md) |
+| Week 2  | PWN: Basic Buffer Overflow     | 1. Introduce PWN<br />2. Stack and buffer overflow<br />3. Return to shellcode | [Week 2.md](Week 2.md) |
+| Week 3  | PWN: Advanced Buffer Overflow  | 1. Calling conversion<br />2. Binary security<br />3. Bypass canary & PIE | [Week 3.md](Week 3.md) |
+| Week 4  | WEB: Information Discovery     |                                                              |                        |
+| Week 5  | WEB: Vulnerability Exploit     |                                                              |                        |
+| Week 6  | RE: De-compiling Program       |                                                              |                        |
+| Week 7  | IOT: Attacking IoT             |                                                              |                        |
+| Week 8  | WLAN: Attacking WiFi           |                                                              |                        |
+| Week 9  | MISC: Defense with IDS         |                                                              |                        |
+| Week 10 | PWN: Privilege Escalation      |                                                              |                        |
+| Week 11 | PWN: Format String             |                                                              |                        |
+| Week 12 | WEB: Attacking Websites        |                                                              |                        |
+| Week 13 | PWN: ROL and ROP               |                                                              |                        |
+| Week 14 | PWN: Advanced ROP              |                                                              |                        |
+| Week 15 | Attack and Defense CTF         |                                                              |                        |
 

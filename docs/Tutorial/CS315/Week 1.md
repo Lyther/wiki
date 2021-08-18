@@ -427,15 +427,37 @@ Your hex editor should also have a “go to” or “find” feature so you can 
 
 ## Exercise
 
-Question 1. Retrieve the secret **flag** from the following file (5 pt):
+### (5 pt) What is so called stream?
 
-[Wireshark0.pcapng](../../assets/Wireshark0.pcapng)
+The network is so bad that I can't even send TCP stream through Internet. Wondering if I can use "UDP streams"...
 
-Question 2. Retrieve the secret **flag** from the following file (5 pt):
+[capture.pcap](file/chall1-1.pcap)
 
-[Wireshark1.pcapng](../../assets/Wireshark1.pcapng)
+Try to find `flag` in this file, the flag format is: `picoCTF{***}`
 
-Question 3. Retrieve the secret **flag** from the following file (*bonus 5 pt*):
+*Hint1: Wireshark may be useful.*
 
-[Wireshark2.pcapng](../../assets/Wireshark2.pcapng)
+### (5 pt) HTTPS with secret sauce
+
+Solved the network problem yesterday, but I found some guy was sniffing my network traffic. I need to be careful to protect my flag. Decide to use HTTPS to submit my flag to `web01`.
+
+<img src="../../assets/chall1-2.jpg" alt="pic" style="zoom: 50%;" />
+
+By the way, upload my **super☆secret☆file** to network disk.
+
+[capture.pcapng](file/chall1-2.pcapng)
+
+[pre-master secret.txt](file/chall1-2.log)
+
+Try to find `flag` in this file, the flag format is: `flag{y2***}`
+
+### (BONUS 5 pt) Bytes through network
+
+That hacker still got my flag! Fine, I'm going to send my file byte by byte. Besides, combined with my knowledge of **programming, encryption, and stenography** I'm going to fight the final round. WE ARE IN THE ENDGAME NOW.
+
+[capture.pcapng](file/chall1-3.pcapng)
+
+Try to find `flag` in this file, the flag format is: `flag{***}`
+
+*This challenge is extremely hard. The winner will get a badge for solving this.*
 
