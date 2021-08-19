@@ -16,7 +16,7 @@ The program that can never be reversed？
 
 输入的字符串，根据每位的字符会经过一堆的处理，然后跟相应的数据一位一位对比。可以直接输入0-9 a-z的字符串来进行爆破一下字符对应，从而得到flag。
 
-​    ![图片](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsiaStUACcrx4rzlvPxdklxllE7DEgPnn7koUdF04ZjqtqqV4mTKUdDVFf53lTjb8mFrv7yRe6oWuiaQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../assets/re1.webp)
 
 ```python
 # 1234567890abcdefghijklmnopqrstuv
@@ -49,7 +49,7 @@ flag += chr(key[i] + 72)
 print(flag+'}')
 ```
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsiaStUACcrx4rzlvPxdklxll45LhJKejOHPMZJbpqSMMqs482busMiaORt5Ves2K79L4c75YCHTFSXA/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](../../assets/re2.webp)
 
 ## Flag
 

@@ -162,7 +162,7 @@ while True:
 
 对磁盘反解出flag.png
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/VfLUYJEMVsiaStUACcrx4rzlvPxdklxllO44ssAQxxk1zCzDtUptC0GWm7dJl96enN6a0Olzdp5RUxVDiav6pibbw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)    
+![图片](../../assets/xixixi1.png)    
 
 ## Flag
 
