@@ -91,9 +91,14 @@ nav:
     - Writeup/Binary Exploitation/ret2the-unknown.md
     - Writeup/Binary Exploitation/simultaneity.md
   - Cryptography:
+    - Writeup/Cryptography/blowfishgame.md
     - Writeup/Cryptography/Dachshund Attacks.md
+    - Writeup/Cryptography/Exposure.md
     - Writeup/Cryptography/MedicalImage.md
+    - Writeup/Cryptography/more_calc.md
+    - Writeup/Cryptography/RSAssss.md
     - Writeup/Cryptography/scissor.md
+    - Writeup/Cryptography/simpleRSA.md
   - Forensics:
     - Writeup/Forensics/Disk, disk, sleuth! II.md
     - Writeup/Forensics/Disk, disk, sleuth!.md

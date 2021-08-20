@@ -1,6 +1,6 @@
 # Dachshund Attacks
 
-Category: Web Exploitation
+Category: Cryptography
 
 Source: picoCTF 2021
 
