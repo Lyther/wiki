@@ -56,9 +56,10 @@ nav:
     - Tutorial/CS315/Week 2.md
     - Tutorial/CS315/Week 3.md
   - Material:
-    - Tutorial/Material/OS.md
-    - Tutorial/Material/Network.md
     - Tutorial/Material/Cryptography.md
+    - Tutorial/Material/Network.md
+    - Tutorial/Material/OS.md
+    - Tutorial/Material/Penetration.md
   - Schedule:
     - Tutorial/Schedule/Summer.md
 - Website:
