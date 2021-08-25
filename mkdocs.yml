@@ -95,10 +95,14 @@ nav:
     - Writeup/Cryptography/blowfishgame.md
     - Writeup/Cryptography/Dachshund Attacks.md
     - Writeup/Cryptography/Exposure.md
+    - Writeup/Cryptography/Guess.md
     - Writeup/Cryptography/MedicalImage.md
     - Writeup/Cryptography/more_calc.md
+    - Writeup/Cryptography/myRSA.md
+    - Writeup/Cryptography/Random_RSA.md
     - Writeup/Cryptography/RSAssss.md
     - Writeup/Cryptography/scissor.md
+    - Writeup/Cryptography/secret share.md
     - Writeup/Cryptography/simpleRSA.md
   - Forensics:
     - Writeup/Forensics/Disk, disk, sleuth! II.md
@@ -108,11 +112,16 @@ nav:
     - Writeup/Forensics/Wireshark doo dooo do doo.md
   - General Skills:
     - Writeup/General Skills/2Warm.md
+    - Writeup/General Skills/ChieftainsSecret.md
     - Writeup/General Skills/Lets Warm Up.md
+    - Writeup/General Skills/shuffle_code.md
     - Writeup/General Skills/xixixi.md
     - Writeup/General Skills/到点了.md
+    - Writeup/General Skills/层层取证.md
     - Writeup/General Skills/带音乐家.md
+    - Writeup/General Skills/考古.md
     - Writeup/General Skills/进制反转.md
+    - Writeup/General Skills/鸣雏恋.md
   - Reverse Engineering:
     - Writeup/Reverse Engineering/apk1.md
     - Writeup/Reverse Engineering/bread-making.md
