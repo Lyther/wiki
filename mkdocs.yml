@@ -42,6 +42,13 @@ nav:
     - Book/Network/Computer Networking.md
     - Book/Network/Practical Packet Analysis.md
     - Book/Network/TCP IP Illustrated.md
+  - Security:
+    - Book/Security/0day安全.md
+    - Book/Security/A Guide to Kernel Exploitation.md
+    - Book/Security/Fuzzing for Software Security Testing and Quality Assurance.md
+    - Book/Security/Gray Hat Hacking.md
+    - Book/Security/Rootkit.md
+    - Book/Security/漏洞战争.md
 - Tool:
   - Cryptography:
     - Tool/Cryptography/SageMathCell.md
