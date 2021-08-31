@@ -35,8 +35,8 @@ CTFs in CS315 Course aims to provide an experimental environment. Instructions o
 | Week 1  | CTF Introduction and Forensics | 1. Introduce CTF<br />2. Basic Forensics<br />3. Network traffic analysis | [Week 1.md](Week 1.md) |
 | Week 2  | PWN: Basic Buffer Overflow     | 1. Introduce PWN<br />2. Stack and buffer overflow<br />3. Return to shellcode | [Week 2.md](Week 2.md) |
 | Week 3  | PWN: Advanced Buffer Overflow  | 1. Calling conversion<br />2. Binary security<br />3. Bypass canary & PIE | [Week 3.md](Week 3.md) |
-| Week 4  | WEB: Information Discovery     |                                                              |                        |
-| Week 5  | WEB: Vulnerability Exploit     |                                                              |                        |
+| Week 4  | WEB: Information Discovery     | 1. Passive information gathering<br />2. Active Information gathering | [Week 4.md](Week 4.md) |
+| Week 5  | WEB: Vulnerability Exploit     | 1. Injection<br />2. Traversal<br />3. CSRF & XSS<br />4. SSRF | [Week 5.md](Week 5.md) |
 | Week 6  | RE: De-compiling Program       |                                                              |                        |
 | Week 7  | IOT: Attacking IoT             |                                                              |                        |
 | Week 8  | WLAN: Attacking WiFi           |                                                              |                        |
