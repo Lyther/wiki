@@ -11,7 +11,7 @@ Visit our lab website: [COMPASS](http://compass.sustech.edu.cn/)
 * 肖兆祺 11810517
   * 邹泽桦 11810224
   * 孙涛 11810206
-  * 朱宏 12012624
+  * 朱弘 12012624
 * 李照 30016794
   * 金肇轩 11911413
   * 韩梓辰 11910607
@@ -19,7 +19,6 @@ Visit our lab website: [COMPASS](http://compass.sustech.edu.cn/)
   * 陈梓涵 11910507
   * 朱嘉楠 12013008
   * 朱子经 11912723
-* flag{we1c0Me_to_C0MP433_t3am}
 
 ## Activities
 
