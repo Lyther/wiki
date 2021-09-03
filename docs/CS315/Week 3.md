@@ -365,7 +365,7 @@ Full RELRO is not a default compiler setting as it can greatly increase program 
 
 **If you are facing a binary protected by a canary and PIE (Position Independent Executable) you probably need to find a way to bypass them.**
 
-![img](../../assets/Week 3-1.png)
+![img](../assets/Week 3-1.png)
 
 ### **Canary**
 
@@ -439,7 +439,7 @@ INI_SHELLCODE = RBP - 1152
 
 From the **RIP** you can calculate the **base address of the PIE binary** which is what you are going to need to create a **valid ROP chain**. To calculate the base address just do `objdump -d vunbinary` and check the disassemble latest addresses:
 
-![img](../../assets/Week 3-2.png)
+![img](../assets/Week 3-2.png)
 
 In that example you can see that only **1 Byte and a half is needed** to locate all the code, then, the base address in this situation will be the **leaked RIP but finishing on "000"**. For example if you leaked *0x562002970**ecf*** the base address is *0x562002970**000***
 

@@ -532,3 +532,25 @@ If at some point you find a **web page that presents you sensitive information b
 - [**Danging Markup**](https://book.hacktricks.xyz/pentesting-web/dangling-markup-html-scriptless-injection): If you cannot inject XSS tags you still may be able to steal the info using other regular HTML tags.
 - [**Clickjaking**](https://book.hacktricks.xyz/pentesting-web/clickjacking): If there is no  protection against this attack, you may be able to trick the user into sending you the sensitive data (an example [here](https://medium.com/bugbountywriteup/apache-example-servlet-leads-to-61a2720cac20)).
 
+## Exercise
+
+### (5 pt) Behind a domain
+
+Once upon a time, the nation of Panem held the competition called the Hunger Games. Annually twelve tributes are selected from twelve different labs in SUSTech. As a tribute from COMPASS, you need to fight for survive and defeat all other tributes.
+
+![pic](../assets/Week 4-1.png)
+
+Before the journey, your supervisor once told you, "discover the secret from our lab, kid. The hidden subdomain would give you the holy flag!"
+
+Now, you have the domain `compass.college`, what's behind this domain?
+
+[wordlist.txt](file/chall4-1.txt)
+
+### (5 pt) Where's the supply?
+
+During the fight, spplies are vital important. Your supervisor had hidden some supplies somewhere, with some flag inside. Once you get the flag, those tributes have no idea about what you would use to fight them. However, you totally forgot where to find the supply.
+
+Luckily, you remember that the supply is put somewhere in the lab website. Visit the following website to find the flag.
+
+[Lab website (not really COMPASS website)](http://ctf.compass.college:10001/)
+

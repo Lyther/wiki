@@ -8,7 +8,7 @@ Teams of competitors (or just individuals) are pitted against each other in a te
 
 Very often CTFs are the beginning of one's cyber security career due to their team building nature and competitive aspect. In addition, there isn't a lot of commitment required beyond a weekend.
 
-![ctftime](../../assets/ctftime1.png)
+![ctftime](../assets/ctftime1.png)
 
 Figure: CTFs on the CTFtime website.
 
@@ -427,6 +427,29 @@ Your hex editor should also have a “go to” or “find” feature so you can 
 
 ## Exercise
 
+Every lab we will have 2 or 3 challenges about the topics this week. But in case the difficulty of the challenge, only the first 2 challenges are required. But if you want to fight CTF so hard, you can try the third one. Solving the third one would give you extra points for this lab and some prizes as well.
+
+For finishing the challenges, you may click this site: [COMPASS CTF Platform](https://compass.ctfd.io/) and find the category `CS315`. Other challenges are for CTF team members, but you also can finish them freely. After uploading the flag on the platform, you also need to upload a writeup to blackboard system to grade.
+
+The `writeup` is a file to describe how you solve the challenges and you need also post flag in it. **The writeup would use to grade** and in case you forget to submit the writeup, during the argue procedure, we would check the submission in platform.
+
+### Example writeup
+
+```
+(5 pt) Congratulations!
+Now in order to check whether you are a robot, you need to submit this flag to show that you are a real human!
+flag{w31com3_t0_CS315_c0Urs3!!!}
+```
+
+The flag you submit should be `flag{w31com3_t0_CS315_c0Urs3!!!}`, and the example writeup probably be:
+
+```
+Writeup.md
+I am a human so I copied the flag and submit it.
+Here is the flag:
+flag{w31com3_t0_CS315_c0Urs3!!!}
+```
+
 ### (5 pt) What is so called stream?
 
 The network is so bad that I can't even send TCP stream through Internet. Wondering if I can use "UDP streams"...
@@ -441,7 +464,7 @@ Try to find `flag` in this file, the flag format is: `picoCTF{***}`
 
 Solved the network problem yesterday, but I found some guy was sniffing my network traffic. I need to be careful to protect my flag. Decide to use HTTPS to submit my flag to `web01`.
 
-![img](../../assets/chall1-2.jpg)
+![img](../assets/chall1-2.jpg)
 
 By the way, upload my **super☆secret☆file** to network disk.
 

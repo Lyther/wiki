@@ -49,6 +49,14 @@ nav:
     - Book/Security/Gray Hat Hacking.md
     - Book/Security/Rootkit.md
     - Book/Security/漏洞战争.md
+- CS315:
+  - CS315/Overview.md
+  - CS315/Week 1.md
+  - CS315/Week 2.md
+  - CS315/Week 3.md
+  - CS315/Week 4.md
+  - CS315/Week 5.md
+  - CS315/Week 6.md
 - Tool:
   - Cryptography:
     - Tool/Cryptography/SageMathCell.md
@@ -57,11 +65,6 @@ nav:
     - Tool/Reverse Engineering/DiE.md
     - Tool/Reverse Engineering/ExeInfoPE.md
 - Tutorial:
-  - CS315:
-    - Tutorial/CS315/Overview.md
-    - Tutorial/CS315/Week 1.md
-    - Tutorial/CS315/Week 2.md
-    - Tutorial/CS315/Week 3.md
   - Material:
     - Tutorial/Material/Cryptography.md
     - Tutorial/Material/Network.md
