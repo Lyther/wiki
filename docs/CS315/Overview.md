@@ -40,7 +40,7 @@ CTFs in CS315 Course aims to provide an experimental environment. Instructions o
 | Week 6  | RE: De-compiling Program            | 1. Assembly<br />2. From C to assembly<br />3. Disassemblers and Decompiles<br />4. Debugging with GDB | [Week 6.md](Week 6.md)   |
 | Week 7  | WLAN: Attacking WiFi                | 1. WiFi attacking tools<br />2. Resume attack<br />3. WiFi crypto attack<br />4. Evil Twin | [Week 7.md](week 7.md)   |
 | Week 8  | MISC: Physical Attacks              | 1. BIOS<br />2. Bad USB<br />3. Attack printers              | [Week 8.md](week 8.md)   |
-| Week 9  | MISC: Social Engineering            |                                                              | [Week 9.md](week 9.md)   |
+| Week 9  | MISC: Social Engineering            | 1. Cloning a website<br />2. Phishing                        | [Week 9.md](week 9.md)   |
 | Week 10 | PWN: Privilege Escalation           |                                                              | [Week 10.md](week 10.md) |
 | Week 11 | CRYPTO: Public Key Crypto Attacking |                                                              | [Week 11.md](week 11.md) |
 | Week 12 | WEB: Attacking Websites             |                                                              | [Week 12.md](week 12.md) |
