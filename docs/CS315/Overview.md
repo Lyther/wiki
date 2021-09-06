@@ -30,20 +30,20 @@ In this guide/wiki/handbook you'll learn the techniques, thought processes, and 
 
 CTFs in CS315 Course aims to provide an experimental environment. Instructions of CTF components in CS315 are as follow:
 
-| Date    | Topic                               | Content                                                      | File                   |
-| ------- | ----------------------------------- | ------------------------------------------------------------ | ---------------------- |
-| Week 1  | CTF Introduction and Forensics      | 1. Introduce CTF<br />2. Basic Forensics<br />3. Network traffic analysis | [Week 1.md](Week 1.md) |
-| Week 2  | PWN: Basic Buffer Overflow          | 1. Introduce PWN<br />2. Stack and buffer overflow<br />3. Return to shellcode | [Week 2.md](Week 2.md) |
-| Week 3  | PWN: Advanced Buffer Overflow       | 1. Calling conversion<br />2. Binary security<br />3. Bypass canary & PIE | [Week 3.md](Week 3.md) |
-| Week 4  | WEB: Information Discovery          | 1. Passive information gathering<br />2. Active information gathering | [Week 4.md](Week 4.md) |
-| Week 5  | WEB: Vulnerability Exploit          | 1. Injection<br />2. Traversal<br />3. CSRF & XSS<br />4. SSRF | [Week 5.md](Week 5.md) |
-| Week 6  | RE: De-compiling Program            | 1. Assembly<br />2. From C to assembly<br />3. Disassemblers and Decompiles<br />4. Debugging with GDB | [Week 6.md](Week 6.md) |
-| Week 7  | WLAN: Attacking WiFi                |                                                              |                        |
-| Week 8  | MISC: Physical Attacks              |                                                              |                        |
-| Week 9  | MISC: Social Engineering            |                                                              |                        |
-| Week 10 | PWN: Privilege Escalation           |                                                              |                        |
-| Week 11 | CRYPTO: Public Key Crypto Attacking |                                                              |                        |
-| Week 12 | WEB: Attacking Websites             |                                                              |                        |
-| Week 13 | PWN: ROL and ROP                    |                                                              |                        |
-| Week 14 | CTF: Attack-Defense CTF             |                                                              |                        |
+| Date    | Topic                               | Content                                                      | File                     |
+| ------- | ----------------------------------- | ------------------------------------------------------------ | ------------------------ |
+| Week 1  | CTF Introduction and Forensics      | 1. Introduce CTF<br />2. Basic Forensics<br />3. Network traffic analysis | [Week 1.md](Week 1.md)   |
+| Week 2  | PWN: Basic Buffer Overflow          | 1. Introduce PWN<br />2. Stack and buffer overflow<br />3. Return to shellcode | [Week 2.md](Week 2.md)   |
+| Week 3  | PWN: Advanced Buffer Overflow       | 1. Calling conversion<br />2. Binary security<br />3. Bypass canary & PIE | [Week 3.md](Week 3.md)   |
+| Week 4  | WEB: Information Discovery          | 1. Passive information gathering<br />2. Active information gathering | [Week 4.md](Week 4.md)   |
+| Week 5  | WEB: Vulnerability Exploit          | 1. Injection<br />2. Traversal<br />3. CSRF & XSS<br />4. SSRF | [Week 5.md](Week 5.md)   |
+| Week 6  | RE: De-compiling Program            | 1. Assembly<br />2. From C to assembly<br />3. Disassemblers and Decompiles<br />4. Debugging with GDB | [Week 6.md](Week 6.md)   |
+| Week 7  | WLAN: Attacking WiFi                | 1. WiFi attacking tools<br />2. Resume attack<br />3. WiFi crypto attack<br />4. Evil Twin | [Week 7.md](week 7.md)   |
+| Week 8  | MISC: Physical Attacks              | 1. BIOS<br />2. Bad USB<br />3. Attack printers              | [Week 8.md](week 8.md)   |
+| Week 9  | MISC: Social Engineering            |                                                              | [Week 9.md](week 9.md)   |
+| Week 10 | PWN: Privilege Escalation           |                                                              | [Week 10.md](week 10.md) |
+| Week 11 | CRYPTO: Public Key Crypto Attacking |                                                              | [Week 11.md](week 11.md) |
+| Week 12 | WEB: Attacking Websites             |                                                              | [Week 12.md](week 12.md) |
+| Week 13 | PWN: ROL and ROP                    |                                                              | [Week 13.md](week 13.md) |
+| Week 14 | CTF: Attack-Defense CTF             |                                                              | [Week 14.md](week 14.md) |
 
