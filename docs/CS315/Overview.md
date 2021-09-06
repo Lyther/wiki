@@ -41,11 +41,11 @@ CTFs in CS315 Course aims to provide an experimental environment. Instructions o
 | Week 7  | WLAN: Attacking WiFi                | 1. WiFi attacking tools<br />2. Resume attack<br />3. WiFi crypto attack<br />4. Evil Twin | [Week 7.md](week 7.md)   |
 | Week 8  | MISC: Physical Attacks              | 1. BIOS<br />2. Bad USB<br />3. Attack printers              | [Week 8.md](week 8.md)   |
 | Week 9  | MISC: Social Engineering            | 1. Cloning a website<br />2. Phishing                        | [Week 9.md](week 9.md)   |
-| Week 10 | PWN: Privilege Escalation           |                                                              | [Week 10.md](week 10.md) |
-| Week 11 | CRYPTO: Public Key Crypto Attacking |                                                              | [Week 11.md](week 11.md) |
-| Week 12 | WEB: Attacking Websites             |                                                              | [Week 12.md](week 12.md) |
-| Week 13 | PWN: ROL and ROP                    |                                                              | [Week 13.md](week 13.md) |
-| Week 14 | CTF: Attack-Defense CTF             |                                                              | [Week 14.md](week 14.md) |
+| Week 10 | PWN: Privilege Escalation           | 1. Gather vulnerabilities<br />2. Privilege escalation       | [Week 10.md](week 10.md) |
+| Week 11 | CRYPTO: Public Key Crypto Attacking | 1. Traditional crypto<br />2. Hash functions<br />3. RSA     | [Week 11.md](week 11.md) |
+| Week 12 | WEB: Attacking Websites             | 1. OWASP top 10<br />2. Proxies vulnerabilities<br />3. User input vulnerabilities | [Week 12.md](week 12.md) |
+| Week 13 | PWN: ROL and ROP                    | 1. ROP<br />2. Dynamic ROP chain<br />3. ROL                 | [Week 13.md](week 13.md) |
+| Week 14 | CTF: Attack-Defense CTF             | 1. Introduction<br />2. Environment set<br />3. Grading      | [Week 14.md](week 14.md) |
 
 ## Contact me
 
