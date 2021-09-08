@@ -462,7 +462,7 @@ Try to find `flag` in this file, the flag format is: `picoCTF{***}`
 
 ### (5 pt) HTTPS with secret sauce
 
-Solved the network problem yesterday, but I found some guy was sniffing my network traffic. I need to be careful to protect my flag. Decide to use HTTPS to submit my flag to `web01`.
+Solved the network problem yesterday, but I found some guy was sniffing my network traffic. I need to be careful to protect my flag. Decide to use HTTPS to submit my flag to `web01.fruitinc.xyz`.
 
 ![img](../assets/chall1-2.jpg)
 

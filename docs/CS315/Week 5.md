@@ -401,3 +401,15 @@ These filters can also be used on input such as:
 - `include`, `file_get_contents()`, etc. support URLs including PHP stream filter URLs (`php://`)
 - `include` normally evaluates any PHP code (in tags) it finds, but if it’s base64 encoded it can be used to leak source
 
+## Exercise
+
+### (5 pt) Master of Touhou Project
+
+It's said there's some students who are really strong at playing `Touhou Project` games. I doubt it, so I hide my flag in this game. The awesome flag is only for those who are really good at Touhou games.
+
+![img](../assets/Week 5-1.png)
+
+There are **6 parts** of flag. Whenever you passed a stage under **Lunatic** difficulty, one part is given to `flag.txt` under root directory of game.
+
+Gamers, make me proud!
+
