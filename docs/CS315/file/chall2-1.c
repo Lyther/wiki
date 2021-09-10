@@ -11,9 +11,9 @@ void sigsegv_handler(int sig) {
   exit(1);
 }
 
-void vuln(char *input){
+void vuln(){
   char buf[16];
-  strcpy(buf, input);
+  gets(buf);
 }
 
 int main(int argc, char **argv){
@@ -31,13 +31,8 @@ int main(int argc, char **argv){
   gid_t gid = getegid();
   setresgid(gid, gid, gid);
   
-  //Need 1 argument to run the program
-  if (argc > 1) {
-  #run vuln with this argument
-    vuln(argv[1]);
-    printf("Thanks! Received: %s", argv[1]);
-  }
-  else
-    printf("This program takes 1 argument.\n");
+  puts("Please enter your string: \n");
+  vuln();
+  printf("Thanks! Received: %s", argv[1]);
   return 0;
 }
