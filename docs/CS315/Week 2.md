@@ -344,9 +344,9 @@ When light appears, a goddess whos so beautiful standing in front of you, said, 
 
 "By the way, if you put something that I can't handle, I'll give you a `flag`!"
 
-`nc compass.ctfd.io:10001`
+`nc ali.infury.org 10001`
 
-[goddess](file/chall2-1)
+[goddess](https://wiki.compass.college/CS315/file/chall2-1)
 
 [goddess.c](file/chall2-1.c)
 
@@ -362,9 +362,9 @@ Because of the goddess got stuck when processing, so you finally didn't get any 
 
 "Now, what's your last word?"
 
-`nc compass.ctfd.io:10002`
+`nc ali.infury.org 10002`
 
-[dragon](file/chall2-2)
+[dragon](https://wiki.compass.college/CS315/file/chall2-2)
 
 [dragon.c](file/chall2-2.c)
 
@@ -384,9 +384,9 @@ The end of journey is arriving.
 
 You are filled with determination.
 
-`nc compass.ctfd.io:10003`
+`nc ali.infury.org 10003`
 
-[world](file/chall2-3)
+[world](https://wiki.compass.college/CS315/file/chall2-3)
 
 [world.c](file/chall2-3.c)
 
