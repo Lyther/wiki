@@ -498,5 +498,3 @@ You are filled with determination.
 
 Become the God and find the flag. Flag format: `flag{***}`
 
-*This challenge is a little hard. The winner will get a badge for solving this.*
-
