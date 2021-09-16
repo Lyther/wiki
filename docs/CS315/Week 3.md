@@ -20,7 +20,7 @@ Common topics addressed by Binary Exploitation or 'pwn' challenges include:
   * **Relocation Read-Only (RELRO)**
 * The Heap
   * Heap Exploitation
-* Format String Vulnerability
+* **Format String Vulnerability**
 
 ## The Stack
 
@@ -446,4 +446,113 @@ In that example you can see that only **1 Byte and a half is needed** to locate 
 ```
 elf.address = RIP - (RIP & 0xfff)
 ```
+
+## Format String Vulnerability
+
+A format string vulnerability is a bug where user input is passed as the format argument to `printf`, `scanf`, or another function in that family.
+
+The format argument has many different specifies which could allow an attacker to leak data if they control the format argument to `printf`. Since `printf` and similar are *variadic* functions, they will continue popping data off of the stack according to the format.
+
+For example, if we can make the format argument "%x.%x.%x.%x", `printf` will pop off four stack values and print them in hexadecimal, potentially leaking sensitive information.
+
+`printf` can also index to an arbitrary "argument" with the following syntax: "%n$x" (where `n` is the decimal index of the argument you want).
+
+While these bugs are powerful, they're very rare nowadays, as all modern compilers warn when `printf` is called with a non-constant string.
+
+### Example
+
+```
+#include <stdio.h>
+#include <unistd.h>
+
+int main() {
+    int secret_num = 0x8badf00d;
+
+    char name[64] = {0};
+    read(0, name, 64);
+    printf("Hello ");
+    printf(name);
+    printf("! You'll never get my secret!\n");
+    return 0;
+}
+```
+
+Due to how GCC decided to lay out the stack, `secret_num` is actually at a lower address on the stack than `name`, so we only have to go to the 7th "argument" in `printf` to leak the secret:
+
+```
+$ ./fmt_string
+%7$llx
+Hello 8badf00d3ea43eef
+! You'll never get my secret!
+```
+
+## Exercise
+
+### (5 pt) "Gimme the report." The Boss said
+
+CS315 course is open, and this year we added some CTF challenges to the lab tutorial. After 3 weeks of teaching, our professor wants some feedback from students.
+
+"Design a service, please. Gather some feedback and report from students of CS315."
+
+"Sure." Answered in no time, but I got super nervous because of me, as a computer science graduate, don't know how to programming.
+
+![meme](file/Week 3-1.jpg)
+
+By the way, I already got some report said that `why this course so easy`, `please tell something hard`. Fine, I'll just write my program that reads from user input, but stores nothing.
+
+No store, no vulnerability.
+
+Yeah, I'm going to save my job!
+
+[my_super_secret_report_service](file/chall3-1)
+
+[my_super_secret_report_service.c](file/chall3-1.c)
+
+`nc ali.infury.org 10004`
+
+### (5 pt) My Last Chance
+
+It's super hard to convince my Boss that report system is just broken temporarily. Now I'm going to learn programming and security very hard to save my job.
+
+---- 2 DAYS LATER ----
+
+Totally didn't learn.
+
+"Some students want to enroll this course, please make something to collect enroll."
+
+"But, but this course is full already..."
+
+"CS315 is hard, someone gonna to quit. So, in case anyone want to enroll, we need to handle this." The Boss looked at me, "can't you programming?"
+
+"Yep! Yeah, seriously I can programming very well!"
+
+I need to prepare my CV now.
+
+[awesome_enroll_service](file/chall3-2)
+
+[awesome_enroll_service.c](file/chall3-2)
+
+`nc ali.infury.org 10005`
+
+*Please use netcat to connect and solve challenges! And don't ask why there isn't a flag.txt in source code...*
+
+### (BONUS 5 pt) Me, worked in maid cafes
+
+Yet another programming order from cafes.
+
+So called maid cafes, their Boss wants me to design a service to collect costumers' requirements.
+
+The Boss promised me if I can finish such a program, I can come to the cafes free forever. So stuck in the flavor of coffee (not the maid I promise) that I swear gonna to get this work done.
+
+Very strange I don't understand the details of this program (like how big, how far, which requirements are they?), and why some CS315 students are pentesting my program.
+
+Luckily I learned about some security parameters already, so I simply turned them on.
+
+[maid](file/chall3-3)
+
+[ld-linux-x86-64.so.2](file/ld-linux-x86-64.so.2)
+
+[libc.so.6](file/libc.so.6)
+
+*This is a ROP challenge and you may find it's difficult. But success solvers will win a badge.*
 
