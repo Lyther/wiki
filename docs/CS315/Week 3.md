@@ -504,7 +504,7 @@ No store, no vulnerability.
 
 Yeah, I'm going to save my job!
 
-[my_super_secret_report_service](file/chall3-1)
+[my_super_secret_report_service](https://wiki.compass.college/CS315/file/chall3-1)
 
 [my_super_secret_report_service.c](file/chall3-1.c)
 
@@ -528,7 +528,7 @@ Totally didn't learn.
 
 I need to prepare my CV now.
 
-[awesome_enroll_service](file/chall3-2)
+[awesome_enroll_service](https://wiki.compass.college/CS315/file/chall3-2)
 
 [awesome_enroll_service.c](file/chall3-2)
 
@@ -548,7 +548,7 @@ Very strange I don't understand the details of this program (like how big, how f
 
 Luckily I learned about some security parameters already, so I simply turned them on.
 
-[maid](file/chall3-3)
+[maid](https://wiki.compass.college/CS315/file/chall3-3)
 
 [ld-linux-x86-64.so.2](file/ld-linux-x86-64.so.2)
 
