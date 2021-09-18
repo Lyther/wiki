@@ -530,7 +530,7 @@ I need to prepare my CV now.
 
 [awesome_enroll_service](https://wiki.compass.college/CS315/file/chall3-2)
 
-[awesome_enroll_service.c](file/chall3-2)
+[awesome_enroll_service.c](file/chall3-2.c)
 
 `nc ali.infury.org 10005`
 
