@@ -534,7 +534,9 @@ If at some point you find a **web page that presents you sensitive information b
 
 ## Exercise
 
-### (5 pt) Kitten War: Behind the Domain
+This week we won't have CTF grades. But you still can have a try.
+
+### (0 pt) Kitten War: Behind the Domain
 
 Each year, those dragon-li cats would have a war with orange cats. From dining hall to library, from Lychee Hill to TB2. All day to night they fought together to claim manor.
 
@@ -558,7 +560,7 @@ Kittens are so lovely, you can't resist and start to discover DNS records...
 
 [wordlist.txt](file/chall4-1.txt)
 
-### (5 pt) Kitten War: 5 Cats in a Row
+### (0 pt) Kitten War: 5 Cats in a Row
 
 Two dragon-li cats are staring at you for a while, since the last cyber attack. After you step into the classroom in TB1, a dragon-li cat jumped on the desk and starts talking to you.
 
@@ -574,7 +576,7 @@ Without a hesitate, you start to hack the website:
 
 [Very cheap and nice weapons for orange cats :P)](http://103.102.44.218:10001/)
 
-### (BONUS 5 pt) Kitten War: Black means Blind
+### (BONUS 0 pt) Kitten War: Black means Blind
 
 The war has lasted for 2 months.
 
