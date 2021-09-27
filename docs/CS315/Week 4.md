@@ -534,23 +534,57 @@ If at some point you find a **web page that presents you sensitive information b
 
 ## Exercise
 
-### (5 pt) Behind a domain
+### (5 pt) Kitten War: Behind the Domain
 
-Once upon a time, the nation of Panem held the competition called the Hunger Games. Annually twelve tributes are selected from twelve different labs in SUSTech. As a tribute from COMPASS, you need to fight for survive and defeat all other tributes.
+Each year, those dragon-li cats would have a war with orange cats. From dining hall to library, from Lychee Hill to TB2. All day to night they fought together to claim manor.
 
-![pic](../assets/Week 4-1.png)
+However, this year things are different. Since the COVID-19 becomes serious and dangerous, which can also infect cats. Kitten war would be hold online.
 
-Before the journey, your supervisor once told you, "discover the secret from our lab, kid. The hidden subdomain would give you the holy flag!"
+Now, dragon-li cats just borrowed ours domain name to establish their website. Once the website is finished, they would hire too many cats that orange cats can't fight.
 
-Now, you have the domain `compass.college`, what's behind this domain?
+One day, when you step into TB2, an orange cat stopped you and begged, "humble human, please help us! We are losing the war."
+
+![img](../assets/Week 4-11.jpg)
+
+"Find out what are those dragon-li cats hiding. If you can retrieve the flag behind the domain, I would allow you to pat my belly - for 2 seconds!"
+
+Kittens are so lovely, you can't resist and start to discover DNS records...
+
+*Hint1: cats like TXT because TXT looks so cute!*
+
+*Hint2: cats only know a few words listed in the file below.*
 
 [wordlist.txt](file/chall4-1.txt)
 
-### (5 pt) Where's the supply?
+### (5 pt) Kitten War: 5 Cats in a Row
 
-During the fight, spplies are vital important. Your supervisor had hidden some supplies somewhere, with some flag inside. Once you get the flag, those tributes have no idea about what you would use to fight them. However, you totally forgot where to find the supply.
+Two dragon-li cats are staring at you for a while, since the last cyber attack. After you step into the classroom in TB1, a dragon-li cat jumped on the desk and starts talking to you.
 
-Luckily, you remember that the supply is put somewhere in the lab website. Visit the following website to find the flag.
+![img](../assets/Week 4-12.jpg)
 
-[Lab website (not really COMPASS website)](http://ctf.compass.college:10001/)
+"Orange cats are greedy. Team with us dragon-li cats." That cat licks its claw, said, "TB1 is ours manor, if you team with us, you can always pat cats in TB1."
+
+"Now, here's your mission. Orange cats are using a website built by a CTFer from COMPASS. That guy is a noob and the website must be full of vulnerabilities. Check the sensitive files on the website and find us some flag."
+
+"If we make orange cats have the website. They would be allowed to purchase dangerous weapons from online market. Then we won't defeat them in video games!"
+
+Without a hesitate, you start to hack the website:
+
+[Very cheap and nice weapons for orange cats :P)](http://103.102.44.218:10001/)
+
+### (BONUS 5 pt) Kitten War: Black means Blind
+
+The war has lasted for 2 months.
+
+The dragon-li cats are settling in TB1 and dining hall, while the orange cats are claimed Lychee Hill and TB2.
+
+A black cat was so struggle with these fights. The cat, said, "we, we are cats. We slept 20 hours a day. Why do we bother fighting instead of sleeping?"
+
+![img](../assets/Week 4-13.jpg)
+
+"Now you have a choice to stop the war," the black cat said, "everyone are looking at obvious things, but nobody cares about blind night."
+
+"Log in COMPASS admin panel and use the final flag to stop the meaningless war."
+
+[COMPASS Admin Note](http://103.102.44.218:10002/)
 
