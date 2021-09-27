@@ -550,6 +550,8 @@ One day, when you step into TB2, an orange cat stopped you and begged, "humble h
 
 Kittens are so lovely, you can't resist and start to discover DNS records...
 
+`compass.college`
+
 *Hint1: cats like TXT because TXT looks so cute!*
 
 *Hint2: cats only know a few words listed in the file below.*
