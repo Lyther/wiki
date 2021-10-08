@@ -403,13 +403,33 @@ These filters can also be used on input such as:
 
 ## Exercise
 
-### (5 pt) Master of Touhou Project
+### (5 pt) Jiaran!!!
 
-It's said there's some students who are really strong at playing `Touhou Project` games. I doubt it, so I hide my flag in this game. The awesome flag is only for those who are really good at Touhou games.
+One of my friends loves Jiaran so, so much. I'm not so interested in Vtubers, but I do know vtubers would hide some `flag` in web.
 
-![img](../assets/Week 5-1.png)
+![img](../assets/Week 5-1.jpg)
 
-There are **6 parts** of flag. Whenever you passed a stage under **Lunatic** difficulty, one part is given to `flag.txt` under root directory of game.
+Now we have the chat page of fans: `http://103.102.44.218:10003/`. Maybe you can find flag in this website.
 
-Gamers, make me proud!
+*Hint: as a fan web, the privilege check is broken.*
+
+[source.zip](../assets/Week 5-1.zip)
+
+### (5 pt) Do you like pickle?
+
+Rick is a famous scientist in our universe. One time he trapped himself into a pickle.
+
+Find some items to save Rick.
+
+`http://103.102.44.218:10004/`
+
+If you want to find some hints from source, here it is: [source.zip](../assets/Week 5-2.zip)
+
+### (BONUS 5 pt) Jason is a cool guy
+
+Seems this website is impossible to broken. But still, nothing can block you hackers from stealing the flag.
+
+`http://103.102.44.218:10005/`
+
+Here's the source code for you: [source.zip](../assets/Week 5-3.zip)
 
