@@ -1,5 +1,7 @@
 site_name: COMPASS CTF Wiki
-site_url: https://wiki.compass.college/
+site_url: https://wiki.compass.college
+repo_name: lyther/wiki
+repo_url: https://github.com/lyther/wiki
 site_description: Wiki project for COMPASS CTF, for usage of information sharing, collection, and reference. The contents are contributed by the students of COMPASS CTF team.
 copyright: COMPASS & SUSTech 2021 CTF team
 
@@ -16,6 +18,16 @@ theme:
     scheme: preference
   icon:
     logo: logo
+  features:
+  - navigation.tabs
+  - navigation.tabs.sticky
+  - search.suggest
+  - search.highlight
+  - search.share
+  plugins:
+  - search
+  - minify:
+    minify_html: true
 
 nav:
 - Abstract:
