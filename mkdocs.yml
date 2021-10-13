@@ -79,6 +79,24 @@ nav:
   - CS315/Week 12.md
   - CS315/Week 13.md
   - CS315/Week 14.md
+- Paper:
+  - Artificial Intelligence:
+    - Cert-RNN Towards Certifying the Robustness of Recurrent.md
+    - Unleashing the Tiger Inference Attacks on Split Learning.md
+  - Cryptography:
+    - Fuzzy Message Detection.md
+    - Key Agreement for Decentralized Secure Group Messaging with Strong Security Guarantees.md
+  - Internet of Things:
+    - Snipuzz Black-box Fuzzing of IoT Firmware via Message Snippet Inference.md
+  - Misc:
+    - Chaff Bugs Deterring Attackers by Making Software Buggier.md
+  - Mobile:
+    - Consistency Analysis of Data-Usage Purposes in Mobile Apps.md
+  - PWN:
+    - Exorcising Spectres with Secure Compilers.md
+    - Preventing Dynamic Library Compromise on Node.js via RWX-Based Privilege Reduction.md
+  - Reverse Engineering:
+    - Search-based Approaches for Local Black-Box Code Deobfuscation Understand, Improve and Mitigate.md
 - Tool:
   - Cryptography:
     - Tool/Cryptography/SageMathCell.md
