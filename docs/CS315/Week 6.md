@@ -737,3 +737,43 @@ d!
 -
 ```
 
+## Exercise
+
+### (4 pt) De-Android
+
+Android source code is easy to de-compile. Rather than reading assembly codes from the beginning, why not try some java first?
+
+Try to reverse this Android apk file and find flag in it.
+
+`Flag format: CTFlearn{******}`
+
+[flag.apk](file/chall.apk)
+
+*Hint1: if you really have difficult to reverse Android, I would recommend you to try jadx.*
+
+*Hint2: md5 is old and not safe. So many methods can help you to crack md5.*
+
+### (4 pt) Touhou Players Win Twice
+
+I heard that some SUSTCers are really good at playing Touhou Project (東方project) Games. As a kind of STG game, Touhou Project is very difficult and not friendly for beginners.
+
+Some one sent me this game and challenged me: if you can pass all 6 levels in `Lunatic` difficulty, you can have the flag.
+
+![img](../assets/Week 6-1.png)
+
+Each time you finish a level in Lunatic difficulty, one part of flag is given to `flag.txt` under the game directory. I have several ideas for you to break this game:
+
+1. As a real touhou player, you can play this game until you finish all levels.
+2. As a reverse engineer, you may observe the assembly codes and find how flag is given after each level.
+3. As a game trainer developer, you also can write a cheat for this game.
+4. As a social engineer, you can convince CS315's professor and TAs to tell you the flag.
+
+Good luck!
+
+[https://mega.nz/file/KtNkiZga#juXA-LhgguC8De76CTYnHjPaObvlNcyjyEDXjhkSDCs](https://mega.nz/file/KtNkiZga#juXA-LhgguC8De76CTYnHjPaObvlNcyjyEDXjhkSDCs)
+
+### (2 pt) javaisez3
+
+3rd round of your local Java rev! Note: This requires Java 11 and above to run.
+
+[javaisez3.jar](file/chall6-3.jar)
