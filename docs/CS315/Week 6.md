@@ -747,7 +747,7 @@ Try to reverse this Android apk file and find flag in it.
 
 `Flag format: CTFlearn{******}`
 
-[flag.apk](file/chall.apk)
+[flag.apk](file/chall6-1.apk)
 
 *Hint1: if you really have difficult to reverse Android, I would recommend you to try jadx.*
 
