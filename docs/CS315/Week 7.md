@@ -719,3 +719,33 @@ This tool automates **WPS/WEP/WPA-PSK** attacks. It will automatically:
   - Try to deauthenticate clients of the AP to capture a handshake
   - If PMKID or Handshake, try to bruteforce using top5000 passwords.
 
+## Exercise
+
+### (4 pt) Insecure WPA
+
+WiFi standards update so quick.
+
+Some security problems, some new attack ideas, balabala...
+
+I just don't want to update my router. Seriously, who would hack my wireless network?
+
+`flag format: flag{md5 of the WiFi password}`
+
+[capture.cap](file/chall7.md)
+
+### (4 pt) 野獣先輩（やじゅうせんぱい）'s traffic sniff
+
+My せんぱい (seniority) invited me to play games in his house.
+
+The seniority treated me with delicious black tea. But his WiFi is too slow to play video games. So, I'm going to debug this wireless network.
+
+[114514.7z](file/chall7.md)
+
+### (2 pt) wifi
+
+Wang uploaded a Godzilla Trojan to server upload-labs. The memory image, wifi traffic, and the server's traffic are saved.
+
+Wang used Trojan to run `cat /flag`, and you are given these files. Find the flag.
+
+[chall.zip](file/chall7.md)
+

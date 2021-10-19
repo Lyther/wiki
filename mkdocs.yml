@@ -65,9 +65,7 @@ nav:
   - CS315/Overview.md
   - CS315/Week 1.md
   - CS315/Week 2.md
-  - CS315/Week 2 sol.md
   - CS315/Week 3.md
-  - CS315/Week 3 sol.md
   - CS315/Week 4.md
   - CS315/Week 5.md
   - CS315/Week 6.md
@@ -79,6 +77,8 @@ nav:
   - CS315/Week 12.md
   - CS315/Week 13.md
   - CS315/Week 14.md
+  - CS315/Week 2 sol.md
+  - CS315/Week 3 sol.md
 - Paper:
   - Artificial Intelligence:
     - Paper/Artificial Intelligence/Cert-RNN Towards Certifying the Robustness of Recurrent.md
