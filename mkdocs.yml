@@ -54,6 +54,16 @@ nav:
     - Book/Network/Computer Networking.md
     - Book/Network/Practical Packet Analysis.md
     - Book/Network/TCP IP Illustrated.md
+  - Programming:
+    - C:
+      - Book/Programming/C/C Primer Plus.md
+      - Book/Programming/C/C Programming Language.md
+      - Book/Programming/C/C Traps and Pitfalls.md
+      - Book/Programming/C/Expert C Programming Deep C Secrets.md
+      - Book/Programming/C/Pointers on C.md
+    - C++:
+      - Book/Programming/C++/C++ Primer Plus.md
+      - Book/Programming/C++/C++ Primer.md
   - Security:
     - Book/Security/0day安全.md
     - Book/Security/A Guide to Kernel Exploitation.md
