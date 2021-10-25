@@ -731,7 +731,7 @@ I just don't want to update my router. Seriously, who would hack my wireless net
 
 `flag format: flag{md5 of the WiFi password}`
 
-[capture.cap](file/chall7.md)
+[capture.cap](file/chall7-1.cap)
 
 ### (4 pt) 野獣先輩（やじゅうせんぱい）'s traffic sniff
 
@@ -739,7 +739,7 @@ My せんぱい (seniority) invited me to play games in his house.
 
 The seniority treated me with delicious black tea. But his WiFi is too slow to play video games. So, I'm going to debug this wireless network.
 
-[114514.7z](file/chall7.md)
+[114514.7z](file/chall7-2.7z)
 
 ### (2 pt) wifi
 
@@ -747,5 +747,5 @@ Wang uploaded a Godzilla Trojan to server upload-labs. The memory image, wifi tr
 
 Wang used Trojan to run `cat /flag`, and you are given these files. Find the flag.
 
-[chall.zip](file/chall7.md)
+[chall.zip](https://mega.nz/file/fldgVD7Y#GQeVCPyUN86JJbRm_HPcILgWBuYhZt_ITCOY9NZHGpo)
 
