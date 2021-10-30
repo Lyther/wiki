@@ -1,6 +1,6 @@
 # 逆向工程与汇编语言
 
-# C 语言基础
+## C 语言基础
 
 - [从源代码到可执行文件](https://firmianay.gitbooks.io/ctf-all-in-one/content/doc/1.5.1_c_basic.html#从源代码到可执行文件)
 - [C 语言标准库](https://firmianay.gitbooks.io/ctf-all-in-one/content/doc/1.5.1_c_basic.html#c-语言标准库)
@@ -429,7 +429,7 @@ printf("%42c%1$n", &n);       // 首先输出41个空格，然后输出 n 的低
 
 这里我们对格式化输出函数和格式字符串有了一个详细的认识，后面的章节中我们会介绍格式化字符串漏洞的内容。
 
-# 汇编语言
+## 汇编语言
 
 - [汇编语言](https://firmianay.gitbooks.io/ctf-all-in-one/content/doc/1.5.2_assembly.html#汇编语言)
   - 3.3 X86 汇编基础
@@ -526,11 +526,11 @@ str :
        .string "hello" ;从 str 这个标签的位置开始, 声明 6 个字节的数据, 即 hello 对应的 ASCII 值, 这最后还跟有一个 nul(0) 字节.
 ```
 
-![label_s](https://github.com/MXYLR/A-note-from-a-weeb/blob/master/x86image/label_s.png)
+![label_s](../../assets/reverse1.png)
 
-![label_barr](https://github.com/MXYLR/A-note-from-a-weeb/blob/master/x86image/label_barr.png)
+![label_barr](../../assets/reverse2.png)
 
-![label_str](https://github.com/MXYLR/A-note-from-a-weeb/blob/master/x86image/label_str.png)
+![label_str](../../assets/reverse3.png)
 
 #### 3.3.3.2 内存寻址
 
@@ -613,7 +613,7 @@ mov %ebx, %eax ;将 EBX 中的值复制到 EAX 中
 mov $5, var(,1) ;将数字 5 存到字节型内存单元 " var "
 ```
 
-![mov_1](https://github.com/MXYLR/A-note-from-a-weeb/blob/master/x86image/mov_1.png)
+![mov_1](../../assets/mov_1.png)
 
 - `push` 入栈
 
@@ -904,7 +904,7 @@ jmp <label
 jmp begin ;跳转到打了 " begin " 这个标签的地方
 ```
 
-![jmp](https://github.com/MXYLR/A-note-from-a-weeb/blob/master/x86image/jmp.png)
+![jmp](../../assets/jmp.png)
 
 - `jcondition` 有条件的跳转
 
@@ -932,7 +932,7 @@ jle done
 ;如果 EAX 的值小于等于 EBX 的值, 就跳转到 " done " 标签, 否则就继续执行下一条指令.
 ```
 
-![jcondition](https://github.com/MXYLR/A-note-from-a-weeb/blob/master/x86image/jcondition.png)
+![jcondition](../../assets/jcondition.png)
 
 - `cmp` 比较指令
 
@@ -955,7 +955,7 @@ jeq loop
 ;如果 EBX 的值等于整数常量 10, 则跳转到标签 " loop " 的位置.
 ```
 
-![cmp](https://github.com/MXYLR/A-note-from-a-weeb/blob/master/x86image/cmp.png)
+![cmp](../../assets/cmp.png)
 
 - `call, ret` 子程序调用与返回
 
@@ -980,7 +980,7 @@ C 调用约定很大程度上取决于使用硬件支持的栈内存. 它基于 
 
 调用约定分为两组. 第一组规则是面向子例程的调用者 ( Caller ) 的, 第二组规则面向子例程的编写者, 即被调用者 ( Callee ). 应该强调的是, 错误地遵守这些规则会导致程序的致命错误, 因为栈将处于不一致的状态; 因此, 在你自己的子例程中实现调用约定的时候, 务必当心.
 
-![stack-convention](https://github.com/MXYLR/A-note-from-a-weeb/blob/master/stack-convention.png)
+![stack-convention](../../assets/stack-convention.png)
 
 将调用约定可视化的一种好方法是, 在子例程执行期间画一个栈内存附近的图. 图 2 描绘了在执行具有三个参数和三个局部变量的子程序期间栈的内容. 栈中描绘的单元都是 32 位内存单元, 因此这些单元的内存地址相隔 4 个字节. 第一个参数位于距基指针 8 个字节的偏移处. 在栈参数的上方 ( 和基指针下方 ), `call` 指令在这放了返回地址, 从而导致从基指针到第一个参数有额外 4 个字节的偏移量. 当 `ret` 指令用于从子程序返回时, 它将跳转到栈中的返回地址.
 
@@ -1097,7 +1097,7 @@ x86-64 (也被称为 x64 或者 AMD64) 是 64 位版本的 x86/IA32 指令集. �
 
 ------
 
-![img](https://github.com/MXYLR/A-note-from-a-weeb/blob/master/x64image/registers.png)
+![img](../../assets/registers.png)
 
 ------
 
@@ -1894,7 +1894,7 @@ op = 0 和 funct = 32 表示这是加法， 16 = `$s0` 表示第一个源操作�
 
 `mov $1,$2; movz $1,$2,$3` ( `$3` 为零则复制 `$2` 到 `$1` ) **trap** : 根据地址向量转入管态 **eret** : 从异常中返回到用户态
 
-# Linux ELF
+## Linux ELF
 
 - 一个实例
   - [elfdemo.o](https://firmianay.gitbooks.io/ctf-all-in-one/content/doc/1.5.3_elf.html#elfdemoo)
@@ -2507,7 +2507,7 @@ Relocation section '.rel.eh_frame' at offset 0x380 contains 3 entries:
 00000070  00000802 R_386_PC32        00000000   .text.__x86.get_pc_thu
 ```
 
-# 动态链接
+## 动态链接
 
 - [动态链接相关的环境变量](https://firmianay.gitbooks.io/ctf-all-in-one/content/doc/1.5.6_dynamic_link.html#动态链接相关的环境变量)
 
@@ -2580,7 +2580,7 @@ AT_EXECFN:       /usr/bin/ls
 AT_PLATFORM:     x86_64
 ```
 
-# 内存管理
+## 内存管理
 
 - [什么是内存](https://firmianay.gitbooks.io/ctf-all-in-one/content/doc/1.5.7_memory.html#什么是内存)
 - [栈与调用约定](https://firmianay.gitbooks.io/ctf-all-in-one/content/doc/1.5.7_memory.html#栈与调用约定)
@@ -3122,7 +3122,7 @@ End of assembler dump.
 
 关于 glibc 中的 malloc 实现是一个很重要的话题，我们会在后面的章节详细介绍。
 
-# glibc malloc
+## glibc malloc
 
 - [glibc](https://firmianay.gitbooks.io/ctf-all-in-one/content/doc/1.5.8_glibc_malloc.html#glibc)
 - [malloc](https://firmianay.gitbooks.io/ctf-all-in-one/content/doc/1.5.8_glibc_malloc.html#malloc)
@@ -3243,7 +3243,7 @@ _int_free()
 _int_realloc()
 ```
 
-# Linux 内核
+## Linux 内核
 
 - [编译安装](https://firmianay.gitbooks.io/ctf-all-in-one/content/doc/1.5.9_linux_kernel.html#编译安装)
 - [系统调用](https://firmianay.gitbooks.io/ctf-all-in-one/content/doc/1.5.9_linux_kernel.html#系统调用)
@@ -3493,7 +3493,7 @@ exit(0)                                 = ?
 调用printf() ==> C库中的printf() ==> C库中的write() ==> write()系统调用
 ```
 
-# patch 二进制文件
+## patch 二进制文件
 
 - [什么是 patch](https://firmianay.gitbooks.io/ctf-all-in-one/content/doc/3.2.1_patch_binary.html#什么是-patch)
 - [手工 patch](https://firmianay.gitbooks.io/ctf-all-in-one/content/doc/3.2.1_patch_binary.html#手工-patch)
@@ -3612,7 +3612,7 @@ Written 5 bytes (call sym.imp.puts) = wx e8e1feffff
 
 [patchkit](https://github.com/lunixbochs/patchkit) 可以让我们通过 Python 脚本来 patch ELF 二进制文件。
 
-# 反调试技术
+## 反调试技术
 
 - [什么是反调试](https://firmianay.gitbooks.io/ctf-all-in-one/content/doc/3.2.4_pe_anti_debugging.html#什么是反调试)
 - [反调试技术](https://firmianay.gitbooks.io/ctf-all-in-one/content/doc/3.2.4_pe_anti_debugging.html#反调试技术)
@@ -3904,7 +3904,7 @@ BOOL CheckDebug()
 
 行为占用是指在需要保护的程序中，程序自身将一些只能同时有 1 个实例的功能占为己用。比如一般情况下，一个进程只能同时被 1 个调试器调试，那么就可以设计一种模式，将程序以调试方式启动，然后利用系统的调试机制防止被其他调试器调试。
 
-# 指令混淆
+## 指令混淆
 
 - [为什么需要指令混淆](https://firmianay.gitbooks.io/ctf-all-in-one/content/doc/3.2.6_instruction_confusion.html#为什么需要指令混淆)
 - [常见的混淆方法](https://firmianay.gitbooks.io/ctf-all-in-one/content/doc/3.2.6_instruction_confusion.html#常见的混淆方法)
