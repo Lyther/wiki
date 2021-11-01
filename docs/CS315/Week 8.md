@@ -682,3 +682,40 @@ I’m looking forward to feedback and improvement suggestions.
 - [From patched to Pwnd 23](http://foofus.net/goons/percx/Xerox_hack.pdf)
 - [Thousands of printers hacked across the globe after critical flaw exposed 25](http://www.techradar.com/news/thousands-of-printers-hacked-across-the-globe-after-critical-flaw-exposed)
 - [Cross_Site_Printing 26](https://helpnetsecurity.com/dl/articles/CrossSitePrinting.pdf)
+
+## Exercise
+
+### (4 pt) GO!! Chase the free wave!
+
+[-] ~~Hackergame 2021 challenge "去吧！追寻自由的电波"~~
+
+[+] Inspired by Hackergame. Original created challenge.
+
+[an interesting story]
+
+OK now you have this mp3 file, please find the flag.
+
+[video.mp3](file/chall8-1.mp3)
+
+### (4 pt) Mechanical Keyboard
+
+Have you faced the situation, that your roommate is playing games so late and the sound of mechanical keyboard is super noisy?
+
+Meanwhile, especially you have midterm exam the next day.
+
+You decide to record this sound and try to find some interesting key taps from your roommate.
+
+(Account password, secret chat with girlfriend, or pxxxhub keywords...)
+
+[dist.zip](file/chall8-2.zip)
+
+### (2 pt) Free USB
+
+A stranger has left his USB on my desk.
+
+[plug in...]
+
+OMG my mouse is out of control!
+
+[usb.pcapng](file/chall8-3.pcapng)
+
