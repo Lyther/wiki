@@ -87,13 +87,7 @@ nav:
   - CS315/Week 12.md
   - CS315/Week 13.md
   - CS315/Week 14.md
-  - CS315/file/Week 1 sol.pdf
-  - CS315/file/Week 2 sol.pdf
-  - CS315/file/Week 3 sol.pdf
-  - CS315/file/Week 4 sol.pdf
-  - CS315/file/Week 5 sol.pdf
-  - CS315/file/Week 6 sol.pdf
-  - CS315/file/Week 7 sol.pdf
+  - CS315/Exercise Solutions.md
 - Paper:
   - Artificial Intelligence:
     - Paper/Artificial Intelligence/Cert-RNN Towards Certifying the Robustness of Recurrent.md
