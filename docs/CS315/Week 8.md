@@ -697,6 +697,12 @@ OK now you have this mp3 file, please find the flag.
 
 [video.mp3](file/chall8-1.mp3)
 
+*Hint1: it's too fast to understand!*
+
+*Hint2: if I can let the time move backwards, this might be easier.*
+
+*Hint3: some online OCR might be helpful. For example, [https://speech-to-text-demo.ng.bluemix.net/](https://speech-to-text-demo.ng.bluemix.net/)*
+
 ### (4 pt) Mechanical Keyboard
 
 Have you faced the situation, that your roommate is playing games so late and the sound of mechanical keyboard is super noisy?
@@ -709,6 +715,75 @@ You decide to record this sound and try to find some interesting key taps from y
 
 [dist.zip](file/chall8-2.zip)
 
+*Hint1: the key taps only contain lower case characters and spaces.*
+
+*Hint2: keyboard sniffing paper: [https://www.davidsalomon.name/CompSec/auxiliary/KybdEmanation.pdf](https://www.davidsalomon.name/CompSec/auxiliary/KybdEmanation.pdf)*
+
+*Hint3: online key tap detector: [https://keytap2.ggerganov.com/](https://keytap2.ggerganov.com/)*
+
+*Hint4: another (faster) method: recognize key tap sound, generate a substitution cipher and break.*
+
+*Hint5: flag only contains lower case characters and underline (replace all spaces to underlines).*
+
+Example program to generate key sound average:
+
+```python
+from scipy.io import wavfile
+samplerate, data = wavfile.read('./output.wav')
+
+i = 0
+countsilent = 0
+samplefound = 0
+
+avg = []
+start = 0
+end = 0
+avg.append([0])
+
+for sample in data:
+    i+=1	
+    if(sample[1]<100):
+        countsilent += 1
+    if(countsilent > 10000 and sample[1]>100):
+        countsilent = 0
+        #print(str(i)+": sample found")
+        start = i
+        samplefound = 1
+    if(countsilent > 8000 and samplefound==1):
+        samplefound = 0
+        #print(str(i)+": sample ended")
+        end = i
+        avg[len(avg)-1]=avg[len(avg)-1]/(end-start)
+        print("avg: "+str(avg[len(avg)-1]))
+        avg.append([0])
+    if (samplefound == 1):
+        avg[len(avg)-1] += sample[1]
+```
+
+Example program to map sound to character:
+
+```python
+alphabet = "abcdefghijklmnopqr stuvwxyz"
+avg = {}
+
+i=0
+
+res=""
+
+with open("avg") as file:
+    for line in file:
+        value = line.rstrip()[6:-1]
+        #print(value)
+        if str(value) not in avg:
+            avg[str(value)]=alphabet[i]
+            i+=1
+        res+=avg[str(value)]
+print(avg)
+print(res)
+```
+
+Online substitution cipher solver: [https://www.boxentriq.com/code-breaking/cryptogram](https://www.boxentriq.com/code-breaking/cryptogram)
+
 ### (2 pt) Free USB
 
 A stranger has left his USB on my desk.
@@ -718,4 +793,12 @@ A stranger has left his USB on my desk.
 OMG my mouse is out of control!
 
 [usb.pcapng](file/chall8-3.pcapng)
+
+*Hint1: packet is a USB capture, used for Logitech Optical Mouse.*
+
+*Hint2: IRP ID is the only part changes in capture, which represents the mouse move.*
+
+*Hint3: Gnuplot is an application to simulate mouse clicks.*
+
+*Hint4: the first word in flag is "tHE".*
 
