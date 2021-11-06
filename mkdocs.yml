@@ -115,6 +115,7 @@ nav:
     - Tool/Reverse Engineering/ExeInfoPE.md
 - Tutorial:
   - Material:
+    - Tutorial/Material/Binary Exploitation.md
     - Tutorial/Material/Cryptography.md
     - Tutorial/Material/Network.md
     - Tutorial/Material/OS.md
