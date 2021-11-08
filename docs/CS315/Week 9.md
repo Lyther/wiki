@@ -156,7 +156,7 @@ Found this pcap of my ex's network traffic. I knew they're streaming video but I
 
 [video.zip](https://mega.nz/file/ug80mahR#ip4FiWbLYBN7DHeTO7ikBJEOUDYpM6oQwqdRTXcnubY)
 
-### (4 pt) Archaeology
+### (2 pt) Archaeology
 
 Windows XP is a great OS. When cleaning my Windows XP laptop, something unfortunate happened...
 
