@@ -132,3 +132,37 @@ The more common they are, the more probable the AV will detect it.
 - **[macphish](https://github.com/cldrn/macphish)**
 - [**Mythic Macro Generator**](https://github.com/cedowens/Mythic-Macro-Generator)
 
+## Exercise
+
+### (4 pt) Sanity Check
+
+Got some reviews that our challenges are so hard. Frank becomes so sad because there's no difficult challenges this week. 
+
+We even have a sanity check for the first challenge.
+
+`flag{1_l0v3_54n17y_ch3ck_ch4ll5}`
+
+*Hint1: the flag is in question description.*
+
+*Hint2: the flag is in plain text.*
+
+### (4 pt) VidCap
+
+Found this pcap of my ex's network traffic. I knew they're streaming video but I can't extract it. Can you help me ?
+
+*Hint1: this challenge is from COMPFEST 13.*
+
+*Hint2: successfully extract files in the zip leads to the checkpoint.*
+
+[video.zip](https://mega.nz/file/ug80mahR#ip4FiWbLYBN7DHeTO7ikBJEOUDYpM6oQwqdRTXcnubY)
+
+### (4 pt) Archaeology
+
+Windows XP is a great OS. When cleaning my Windows XP laptop, something unfortunate happened...
+
+*Hint1: after you found the docx, use XOR brute. This isn't a macro forensics.*
+
+[Archaeology.zip from MEGA](https://mega.nz/file/i0823AxL#28rdjtrcIE6bSF8-6Vjq9VCnESjt4QiWw-cNQt9eBys)
+
+[Archaeology.zip from Baidu Disk](https://pan.baidu.com/s/1ZuD_pj_6ejT5cW_roPscBg) with password `l720`
+
