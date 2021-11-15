@@ -1472,6 +1472,38 @@ Download: [https://mega.nz/file/ix9VnA7Y#7LM1LXBta_kAeNrajXGkQhmwfbr5fIaQHykkWEP
 
 Mirror: [https://pan.baidu.com/s/1D-YEa6cr3rcWXv49HgZtSw](https://pan.baidu.com/s/1D-YEa6cr3rcWXv49HgZtSw) (Code: 1337)
 
+#### Setup
+
+Environment setup should use `VirtualBox` history version (VirtualBox 6.1.28 has a bug with Hyper-V, I used VirtualBox 6.0.24 and worked properly). You should setup `Network` as the following:
+
+![img](../assets/Week 10-1.png)
+
+The virtual image should enter the following promption:
+
+```bash
+Debian GNU/Linux 10 hacksudo fog tty1
+eth0: 192.168.xx.xxx
+hacksudo login: _
+```
+
+The second line is the ip address of virtual machine.
+
+Open your web browser, you can find this page in VM's ip address:
+
+![img](../assets/Week 10-5.png)
+
+You are done with configuration, now you can hack the machine and solve the challenges!
+
+**If the ip address hasn't shown up, you can find it as below:**
+
+Open you terminal (powershell.exe in Windows), and use `ipconfig /all` to find your `Host-only NET` ip address.
+
+![img](../assets/Week 10-3.png)
+
+Use any tool to scan the ip `192.168.xx.0/24` and you can find the virtual machine ip address. Otherwise, you can also use `arp -a` to find your `Host-only Network` address, and usually VM's ip address is followed.
+
+![img](../assets/Week 10-4.png)
+
 #### (1 pt) Port scan
 
 After the port scan, you should find several services running in the box. What's the version of the `mysql` service?
