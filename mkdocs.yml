@@ -64,6 +64,10 @@ nav:
     - C++:
       - Book/Programming/C++/C++ Primer Plus.md
       - Book/Programming/C++/C++ Primer.md
+  - PWN:
+    - Book/PWN/Practical Malware Analysis.md
+    - Book/PWN/加密与解密.md
+    - Book/PWN/逆向工程核心原理.md
   - Security:
     - Book/Security/0day安全.md
     - Book/Security/A Guide to Kernel Exploitation.md
@@ -109,6 +113,12 @@ nav:
 - Tool:
   - Cryptography:
     - Tool/Cryptography/SageMathCell.md
+  - PWN:
+    - Tool/PWN/IDA.md
+    - Tool/PWN/PEiD.md
+    - Tool/PWN/WinDbg.md
+    - Tool/PWN/WinHex.md
+    - Tool/PWN/x64dbg.md
   - Reverse Engineering:
     - Tool/Reverse Engineering/Bytecode Viewer.md
     - Tool/Reverse Engineering/DiE.md
