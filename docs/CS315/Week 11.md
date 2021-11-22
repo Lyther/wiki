@@ -276,3 +276,48 @@ From the [RsaCtfTool README](https://github.com/Ganapati/RsaCtfTool)
 > - Pollards p-1 for relatively smooth numbers
 > - Mersenne primes factorization
 
+## Exercise
+
+### (4 pt) Pseudo Random Primes
+
+A wiser once said: "every number can be factored to the sum of primes."
+
+Try to factor the number and find me some flag.
+
+*Checkpoint: what's the first 20 numbers in f(pow(10,6))? Find those numbers and gain 2 points.*
+
+*Hint: try to convert enc into the binary.*
+
+[main.py](file/chall11-1.py)
+
+### (4 pt) GCD Oracle
+
+Some oracle can get you LSB and help solve the challenge. Now break the number N with the GCD Oracle.
+
+**Byte**
+
+The number N has 8 bits at most. Oracle can give you 10 times of response and then you should give the value of N.
+
+Solving this gives you the checkpoint for 2 points. But you can directly solve the second question and get 4 points.
+
+`nc ali.infury.org 10008`
+
+**Full**
+
+The number N has 512 bits at most. If you solve this, don't need to solve the previous question.
+
+*Hint: you may need a script to solve the second question.*
+
+`nc ali.infury.org 10007`
+
+[main.py](file/chall11-2.py)
+
+### (2 pt) RSA in the triangle
+
+A modern public key encryption requires a key pair of 512 bytes usually. Sometimes I just confused about the private key. Therefore, I designed a "super secure" method to find me a private key.
+
+*Hint: find a faster way to calculate the triangle.*
+
+[main.py](file/chall11-3.py)
+
+[challenge.txt](file/chall11-3.txt)
