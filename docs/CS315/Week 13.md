@@ -264,7 +264,7 @@ from pwn import *
 cyclic_find(0x6161616b)
 ```
 
-[![img](https://github.com/carlospolop/hacktricks/raw/master/.gitbook/assets/image%20%28188%29.png)](https://github.com/carlospolop/hacktricks/blob/master/.gitbook/assets/image (188).png)
+![img](https://github.com/carlospolop/hacktricks/raw/master/.gitbook/assets/image%20%28188%29.png)
 
 After finding the offset (in this case 40) change the OFFSET variable inside the template using that value.
 `OFFSET = "A" * 40`
@@ -336,7 +336,7 @@ Finally, main function is called again so we can exploit the overflow again.
 
 This way we have tricked puts function to print out the address in memory of the function puts (which is inside libc library). Now that we have that address we can search which libc version is being used.
 
-[![img](https://github.com/carlospolop/hacktricks/raw/master/.gitbook/assets/image%20%2881%29.png)](https://github.com/carlospolop/hacktricks/blob/master/.gitbook/assets/image (81).png)
+![img](https://github.com/carlospolop/hacktricks/raw/master/.gitbook/assets/image%20%2881%29.png)
 
 As we are exploiting some local binary it is not needed to figure out which version of libc is being used (just find the library in `/lib/x86_64-linux-gnu/libc.so.6`).
 But, in a remote exploit case I will explain here how can you find it:
@@ -346,7 +346,7 @@ But, in a remote exploit case I will explain here how can you find it:
 You can search which library is being used in the web page: https://libc.blukat.me/
 It will also allow you to download the discovered version of libc
 
-[![img](https://github.com/carlospolop/hacktricks/raw/master/.gitbook/assets/image%20%2816%29.png)](https://github.com/carlospolop/hacktricks/blob/master/.gitbook/assets/image (16).png)
+![img](https://github.com/carlospolop/hacktricks/raw/master/.gitbook/assets/image%20%2816%29.png)
 
 #### 3.2- Searching for libc version (2)
 
@@ -438,7 +438,7 @@ Finally, the address of exit function is called so the process exists nicely and
 
 This way the exploit will execute a */bin/sh* shell.
 
-[![img](https://github.com/carlospolop/hacktricks/raw/master/.gitbook/assets/image%20%28255%29.png)](https://github.com/carlospolop/hacktricks/blob/master/.gitbook/assets/image (255).png)
+![img](https://github.com/carlospolop/hacktricks/raw/master/.gitbook/assets/image%20%28255%29.png)
 
 ### 4(2)- Using ONE_GADGET
 
@@ -524,7 +524,7 @@ If the process is creating **children** every time you talk with it (network ser
 
 Here you can find **exactly where is the libc loaded** inside the process and **where is going to be loaded** for every children of the process.
 
-[![img](https://github.com/carlospolop/hacktricks/raw/master/.gitbook/assets/image%20%2899%29.png)](https://github.com/carlospolop/hacktricks/blob/master/.gitbook/assets/image (99).png)
+![img](https://github.com/carlospolop/hacktricks/raw/master/.gitbook/assets/image%20%2899%29.png)
 
 In this case it is loaded in **0xb75dc000** (This will be the base address of libc)
 
@@ -562,5 +562,94 @@ for off in range(0xb7000000, 0xb8000000, 0x1000):
     payload = 'A'*0x20010 + p
     c.send(payload)
     c.interactive() #?
+```
+
+## Exercise
+
+### (5 pt) ret2win
+
+*Challenge is from https://ropemporium.com/challenge/ret2win.html*
+
+*If you are interested in the ROP exploit, please take a look at ROP Emporium.*
+
+Locate a method that you want to call within the binary. Call it by overwriting a saved return address on the stack.
+
+`nc 103.102.44.218 10001`
+
+Download binary x86_64 ELF: https://ropemporium.com/binary/ret2win.zip
+
+*Hint: check the LET'S DO THIS part of original challenge.*
+
+### (5 pt) AWD prepare
+
+We know that we are going to have a AWD CTF next week. Make sure you have access to the test AWD environment. Check the demo challenge and try to hack it to get a flag.
+
+Browser the page `http://103.102.44.218:23333/` in your browser, login with some test account below:
+
+```
+Account：TEST1 Password：YpkyiQDwGHLjoOk3
+Account：TEST2 Password：pQXBpiFPlNBB6TUt
+Account：TEST3 Password：cUMvgNGCb64E4uLv
+Account：TEST4 Password：RQGqtTfK6601c7qY
+Account：TEST5 Password：SVtm4Pd3vtAaeQvZ
+Account：TEST6 Password：lNTrEnx586taV8Ow
+Account：TEST7 Password：wXxFkOsGcpb1XsIo
+Account：TEST8 Password：AhcNEZpaBWAm3Jst
+Account：TEST9 Password：lxqzbu9tjkshQ0oB
+Account：TEST10 Password：bRewQknqeY3yrZCc
+```
+
+The flag file is located in `/var/flag/flag.txt`. The application files are under `/app`. You have the permission to read and modify the application files.
+
+During the AWD CTF, you can only access `ctf` user. Here's the account information:
+
+```
+IP address: 103.102.44.218
+Service port: 20000-20009
+SSH port: 30000-30009
+Username: ctf
+Password: 123456
+```
+
+Further, only for testing, you have the root password:
+
+```
+Username: root
+Password: rootpassword
+```
+
+Please **DO NOT** change the password of the users during testing.
+
+**In this challenge, you should post those screenshots in your writeup:**
+
+1. The screenshot of the port 2000x: make sure the PHP code is shown.
+
+   ​	In the browser: `http://103.102.44.218:2000x/`
+
+2. The screenshot of the successful login to port 3000x: make sure you can access the server from user `ctf`.
+
+   ​	In the terminal: `ssh ctf@103.102.44.218 -p 3000x`
+
+3. The screenshot of the flag.txt content.
+
+   ​	In the ssh session: `cat /var/flag/flag.txt`
+
+Hope you enjoy the AWD.
+
+```
+Q&As:
+
+Q: How to modify the file on the server?
+A: Use scp command to transfer files through network. Download the file to you local machine and modify, after that then push the file to the server.
+For example:
+scp -P 30000 ctf@103.102.44.218:/app/index.php ./
+<modify>
+scp -P 30000 ./index.php ctf@103.102.44.218:/app/index.php
+
+Q: Can I install software on the server (vim for example)?
+A: You can't install software through apt. But if you have other methods, they're allowed.
+
+Q: Can I delete flag.txt after I read it?
+A: You can't. Only root can modify flag.txt.
 ```
 
