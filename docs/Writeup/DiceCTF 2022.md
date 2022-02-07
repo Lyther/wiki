@@ -443,7 +443,7 @@ There's usually a pointer to `link_map` on the stack somewhere, so just write so
 
 The offset to `link_map` varies a little bit but this should cover most of the possibilities.
 
-```python=
+```python
 def sice(k):
   print(k)
   try:
@@ -661,7 +661,7 @@ print(f)
 
 This challenge gives a pastebin where notes are accessed by `id` and `token`. The tokens are generated as follows:
 
-```javascript=24
+```javascript
   generateToken(id) {
     return crypto
       .createHmac('sha256', this.secret)
@@ -672,7 +672,7 @@ This challenge gives a pastebin where notes are accessed by `id` and `token`. Th
 
 This looks okay, as long as the secret is chosen securely. Let's take a look at where that comes from:
 
-```javascript=4
+```javascript
   constructor() {
     this.notes = [];
     this.secret = `secret-${crypto.randomUUID}`;
@@ -770,7 +770,7 @@ We can easily exfiltrate despite the CSP by setting `window.location`
 
 ### rev/typed
 Here's the original version of the code before macro expansion (and with the flag added in):
-```rust=
+```rust
 #![recursion_limit = "10000"]
 // #![allow(dead_code, unused_macros)]
 
@@ -1053,3 +1053,4 @@ fn main() {
 }
 ```
 It essentially creates a lisp-like language, and a list of 60 constraints. The constraints are of the form `(flag[i] op flag[j]) cmp x`, where `op` is addition, subtraction, or multiplication, and `cmp` is either equality or inequality. Every 3rd constraint is inequality and the rest are equality.
+
