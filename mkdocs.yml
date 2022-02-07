@@ -155,6 +155,8 @@ nav:
     - Website/Tutorial/linux.md
     - Website/Tutorial/python.md
 - Writeup:
+  - Writeup/index.md
+  - Writeup/DiceCTF 2022.md
   - Binary Exploitation:
     - Writeup/Binary Exploitation/beginner-generic-pwn-number-0.md
     - Writeup/Binary Exploitation/collision.md
