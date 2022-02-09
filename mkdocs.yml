@@ -15,14 +15,7 @@ theme:
   palette:
     primary: red
     accent: orange
-    - scheme: default
-      toggle:
-        icon: material/toggle-switch-off-outline 
-        name: dark mode
-    - scheme: slate 
-      toggle:
-        icon: material/toggle-switch
-        name: light mode
+    scheme: slate
   icon:
     logo: logo
   features:
