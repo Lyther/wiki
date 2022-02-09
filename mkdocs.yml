@@ -9,13 +9,20 @@ theme:
   name: material
   language: en
   font:
-    text: Roboto
-    code: Roboto Mono
+    text: Oswald
+    code: Consolas
   favicon: assets/favicon.ico
   palette:
-    primary: white
-    accent: cyan
-    scheme: preference
+    primary: red
+    accent: orange
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline 
+        name: dark mode
+    - scheme: slate 
+      toggle:
+        icon: material/toggle-switch
+        name: light mode
   icon:
     logo: logo
   features:
