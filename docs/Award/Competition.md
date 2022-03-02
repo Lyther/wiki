@@ -13,4 +13,5 @@ This file is an archive of all the competitions we joined. Both great ones and n
 | DefCamp 2022      | 11-13 February, 2022 | #194 |
 | VU CYBERTHON 2022 | 18 Feb 2022          | #78  |
 | TQLCTF 2022       | 2022-02-19           | #37  |
+| CODEGATE 2022     | 26 Feb 2022          | #29  |
 
