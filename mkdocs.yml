@@ -11,7 +11,7 @@ theme:
   font:
     text: Oswald
     code: Consolas
-  favicon: assets/favicon.icon
+  favicon: assets/favicon.ico
   palette:
     primary: red
     accent: orange
