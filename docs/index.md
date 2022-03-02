@@ -8,8 +8,6 @@ Visit our lab website: [COMPASS](http://compass.sustech.edu.cn/)
 
 ## Members
 
-![img](assets/Members.jpg)
-
 * 肖兆祺 11810517
   * 邹泽桦 11810224
   * 孙涛 11810206

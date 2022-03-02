@@ -11,7 +11,7 @@ theme:
   font:
     text: Oswald
     code: Consolas
-  favicon: assets/favicon.ico
+  favicon: assets/icon.png
   palette:
     primary: red
     accent: orange
@@ -32,6 +32,8 @@ theme:
 nav:
 - Abstract:
   - index.md
+  - member.md
+  - related.md
 - Book:
   - Computer and System:
     - Book/Computer and System/Android Dalvik虚拟机结构及机制剖析.md
