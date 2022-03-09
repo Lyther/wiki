@@ -23,6 +23,8 @@ If you want to participate CTFs or join us, please feel free to contact us if yo
 * You know the basics of computer science or mathematics.
 * You will enjoy your travel toward CTFs.
 
+If you are interested, please send to Email address: liz33#mail.sustech.edu.cn
+
 ## Contribute to the Wiki
 
 It's highly recommended to pull requests about new content and anything you find useful for Wiki.
