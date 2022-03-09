@@ -14,4 +14,26 @@ This file is an archive of all the competitions we joined. Both great ones and n
 | VU CYBERTHON 2022 | 18 Feb 2022          | #78  |
 | TQLCTF 2022       | 2022-02-19           | #37  |
 | CODEGATE 2022     | 26 Feb 2022          | #29  |
+| ECTF 2022         | 5th March 3:00 PM    | #31  |
 
+### KnightCTF 2022
+
+![img](assets/KnightCTF.png)
+
+### VU CYBERTHON 2022
+
+![img](assets/VU_CTF_1.png)
+
+![img](assets/VU_CTF_2.png)
+
+### TQLCTF 2022
+
+![img](assets/TQL_CTF_1.png)
+
+### CODEGATE 2022
+
+![img](assets/CODEGATE_1.png)
+
+### ECTF 2022
+
+![img](assets/ECTF_1.png)

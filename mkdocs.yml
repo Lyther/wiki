@@ -33,7 +33,12 @@ nav:
 - Abstract:
   - index.md
   - member.md
+  - award.md
   - related.md
+  - Meeting:
+    - Meeting/CTF Week Meeting 2022-02-17.md
+    - Meeting/CTF Week Meeting 2022-02-24.md
+    - Meeting/CTF Week Meeting 2022-03-03.md
 - Book:
   - Computer and System:
     - Book/Computer and System/Android Dalvik虚拟机结构及机制剖析.md
@@ -137,9 +142,6 @@ nav:
     - Tutorial/Schedule/Summer.md
     - Tutorial/Schedule/2021Fall.md
     - Tutorial/Schedule/2022Spring.md
-  - Meeting:
-    - Tutorial/Meeting/CTF Week Meeting 2022-02-17.md
-    - Tutorial/Meeting/CTF Week Meeting 2022-02-24.md
 - Website:
   - Forum:
     - Website/Forum/kanxue.md
