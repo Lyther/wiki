@@ -62,9 +62,9 @@ Participants will get access to the cyber security tournament system and they wi
 
 ## Note
 
-* SRC平台似乎限制了校内访问？
-* 寻找外部的协助与大佬。
-* 课本选择一些经典的题目作为展示。
-* 课本项目的（会议）平台与项目支持。
-* wiki的维护：下周六（24-26返校）。
+* [x] SRC平台似乎限制了校内访问？
+* [ ] 寻找外部的协助与大佬。
+* [ ] 课本选择一些经典的题目作为展示。
+* [ ] 课本项目的（会议）平台与项目支持。
+* [ ] wiki的维护：下周六（24-26返校）。
 

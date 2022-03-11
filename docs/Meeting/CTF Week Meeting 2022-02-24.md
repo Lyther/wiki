@@ -55,9 +55,9 @@ Rank 78
 
 As an exercise competition got in the top 100.
 
-![1](../../assets/VU_CTF_1.png)
+![1](../assets/VU_CTF_1.png)
 
-![2](../../assets/VU_CTF_2.png)
+![2](../assets/VU_CTF_2.png)
 
 ### TQL CTF 2022
 
@@ -65,7 +65,7 @@ Rank 37
 
 Doesn't have enough participants. Maybe better.
 
-![3](../../assets/TQL_CTF_1.png)
+![3](../assets/TQL_CTF_1.png)
 
 ## First Offline Activity
 
@@ -110,11 +110,11 @@ By SUSr. The name is very likely SUSTC. So, maybe you are interested.
 
 ## Note
 
-1. 题目平台环境挂了，考虑维护和docker-compose
+- [ ] 题目平台环境挂了，考虑维护和docker-compose
 
    A. 服务器环境自动启动
 
    B. SaaS用户启动方案
 
-2. CTF Book动态更新，整理章节目录和材料
-3. 跟进Black Hat Submission的信息
+- [ ] CTF Book动态更新，整理章节目录和材料
+- [ ] 跟进Black Hat Submission的信息

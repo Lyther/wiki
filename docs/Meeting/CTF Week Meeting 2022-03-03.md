@@ -11,7 +11,7 @@
 
 We have achieved rank 29.
 
-![CODEGATE 2022](../../assets/codegate_1.png)
+![CODEGATE 2022](../assets/codegate_1.png)
 
 The rank is in the top tier 2 list. The top 20 teams are very famous `organizers`, `r3kpig`, `DiceGang`, `Oops`, and `perfect blue`. Our rank is along with `Super Guesser`. In the meanwhile, we have won `Redbud` for continuous 3 times.
 
@@ -61,7 +61,7 @@ https://www.qianxin.com/DCICHF/2022
 
 ## Note
 
-1. 护网行动申请相关，进行联络。
-2. Wiki的联络方式添加，周四会议的link链接。
-3. Wiki的meeting notes放在更显眼的地方。
-4. 对外宣传的工作。
+- [ ] 护网行动申请相关，进行联络。
+- [x] Wiki的联络方式添加，周四会议的link链接。
+- [x] Wiki的meeting notes放在更显眼的地方。
+- [ ] 对外宣传的工作。
