@@ -139,5 +139,5 @@ I hope COVID-19 will end soon.
 
 ## Note
 
-- [ ] 进展立即反馈，周会进行总结
-- [ ] notion模板的改动，比赛负责人
+- [x] 进展立即反馈，周会进行总结
+- [x] notion模板的改动，比赛负责人
