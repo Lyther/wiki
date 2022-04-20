@@ -1,4 +1,4 @@
-# CTF Week Meeting 2022-03-24
+# CTF Week Meeting 2022-03-31
 
 1. Competitions schedule.
 1. Writeups update.
@@ -52,4 +52,4 @@ Now I've designed a docker-compose to run environments. 招新 challenges are wo
 
 ## Note
 
-- [ ] 与Frank讨论CTFd-whale搭建
+- [x] 与Frank讨论CTFd-whale搭建
