@@ -126,12 +126,15 @@ nav:
 - Tool:
   - Cryptography:
     - Tool/Cryptography/SageMathCell.md
+    - Tool/Cryptography/RSAWiener.md
+    - Tool/Cryptography/hashcat.md
   - PWN:
     - Tool/PWN/IDA.md
     - Tool/PWN/PEiD.md
     - Tool/PWN/WinDbg.md
     - Tool/PWN/WinHex.md
     - Tool/PWN/x64dbg.md
+    - Tool/PWN/Zeratool.md
   - Reverse Engineering:
     - Tool/Reverse Engineering/Bytecode Viewer.md
     - Tool/Reverse Engineering/DiE.md
@@ -139,6 +142,19 @@ nav:
   - Miscellaneous:
     - Tool/Miscellaneous/bochs.md
     - Tool/Miscellaneous/qemu.md
+    - Tool/Miscellaneous/AZPR.md
+    - Tool/Miscellaneous/Velato.md
+  - Forensics:
+    - Tool/Forensics/BlindWatermark.md
+    - Tool/Forensics/ProcessMonitor.md
+    - Tool/Forensics/stegosaurus.md
+    - Tool/Forensics/Tracewrangler.md
+    - Tool/Forensics/Wireshark.md
+    - Tool/Forensics/volatility.md
+    - Tool/Forensics/zsteg.md
+    - Tool/Forensics/exiftool.md
+    - Tool/Forensics/foremost.md
+    - Tool/Forensics/stegsolve.md
 - Tutorial:
   - Material:
     - Tutorial/Material/Binary Exploitation.md
