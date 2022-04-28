@@ -1,5 +1,7 @@
 # Week10 PWN: Privilege Escalation
 
+According to @Hacktricks: https://book.hacktricks.xyz/
+
 ## System Information
 
 ### OS info

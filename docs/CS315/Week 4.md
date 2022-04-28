@@ -1,5 +1,7 @@
 # Week4 WEB: Information Discovery
 
+According to @d00mfist: https://d00mfist.gitbooks.io/ctf/content/
+
 ## Information Discovery
 
 So once you have decided on a target you want to start your recon-process.

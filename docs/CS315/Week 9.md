@@ -1,5 +1,7 @@
 # Week9 MISC: Social Engineering
 
+According to @Hacktricks: https://book.hacktricks.xyz/
+
 ## Clone a Website
 
 For a phishing assessment sometimes it might be useful to completely **clone a website**.

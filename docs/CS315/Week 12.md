@@ -1,5 +1,7 @@
 # Week12 WEB: Attacking Websites
 
+According to @Hacktricks: https://book.hacktricks.xyz/
+
 In every pentest web there is several hidden and obvious places that might be vulnerable. This post is meant to be a checklist to confirm that you have searched vulnerabilities in all the possible places.
 
 ## Top 10 vulnerabilities

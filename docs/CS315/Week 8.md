@@ -1,5 +1,7 @@
 # Week8 MISC: Physical Attacks
 
+According to @Hacktricks: https://book.hacktricks.xyz/
+
 ## BIOS password
 
 ### The battery

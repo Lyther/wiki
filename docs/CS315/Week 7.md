@@ -1,5 +1,7 @@
 # Week7 WLAN: Attacking WiFi
 
+According to @Hacktricks: https://book.hacktricks.xyz/
+
 ## Wifi basic commands
 
 ```
