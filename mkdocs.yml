@@ -52,6 +52,8 @@ nav:
     - CTF/abstract.md
     - CTF/structure.md
 - Book:
+  - Book/CTF竞赛入门指南.md
+  - Book/从0到1：CTFer成长之路.md
   - Computer and System:
     - Book/Computer and System/Android Dalvik虚拟机结构及机制剖析.md
     - Book/Computer and System/Android Internals.md
@@ -162,6 +164,7 @@ nav:
     - Tool/Forensics/foremost.md
     - Tool/Forensics/stegsolve.md
 - Tutorial:
+  - Tutorial/校队竞赛训练模式.md
   - Material:
     - Tutorial/Material/Binary Exploitation.md
     - Tutorial/Material/Cryptography.md
