@@ -3,7 +3,7 @@ site_url: https://wiki.compass.college
 repo_name: lyther/wiki
 repo_url: https://github.com/lyther/wiki
 site_description: Wiki project for COMPASS CTF, for usage of information sharing, collection, and reference. The contents are contributed by the students of COMPASS CTF team.
-copyright: COMPASS & SUSTech 2021 CTF team
+copyright: COMPASS & SUSTech 2022 CTF team
 
 theme:
   name: material
@@ -48,6 +48,8 @@ nav:
     - Meeting/CTF Week Meeting 2022-04-21.md
     - Meeting/CTF Week Meeting 2022-04-28.md
     - Meeting/CTF Week Meeting 2022-05-05.md
+    - Meeting/CTF Week Meeting 2022-05-13.md
+    - Meeting/CTF Week Meeting 2022-05-19.md
   - CTF:
     - CTF/abstract.md
     - CTF/structure.md
