@@ -15,6 +15,16 @@ This file is an archive of all the competitions we joined. Both great ones and n
 | TQLCTF 2022       | 2022-02-19           | #37  |
 | CODEGATE 2022     | 26 Feb 2022          | #29  |
 | ECTF 2022         | 5th March 3:00 PM    | #31  |
+| 虎符CTF 2022      | 5th March 3:00 PM    | #36  |
+| 广东省赛 2022      | 5th March 3:00 PM    | #9   |
+
+### 广东省赛 2022
+
+![img](assets/GDSS2022.png)
+
+### 虎符CTF 2022
+
+![img](assets/HFCTF2022.png)
 
 ### KnightCTF 2022
 
