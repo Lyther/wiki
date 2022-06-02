@@ -135,6 +135,14 @@ nav:
   - Reverse Engineering:
     - Paper/Reverse Engineering/Search-based Approaches for Local Black-Box Code Deobfuscation Understand, Improve and Mitigate.md
 - Tool:
+  - AWD:
+    - Tool/AWD/AoiAWD.md
+    - Tool/AWD/Auto-AWD.md
+    - Tool/AWD/AWD_auto_attack.md
+    - Tool/AWD/awd-submit-flag.md
+    - Tool/AWD/awd-watchbird.md
+    - Tool/AWD/flower.md
+    - Tool/AWD/ShellCat.md
   - Cryptography:
     - Tool/Cryptography/SageMathCell.md
     - Tool/Cryptography/RSAWiener.md
@@ -166,19 +174,20 @@ nav:
     - Tool/Forensics/exiftool.md
     - Tool/Forensics/foremost.md
     - Tool/Forensics/stegsolve.md
-- Tutorial:
-  - Tutorial/校队竞赛训练模式.md
+- Training:
+  - Training/校队竞赛训练模式.md
   - Material:
-    - Tutorial/Material/Binary Exploitation.md
-    - Tutorial/Material/Cryptography.md
-    - Tutorial/Material/Network.md
-    - Tutorial/Material/OS.md
-    - Tutorial/Material/Penetration.md
-    - Tutorial/Material/Reverse.md
+    - Training/Material/Binary Exploitation.md
+    - Training/Material/Cryptography.md
+    - Training/Material/Network.md
+    - Training/Material/OS.md
+    - Training/Material/Penetration.md
+    - Training/Material/Reverse.md
   - Schedule:
-    - Tutorial/Schedule/Summer.md
-    - Tutorial/Schedule/2021Fall.md
-    - Tutorial/Schedule/2022Spring.md
+    - Training/Schedule/2021Summer.md
+    - Training/Schedule/2021Fall.md
+    - Training/Schedule/2022Spring.md
+    - Training/Schedule/2022Summer.md
 - Website:
   - Forum:
     - Website/Forum/kanxue.md
