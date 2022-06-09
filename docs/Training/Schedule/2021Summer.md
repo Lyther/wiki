@@ -1,4 +1,4 @@
-# Summer Schedule 2021
+# 2021 Summer Schedule
 
 The summer of 2021 is focusing on the beginners and our new members of team. Summer schedule is from basics of CTF to introduction to all the categories and basic knowledge.
 
