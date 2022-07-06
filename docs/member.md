@@ -4,32 +4,34 @@ From the spring of 2021, we start to form the COMPASS CTF team. Our passion team
 
 Let's walk together and achieve further.
 
-![李照](assets/李照.png)
+![李照](assets/11.png)
 
-![肖兆祺](assets/肖兆祺.png)
+![邬一帆](assets/1.png)
 
-![邬一帆](assets/邬一帆.png)
+![朱弘](assets/12.png)
 
-![邹泽桦](assets/邹泽桦.png)
+![严文谦](assets/7.png)
 
-![孙涛](assets/孙涛.png)
+![朱嘉楠](assets/6.png)
 
-![朱弘](assets/朱弘.png)
+![巫晓](assets/8.png)
 
-![周翰然](assets/周翰然.png)
+![陈梓涵](assets/4.png)
 
-![金肇轩](assets/金肇轩.png)
+![金肇轩](assets/2.png)
 
-![韩梓辰](assets/韩梓辰.png)
+![朱子经](assets/14.png)
 
-![严文谦](assets/严文谦.png)
+![周翰然](assets/13.png)
 
-![陈梓涵](assets/陈梓涵.png)
+We also have some members already finished their career in the CTF. We had a great time together, and hope you have better future!
 
-![朱嘉楠](assets/朱嘉楠.png)
+![韩梓辰](assets/3.png)
 
-![朱子经](assets/朱子经.png)
+![肖兆祺](assets/10.png)
 
-![巫晓](assets/巫晓.png)
+![邹泽桦](assets/5.png)
 
-![石文轩](assets/石文轩.png)
+![孙涛](assets/9.png)
+
+![石文轩](assets/15.png)
