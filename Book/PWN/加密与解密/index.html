@@ -1,0 +1,5337 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Wiki project for COMPASS CTF, for usage of information sharing, collection, and reference. The contents are contributed by the students of COMPASS CTF team.">
+      
+      
+      
+        <link rel="canonical" href="https://wiki.compass.college/Book/PWN/%E5%8A%A0%E5%AF%86%E4%B8%8E%E8%A7%A3%E5%AF%86/">
+      
+      <link rel="icon" href="../../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
+    
+    
+      
+        <title>加密与解密 - COMPASS CTF Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ef5552">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:300,300i,400,400i,700,700i%7CConsolas:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Oswald";--md-code-font:"Consolas"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="orange">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="COMPASS CTF Wiki" class="md-header__button md-logo" aria-label="COMPASS CTF Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            COMPASS CTF Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              加密与解密
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/lyther/wiki" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    lyther/wiki
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        Abstract
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../CTF%E7%AB%9E%E8%B5%9B%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/" class="md-tabs__link md-tabs__link--active">
+        Book
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../CS315/Overview/" class="md-tabs__link">
+        CS315
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../Paper/Artificial%20Intelligence/Cert-RNN%20Towards%20Certifying%20the%20Robustness%20of%20Recurrent/" class="md-tabs__link">
+        Paper
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../Tool/AWD/AoiAWD/" class="md-tabs__link">
+        Tool
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../Training/%E6%A0%A1%E9%98%9F%E7%AB%9E%E8%B5%9B%E8%AE%AD%E7%BB%83%E6%A8%A1%E5%BC%8F/" class="md-tabs__link">
+        Training
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../Website/Forum/kanxue/" class="md-tabs__link">
+        Website
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../Writeup/2022%E5%B9%BF%E4%B8%9C%E7%9C%81%E8%B5%9B/readme/" class="md-tabs__link">
+        Writeup
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="COMPASS CTF Wiki" class="md-nav__button md-logo" aria-label="COMPASS CTF Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
+
+    </a>
+    COMPASS CTF Wiki
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/lyther/wiki" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    lyther/wiki
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          Abstract
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Abstract" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Abstract
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        COMPASS CTF
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../member/" class="md-nav__link">
+        Members
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../award/" class="md-nav__link">
+        Competition Awards
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../related/" class="md-nav__link">
+        Related Links
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_5" type="checkbox" id="__nav_1_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_5">
+          Meeting
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Meeting" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_5">
+          <span class="md-nav__icon md-icon"></span>
+          Meeting
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Meeting/CTF%20Week%20Meeting%202022-02-17/" class="md-nav__link">
+        CTF Week Meeting 2022-02-17
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Meeting/CTF%20Week%20Meeting%202022-02-24/" class="md-nav__link">
+        CTF Week Meeting 2022-02-24
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Meeting/CTF%20Week%20Meeting%202022-03-03/" class="md-nav__link">
+        CTF Week Meeting 2022-03-03
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Meeting/CTF%20Week%20Meeting%202022-03-10/" class="md-nav__link">
+        CTF Week Meeting 2022-03-10
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Meeting/CTF%20Week%20Meeting%202022-03-17/" class="md-nav__link">
+        CTF Week Meeting 2022-03-17
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Meeting/CTF%20Week%20Meeting%202022-03-24/" class="md-nav__link">
+        CTF Week Meeting 2022-03-24
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Meeting/CTF%20Week%20Meeting%202022-03-31/" class="md-nav__link">
+        CTF Week Meeting 2022-03-31
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Meeting/CTF%20Week%20Meeting%202022-04-07/" class="md-nav__link">
+        CTF Week Meeting 2022-04-07
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Meeting/CTF%20Week%20Meeting%202022-04-14/" class="md-nav__link">
+        CTF Week Meeting 2022-04-14
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Meeting/CTF%20Week%20Meeting%202022-04-21/" class="md-nav__link">
+        CTF Week Meeting 2022-04-21
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Meeting/CTF%20Week%20Meeting%202022-04-28/" class="md-nav__link">
+        CTF Week Meeting 2022-04-28
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Meeting/CTF%20Week%20Meeting%202022-05-05/" class="md-nav__link">
+        CTF Week Meeting 2022-05-05
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Meeting/CTF%20Week%20Meeting%202022-05-13/" class="md-nav__link">
+        CTF Week Meeting 2022-05-13
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Meeting/CTF%20Week%20Meeting%202022-05-19/" class="md-nav__link">
+        CTF Week Meeting 2022-05-19
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Meeting/CTF%20Week%20Meeting%202022-05-26/" class="md-nav__link">
+        CTF Week Meeting 2022-05-26
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Meeting/CTF%20Week%20Meeting%202022-06-03/" class="md-nav__link">
+        CTF Week Meeting 2022-06-03
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Meeting/CTF%20Week%20Meeting%202022-06-09/" class="md-nav__link">
+        CTF Week Meeting 2022-06-09
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Meeting/CTF%20Week%20Meeting%202022-06-16/" class="md-nav__link">
+        CTF Week Meeting 2022-06-16
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Meeting/CTF%20Week%20Meeting%202022-06-23/" class="md-nav__link">
+        CTF Week Meeting 2022-06-23
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Meeting/CTF%20Week%20Meeting%202022-07-07/" class="md-nav__link">
+        CTF Week Meeting 2022-07-07
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Meeting/CTF%20Week%20Meeting%202022-07-14/" class="md-nav__link">
+        CTF Week Meeting 2022-07-14
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_6" type="checkbox" id="__nav_1_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_6">
+          CTF
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="CTF" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_6">
+          <span class="md-nav__icon md-icon"></span>
+          CTF
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CTF/abstract/" class="md-nav__link">
+        Abstract
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CTF/structure/" class="md-nav__link">
+        Structure
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Book
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Book" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Book
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CTF%E7%AB%9E%E8%B5%9B%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        CTF竞赛入门指南
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%BB%8E0%E5%88%B01%EF%BC%9ACTFer%E6%88%90%E9%95%BF%E4%B9%8B%E8%B7%AF/" class="md-nav__link">
+        从0到1：CTFer成长之路
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3">
+          Computer and System
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Computer and System" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Computer and System
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Computer%20and%20System/Android%20Dalvik%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%BB%93%E6%9E%84%E5%8F%8A%E6%9C%BA%E5%88%B6%E5%89%96%E6%9E%90/" class="md-nav__link">
+        Android Dalvik虚拟机结构及机制剖析
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Computer%20and%20System/Android%20Internals/" class="md-nav__link">
+        Android Internals: Power User's View
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Computer%20and%20System/Android%E7%B3%BB%E7%BB%9F%E6%BA%90%E4%BB%A3%E7%A0%81%E6%83%85%E6%99%AF%E5%88%86%E6%9E%90/" class="md-nav__link">
+        Android系统源代码情景分析
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Computer%20and%20System/Code/" class="md-nav__link">
+        Code: The Hidden Language of Computer Hardware and Software
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Computer%20and%20System/Computer%20Systems/" class="md-nav__link">
+        Computer Systems: A Programmer's Perspective
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Computer%20and%20System/Linux%20Kernel%20Development/" class="md-nav__link">
+        Linux Kernel Development
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Computer%20and%20System/Mac%20OS%20X%20and%20iOS%20Internals/" class="md-nav__link">
+        Mac OS X and iOS Internals: To the Apple’s Core
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Computer%20and%20System/Understanding%20the%20Linux%20Kernel/" class="md-nav__link">
+        Understanding the Linux Kernel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Computer%20and%20System/Windows%20Internals/" class="md-nav__link">
+        Windows Internals
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Computer%20and%20System/%E4%BB%A3%E7%A0%81%E6%8F%AD%E7%A7%98/" class="md-nav__link">
+        代码揭秘
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Computer%20and%20System/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Android%E5%86%85%E6%A0%B8%E8%AE%BE%E8%AE%A1%E6%80%9D%E6%83%B3/" class="md-nav__link">
+        深入理解Android内核设计思想
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4">
+          Cryptography
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Cryptography" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          Cryptography
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Cryptography/Foundations%20of%20Cryptography/" class="md-nav__link">
+        Foundations of Cryptography
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Cryptography/Introduction%20to%20Modern%20Cryptography/" class="md-nav__link">
+        Introduction to Modern Cryptography: Principles and Protocols
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Cryptography/Understanding%20Cryptography/" class="md-nav__link">
+        Understanding Cryptography: A Textbook for Students and Practitioners
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Cryptography/%E5%9B%BE%E8%A7%A3%E5%AF%86%E7%A0%81%E6%8A%80%E6%9C%AF/" class="md-nav__link">
+        图解密码技术
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" type="checkbox" id="__nav_2_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_5">
+          Network
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Network" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          Network
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Network/Computer%20Networking/" class="md-nav__link">
+        Computer Networking: A Top-Down Approach
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Network/Practical%20Packet%20Analysis/" class="md-nav__link">
+        Practical Packet Analysis: Using Wireshark to Solve Real-World Network Problems
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Network/TCP%20IP%20Illustrated/" class="md-nav__link">
+        TCP/IP Illustrated
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6" type="checkbox" id="__nav_2_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_6">
+          Programming
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Programming" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_6">
+          <span class="md-nav__icon md-icon"></span>
+          Programming
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6_1" type="checkbox" id="__nav_2_6_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_6_1">
+          C
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="C" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_6_1">
+          <span class="md-nav__icon md-icon"></span>
+          C
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programming/C/C%20Primer%20Plus/" class="md-nav__link">
+        C Primer Plus (Developer's Library)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programming/C/C%20Programming%20Language/" class="md-nav__link">
+        C Programming Language, 2nd Edition
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programming/C/C%20Traps%20and%20Pitfalls/" class="md-nav__link">
+        C Traps and Pitfalls
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programming/C/Expert%20C%20Programming%20Deep%20C%20Secrets/" class="md-nav__link">
+        Expert C Programming: Deep C Secrets
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programming/C/Pointers%20on%20C/" class="md-nav__link">
+        Pointers on C
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6_2" type="checkbox" id="__nav_2_6_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_6_2">
+          C++
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="C++" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_6_2">
+          <span class="md-nav__icon md-icon"></span>
+          C++
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programming/C%2B%2B/C%2B%2B%20Primer%20Plus/" class="md-nav__link">
+        C++ Primer Plus
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programming/C%2B%2B/C%2B%2B%20Primer/" class="md-nav__link">
+        C++ Primer
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" type="checkbox" id="__nav_2_7" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_7">
+          PWN
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="PWN" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_7">
+          <span class="md-nav__icon md-icon"></span>
+          PWN
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Practical%20Malware%20Analysis/" class="md-nav__link">
+        Practical Malware Analysis
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          加密与解密
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        加密与解密
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    内容简介
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    目录
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B%E6%A0%B8%E5%BF%83%E5%8E%9F%E7%90%86/" class="md-nav__link">
+        逆向工程核心原理
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_8" type="checkbox" id="__nav_2_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_8">
+          Security
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Security" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_8">
+          <span class="md-nav__icon md-icon"></span>
+          Security
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Security/0day%E5%AE%89%E5%85%A8/" class="md-nav__link">
+        0day安全：软件漏洞分析技术
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Security/A%20Guide%20to%20Kernel%20Exploitation/" class="md-nav__link">
+        A Guide to Kernel Exploitation: Attacking the Core
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Security/Fuzzing%20for%20Software%20Security%20Testing%20and%20Quality%20Assurance/" class="md-nav__link">
+        Fuzzing for Software Security Testing and Quality Assurance (Artech House Information Security and Privacy)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Security/Gray%20Hat%20Hacking/" class="md-nav__link">
+        Gray Hat Hacking The Ethical Hackers Handbook
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Security/Rootkit/" class="md-nav__link">
+        The Rootkit Arsenal: Escape and Evasion: Escape and Evasion in the Dark Corners of the System
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Security/%E6%BC%8F%E6%B4%9E%E6%88%98%E4%BA%89/" class="md-nav__link">
+        漏洞战争：软件漏洞分析精要
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          CS315
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="CS315" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          CS315
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CS315/Overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CS315/Week%201/" class="md-nav__link">
+        Week 1 CTF Introduction and Forensics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CS315/Week%202/" class="md-nav__link">
+        Week 2 PWN: Basic Buffer Overflow
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CS315/Week%203/" class="md-nav__link">
+        Week3 PWN: Advanced Buffer Overflow
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CS315/Week%204/" class="md-nav__link">
+        Week4 WEB: Information Discovery
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CS315/Week%205/" class="md-nav__link">
+        Week5 WEB: Vulnerability Exploit
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CS315/Week%206/" class="md-nav__link">
+        Week6 RE: De-compiling Program
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CS315/Week%207/" class="md-nav__link">
+        Week7 WLAN: Attacking WiFi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CS315/Week%208/" class="md-nav__link">
+        Week8 MISC: Physical Attacks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CS315/Week%209/" class="md-nav__link">
+        Week9 MISC: Social Engineering
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CS315/Week%2010/" class="md-nav__link">
+        Week10 PWN: Privilege Escalation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CS315/Week%2011/" class="md-nav__link">
+        Week11 CRYPTO: Public Key Crypto Attacking
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CS315/Week%2012/" class="md-nav__link">
+        Week12 WEB: Attacking Websites
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CS315/Week%2013/" class="md-nav__link">
+        Week13 PWN: ROL and ROP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CS315/Week%2014/" class="md-nav__link">
+        Week14 CTF: Attack-Defense CTF
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CS315/Exercise%20Solutions/" class="md-nav__link">
+        Exercise Solutions
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Paper
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Paper" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Paper
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1">
+          Artificial Intelligence
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Artificial Intelligence" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Artificial Intelligence
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Paper/Artificial%20Intelligence/Cert-RNN%20Towards%20Certifying%20the%20Robustness%20of%20Recurrent/" class="md-nav__link">
+        Cert-RNN: Towards Certifying the Robustness of Recurrent Neural Networks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Paper/Artificial%20Intelligence/Unleashing%20the%20Tiger%20Inference%20Attacks%20on%20Split%20Learning/" class="md-nav__link">
+        Unleashing the Tiger Inference Attacks on Split Learning
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2">
+          Cryptography
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Cryptography" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Cryptography
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Paper/Cryptography/Fuzzy%20Message%20Detection/" class="md-nav__link">
+        Fuzzy Message Detection
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Paper/Cryptography/Key%20Agreement%20for%20Decentralized%20Secure%20Group%20Messaging%20with%20Strong%20Security%20Guarantees/" class="md-nav__link">
+        Key Agreement for Decentralized Secure Group Messaging with Strong Security Guarantees
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_3">
+          Internet of Things
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Internet of Things" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          Internet of Things
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Paper/Internet%20of%20Things/Snipuzz%20Black-box%20Fuzzing%20of%20IoT%20Firmware%20via%20Message%20Snippet%20Inference/" class="md-nav__link">
+        Snipuzz: Black-box Fuzzing of IoT Firmware via Message Snippet Inference
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_4">
+          Misc
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Misc" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Misc
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Paper/Misc/Chaff%20Bugs%20Deterring%20Attackers%20by%20Making%20Software%20Buggier/" class="md-nav__link">
+        Chaff Bugs: Deterring Attackers by Making Software Buggier
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" type="checkbox" id="__nav_4_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_5">
+          Mobile
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Mobile" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_5">
+          <span class="md-nav__icon md-icon"></span>
+          Mobile
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Paper/Mobile/Consistency%20Analysis%20of%20Data-Usage%20Purposes%20in%20Mobile%20Apps/" class="md-nav__link">
+        Consistency Analysis of Data-Usage Purposes in Mobile Apps
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6" type="checkbox" id="__nav_4_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_6">
+          PWN
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="PWN" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_6">
+          <span class="md-nav__icon md-icon"></span>
+          PWN
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Paper/PWN/Exorcising%20Spectres%20with%20Secure%20Compilers/" class="md-nav__link">
+        Exorcising Spectres with Secure Compilers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Paper/PWN/Preventing%20Dynamic%20Library%20Compromise%20on%20Node.js%20via%20RWX-Based%20Privilege%20Reduction/" class="md-nav__link">
+        Preventing Dynamic Library Compromise on Node.js via RWX-Based Privilege Reduction
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_7" type="checkbox" id="__nav_4_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_7">
+          Reverse Engineering
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Reverse Engineering" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_7">
+          <span class="md-nav__icon md-icon"></span>
+          Reverse Engineering
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Paper/Reverse%20Engineering/Search-based%20Approaches%20for%20Local%20Black-Box%20Code%20Deobfuscation%20Understand%2C%20Improve%20and%20Mitigate/" class="md-nav__link">
+        Search-based Approaches for Local Black-Box Code Deobfuscation Understand, Improve and Mitigate
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Tool
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tool" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Tool
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1" type="checkbox" id="__nav_5_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_1">
+          AWD
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="AWD" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_1">
+          <span class="md-nav__icon md-icon"></span>
+          AWD
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Tool/AWD/AoiAWD/" class="md-nav__link">
+        AoiAWD
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Tool/AWD/Auto-AWD/" class="md-nav__link">
+        Auto-AWD
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Tool/AWD/AWD_auto_attack/" class="md-nav__link">
+        AWD_auto_attack
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Tool/AWD/awd-submit-flag/" class="md-nav__link">
+        awd-submit-flag
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Tool/AWD/awd-watchbird/" class="md-nav__link">
+        awd-watchbird
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Tool/AWD/flower/" class="md-nav__link">
+        flower
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Tool/AWD/ShellCat/" class="md-nav__link">
+        ShellCat
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2">
+          Cryptography
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Cryptography" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          Cryptography
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Tool/Cryptography/SageMathCell/" class="md-nav__link">
+        SageMathCell
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Tool/Cryptography/RSAWiener/" class="md-nav__link">
+        RSA Wiener Attack
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Tool/Cryptography/hashcat/" class="md-nav__link">
+        HashCat
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3">
+          PWN
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="PWN" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          PWN
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Tool/PWN/IDA/" class="md-nav__link">
+        IDA
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Tool/PWN/PEiD/" class="md-nav__link">
+        PEiD
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Tool/PWN/WinDbg/" class="md-nav__link">
+        WinDbg
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Tool/PWN/WinHex/" class="md-nav__link">
+        WinHex: Computer Forensics & Data Recovery Software, Hex Editor & Disk Editor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Tool/PWN/x64dbg/" class="md-nav__link">
+        x64dbg
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Tool/PWN/Zeratool/" class="md-nav__link">
+        Zeratool
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_4" type="checkbox" id="__nav_5_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_4">
+          Reverse Engineering
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Reverse Engineering" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          Reverse Engineering
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Tool/Reverse%20Engineering/Bytecode%20Viewer/" class="md-nav__link">
+        Bytecode Viewer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Tool/Reverse%20Engineering/DiE/" class="md-nav__link">
+        Detect it Easy (DiE)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Tool/Reverse%20Engineering/ExeInfoPE/" class="md-nav__link">
+        ExeInfoPE
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_5" type="checkbox" id="__nav_5_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_5">
+          Miscellaneous
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Miscellaneous" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_5">
+          <span class="md-nav__icon md-icon"></span>
+          Miscellaneous
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Tool/Miscellaneous/bochs/" class="md-nav__link">
+        Bochs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Tool/Miscellaneous/qemu/" class="md-nav__link">
+        qemu
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Tool/Miscellaneous/AZPR/" class="md-nav__link">
+        Advanced ZIP Password Recovery
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Tool/Miscellaneous/Velato/" class="md-nav__link">
+        Velato
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_6" type="checkbox" id="__nav_5_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_6">
+          Forensics
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Forensics" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_6">
+          <span class="md-nav__icon md-icon"></span>
+          Forensics
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Tool/Forensics/BlindWatermark/" class="md-nav__link">
+        Blind Watermark
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Tool/Forensics/ProcessMonitor/" class="md-nav__link">
+        Process Monitor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Tool/Forensics/stegosaurus/" class="md-nav__link">
+        stegosaurus
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Tool/Forensics/Tracewrangler/" class="md-nav__link">
+        Tracewrangler
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Tool/Forensics/Wireshark/" class="md-nav__link">
+        Wireshark
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Tool/Forensics/volatility/" class="md-nav__link">
+        volatility
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Tool/Forensics/zsteg/" class="md-nav__link">
+        zsteg
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Tool/Forensics/exiftool/" class="md-nav__link">
+        ExifTool
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Tool/Forensics/foremost/" class="md-nav__link">
+        foremost
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Tool/Forensics/stegsolve/" class="md-nav__link">
+        stegsolve
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Training
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Training" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Training
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Training/%E6%A0%A1%E9%98%9F%E7%AB%9E%E8%B5%9B%E8%AE%AD%E7%BB%83%E6%A8%A1%E5%BC%8F/" class="md-nav__link">
+        校队竞赛训练模式
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2" type="checkbox" id="__nav_6_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_2">
+          Material
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Material" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_2">
+          <span class="md-nav__icon md-icon"></span>
+          Material
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Training/Material/Binary%20Exploitation/" class="md-nav__link">
+        Binary Exploitation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Training/Material/Cryptography/" class="md-nav__link">
+        Modern Cryptography and Mathematics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Training/Material/Network/" class="md-nav__link">
+        Computer Network
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Training/Material/OS/" class="md-nav__link">
+        Operating Systems
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Training/Material/Penetration/" class="md-nav__link">
+        Penetration Testing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Training/Material/Reverse/" class="md-nav__link">
+        逆向工程与汇编语言
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_3" type="checkbox" id="__nav_6_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_3">
+          Schedule
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Schedule" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_3">
+          <span class="md-nav__icon md-icon"></span>
+          Schedule
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Training/Schedule/2021Summer/" class="md-nav__link">
+        2021 Summer Schedule
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Training/Schedule/2021Fall/" class="md-nav__link">
+        2021 Fall Schedule
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Training/Schedule/2022Spring/" class="md-nav__link">
+        2022 Spring Time Schedule
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Training/Schedule/2022Summer/" class="md-nav__link">
+        2022 Summer Training Schedule
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Website
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Website" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Website
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_1" type="checkbox" id="__nav_7_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_1">
+          Forum
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Forum" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_1">
+          <span class="md-nav__icon md-icon"></span>
+          Forum
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Website/Forum/kanxue/" class="md-nav__link">
+        看雪学院
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_2" type="checkbox" id="__nav_7_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_2">
+          Platform
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Platform" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_2">
+          <span class="md-nav__icon md-icon"></span>
+          Platform
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Website/Platform/Cryptopals/" class="md-nav__link">
+        Cryptopals Crypto Challenges
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Website/Platform/CTFHub/" class="md-nav__link">
+        CTFHub
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Website/Platform/CTFlearn/" class="md-nav__link">
+        CTFlearn
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Website/Platform/ctftime/" class="md-nav__link">
+        ctftime
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Website/Platform/ichunqiu/" class="md-nav__link">
+        ichunqiu
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Website/Platform/picoCTF/" class="md-nav__link">
+        picoCTF
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Website/Platform/pwnabletw/" class="md-nav__link">
+        pwnable.tw
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Website/Platform/TryHackMe/" class="md-nav__link">
+        TryHackMe
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Website/Platform/World%20of%20Attack%26Defense/" class="md-nav__link">
+        World of Attack&Defense
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_3" type="checkbox" id="__nav_7_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_3">
+          Tutorial
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tutorial" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_3">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorial
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Website/Tutorial/CTF%20Field%20Guide/" class="md-nav__link">
+        CTF Field Guide
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Website/Tutorial/CTF%20Wiki/" class="md-nav__link">
+        CTF Wiki
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Website/Tutorial/ctf101/" class="md-nav__link">
+        Capture The Flag 101
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Website/Tutorial/how%20to%20become%20a%20hacker/" class="md-nav__link">
+        How To Become A Hacker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Website/Tutorial/linux/" class="md-nav__link">
+        Linux Tools Quick Tutorial
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Website/Tutorial/python/" class="md-nav__link">
+        Python
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          Writeup
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Writeup" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Writeup
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Writeup/2022%E5%B9%BF%E4%B8%9C%E7%9C%81%E8%B5%9B/readme/" class="md-nav__link">
+        2022广东省赛
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Writeup/%E8%99%8E%E7%AC%A6CTF2022/COMPASS%20WriteUp/" class="md-nav__link">
+        虎符CTF - COMPASS WriteUp
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Writeup/COMPASS%20CTF2021/COMPASS_CTF_2021_ALLwp/" class="md-nav__link">
+        COMPASS CTF 2021 招新赛
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Writeup/DiceCTF%202022/" class="md-nav__link">
+        DiceCTF 2022 Author Writeups
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_5" type="checkbox" id="__nav_8_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8_5">
+          Binary Exploitation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Binary Exploitation" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_5">
+          <span class="md-nav__icon md-icon"></span>
+          Binary Exploitation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Writeup/Binary Exploitation/beginner-generic-pwn-number-0.md" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Writeup/Binary Exploitation/collision.md" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Writeup/Binary Exploitation/fd.md" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Writeup/Binary Exploitation/printf-please.md" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Writeup/Binary Exploitation/ret2generic-flag-reader.md" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Writeup/Binary Exploitation/ret2the-unknown.md" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Writeup/Binary Exploitation/simultaneity.md" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_6" type="checkbox" id="__nav_8_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8_6">
+          Cryptography
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Cryptography" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_6">
+          <span class="md-nav__icon md-icon"></span>
+          Cryptography
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Writeup/Cryptography/blowfishgame/" class="md-nav__link">
+        blowfishgame
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Writeup/Cryptography/Dachshund Attacks.md" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Writeup/Cryptography/Exposure/" class="md-nav__link">
+        Exposure
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Writeup/Cryptography/Guess/" class="md-nav__link">
+        Guess
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Writeup/Cryptography/MedicalImage/" class="md-nav__link">
+        MedicalImage
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Writeup/Cryptography/more_calc/" class="md-nav__link">
+        more_calc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Writeup/Cryptography/myRSA/" class="md-nav__link">
+        myRSA
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Writeup/Cryptography/Random_RSA/" class="md-nav__link">
+        Random_RSA
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Writeup/Cryptography/RSAssss/" class="md-nav__link">
+        RSAssss
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Writeup/Cryptography/scissor.md" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Writeup/Cryptography/secret%20share/" class="md-nav__link">
+        secret_share
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Writeup/Cryptography/simpleRSA/" class="md-nav__link">
+        simpleRSA
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_7" type="checkbox" id="__nav_8_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8_7">
+          Forensics
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Forensics" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_7">
+          <span class="md-nav__icon md-icon"></span>
+          Forensics
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Writeup/Forensics/Disk, disk, sleuth! II.md" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Writeup/Forensics/Disk, disk, sleuth!.md" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Writeup/Forensics/MacroHard WeakEdge.md" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Writeup/Forensics/Milkslap.md" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Writeup/Forensics/Wireshark doo dooo do doo.md" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_8" type="checkbox" id="__nav_8_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8_8">
+          General Skills
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="General Skills" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_8">
+          <span class="md-nav__icon md-icon"></span>
+          General Skills
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Writeup/General Skills/2Warm.md" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Writeup/General%20Skills/ChieftainsSecret/" class="md-nav__link">
+        ChieftainsSecret
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Writeup/General Skills/Lets Warm Up.md" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Writeup/General%20Skills/shuffle_code/" class="md-nav__link">
+        shuffle_code
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Writeup/General%20Skills/xixixi/" class="md-nav__link">
+        xixixi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Writeup/General%20Skills/%E5%88%B0%E7%82%B9%E4%BA%86/" class="md-nav__link">
+        到点了
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Writeup/General%20Skills/%E5%B1%82%E5%B1%82%E5%8F%96%E8%AF%81/" class="md-nav__link">
+        层层取证
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Writeup/General%20Skills/%E5%B8%A6%E9%9F%B3%E4%B9%90%E5%AE%B6/" class="md-nav__link">
+        带音乐家
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Writeup/General%20Skills/%E8%80%83%E5%8F%A4/" class="md-nav__link">
+        考古
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Writeup/General%20Skills/%E8%BF%9B%E5%88%B6%E5%8F%8D%E8%BD%AC/" class="md-nav__link">
+        进制反转
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Writeup/General%20Skills/%E9%B8%A3%E9%9B%8F%E6%81%8B/" class="md-nav__link">
+        鸣雏恋
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_9" type="checkbox" id="__nav_8_9" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8_9">
+          Reverse Engineering
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Reverse Engineering" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_9">
+          <span class="md-nav__icon md-icon"></span>
+          Reverse Engineering
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Writeup/Reverse%20Engineering/apk1/" class="md-nav__link">
+        apk1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Writeup/Reverse Engineering/bread-making.md" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Writeup/Reverse Engineering/dimensionality.md" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Writeup/Reverse%20Engineering/re1/" class="md-nav__link">
+        re1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Writeup/Reverse Engineering/Shop.md" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Writeup/Reverse Engineering/speeds and feeds.md" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Writeup/Reverse Engineering/wstrings.md" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_10" type="checkbox" id="__nav_8_10" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8_10">
+          Web Exploitation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Web Exploitation" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_10">
+          <span class="md-nav__icon md-icon"></span>
+          Web Exploitation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Writeup/Web Exploitation/Cookies.md" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Writeup/Web Exploitation/inspect-me.md" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Writeup/Web Exploitation/It is my Birthday.md" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Writeup/Web Exploitation/Most Cookies.md" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Writeup/Web Exploitation/Scavenger Hunt.md" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    内容简介
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    目录
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+  <a href="https://github.com/lyther/wiki/edit/master/docs/Book/PWN/加密与解密.md" title="Edit this page" class="md-content__button md-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+
+<h1 id="_1">加密与解密</h1>
+<p>作者: <a href="https://book.douban.com/search/段钢">段钢</a>
+出版社: 电子工业出版社
+出品方: <a href="https://book.douban.com/series/42608?brand=1">博文视点</a>
+出版年: 2018-10-1
+页数: 936
+定价: 198
+装帧: 平装
+丛书: <a href="https://book.douban.com/series/29000">安全技术大系</a>
+ISBN: 9787121336928</p>
+<p><img alt="img" src="https://img3.doubanio.com/view/subject/s/public/s29833960.jpg" /></p>
+<h2 id="_2">内容简介</h2>
+<p>《加密与解密（第4版）》以加密与解密为切入点，讲述了软件安全领域的基础知识和技能，如调试技能、逆向分析、加密保护、外壳开发、虚拟机设计等。这些知识彼此联系，读者在掌握这些内容之后，很容易就能在漏洞分析、安全编程、病毒分析、软件保护等领域进行扩展。从就业的角度来说，掌握加密与解密的相关技术，可以提高自身的竞争能力；从个人成长的角度来说，研究软件安全技术有助于掌握一些系统底层知识，是提升职业技能的重要途径。作为一名合格的程序员，除了掌握需求分析、设计模式等外，如果能掌握一些系统底层知识、熟悉整个系统的底层结构，在工作中必将获益良多。</p>
+<p>《加密与解密（第4版）》适合安全研究人员、软件调试人员、程序开发人员阅读，也可以作为高校信息安全相关专业的辅助教材。</p>
+<h2 id="_3">目录</h2>
+<p>基础篇
+第1章 基础知识 2
+1.1 什么是加密与解密 2
+1.1.1 软件的加密与解密 2
+1.1.2 软件逆向工程 2
+1.1.3 逆向分析技术 3
+1.2 文本字符 4
+1.2.1 ASCII与Unicode字符集 4
+1.2.2 字节存储顺序 6
+1.3 Windows操作系统 6
+1.3.1 Win32 API函数 6
+1.3.2 WOW64 9
+1.3.3 Windows消息机制 9
+1.3.4 虚拟内存 11
+调试篇
+第2章 动态分析技术 14
+2.1 OllyDbg调试器 14
+2.1.1 OllyDbg的界面 14
+2.1.2 OllyDbg的配置 15
+2.1.3 基本操作 16
+2.1.4 常用断点 27
+2.1.5 插件 35
+2.1.6 Run trace 36
+2.1.7 Hit trace 37
+2.1.8 调试符号 37
+2.1.9 加载程序 39
+2.1.10 OllyDbg的常见问题 40
+2.2 x64dbg调试器 42
+2.3 MDebug调试器 44
+2.3.1 MDebug的界面 44
+2.3.2 表达式 45
+2.3.3 调试 45
+2.3.4 断点 46
+2.3.5 MDebug的其他功能 47
+2.4 WinDbg调试器 47
+2.4.1 WinDbg的安装与配置 47
+2.4.2 调试过程 51
+2.4.3 断点命令 51
+2.4.4 栈窗口 53
+2.4.5 内存命令 55
+2.4.6 脚本 56
+2.4.7 调试功能扩展 58
+2.4.8 小结 59
+第3章 静态分析技术 60
+3.1 文件类型分析 60
+3.2 反汇编引擎 61
+3.2.1 OllyDbg的ODDisasm 61
+3.2.2 BeaEngine 61
+3.2.3 Udis86 61
+3.2.4 Capstone 62
+3.2.5 AsmJit 63
+3.2.6 Keystone 64
+3.2.7 小结 64
+3.3 静态反汇编 65
+3.3.1 IDA Pro简介 65
+3.3.2 IDA的配置 66
+3.3.3 IDA主窗口 68
+3.3.4 交叉参考 69
+3.3.5 参考重命名 70
+3.3.6 标签的用法 71
+3.3.7 格式化指令操作数 71
+3.3.8 函数的操作 72
+3.3.9 代码和数据转换 72
+3.3.10 字符串 73
+3.3.11 数组 74
+3.3.12 结构体 75
+3.3.13 枚举类型 79
+3.3.14 变量 80
+3.3.15 FLIRT 81
+3.3.16 IDC脚本 82
+3.3.17 插件 86
+3.3.18 IDA调试器 87
+3.3.19 远程调试 90
+3.3.20 其他功能 93
+3.3.21 小结 94
+3.4 十六进制工具 94
+3.5 静态分析技术应用实例 97
+3.5.1 解密初步 97
+3.5.2 逆向工程初步 99
+解密篇
+第4章 逆向分析技术 102
+4.1 32位软件逆向技术 102
+4.1.1 启动函数 102
+4.1.2 函数 103
+4.1.3 数据结构 111
+4.1.4 虚函数 115
+4.1.5 控制语句 117
+4.1.6 循环语句 124
+4.1.7 数学运算符 125
+4.1.8 文本字符串 128
+4.1.9 指令修改技巧 130
+4.2 64位软件逆向技术 131
+4.2.1 寄存器 131
+4.2.2 函数 132
+4.2.3 数据结构 142
+4.2.4 控制语句 145
+4.2.5 循环语句 154
+4.2.6 数学运算符 158
+4.2.7 虚函数 169
+4.2.8 小结 193
+第5章 演示版保护技术 194
+5.1 序列号保护方式 194
+5.1.1 序列号保护机制 194
+5.1.2 如何攻击序列号保护机制 195
+5.1.3 字符串比较形式 197
+5.1.4 制作注册机 198
+5.2 警告窗口 203
+5.3 时间限制 205
+5.3.1 计时器 205
+5.3.2 时间限制 205
+5.3.3 拆解时间限制保护 206
+5.4 菜单功能限制 207
+5.4.1 相关函数 207
+5.4.2 拆解菜单限制保护 208
+5.5 KeyFile保护 208
+5.5.1 相关API函数 208
+5.5.2 拆解KeyFile保护 209
+5.6 网络验证 213
+5.6.1 相关函数 214
+5.6.2 破解网络验证的一般思路 214
+5.7 光盘检测 219
+5.7.1 相关函数 219
+5.7.2 拆解光盘保护 220
+5.8 只运行1个实例 221
+5.8.1 实现方法 221
+5.8.2 实例 222
+5.9 常用断点设置技巧 222
+第6章 加密算法 223
+6.1 单向散列算法 223
+6.1.1 MD5算法 223
+6.1.2 SHA算法 227
+6.1.3 SM3密码杂凑算法 231
+6.1.4 小结 231
+6.2 对称加密算法 231
+6.2.1 RC4流密码 231
+6.2.2 TEA算法 233
+6.2.3 IDEA算法 236
+6.2.4 BlowFish算法 243
+6.2.5 AES算法 246
+6.2.6 SM4分组密码算法 259
+6.2.7 小结 259
+6.3 公开密钥加密算法 259
+6.3.1 RSA算法 260
+6.3.2 ElGamal公钥算法 264
+6.3.3 DSA数字签名算法 270
+6.3.4 椭圆曲线密码编码学 272
+6.3.5 SM2算法 279
+6.4 其他算法 279
+6.4.1 CRC32算法 279
+6.4.2 Base64编码 280
+6.5 常见的加密库接口及其识别 281
+6.5.1 Miracl大数运算库 281
+6.5.2 FGInt 283
+6.5.3 其他加密算法库介绍 284
+6.6 加密算法在软件保护中的应用 285
+系统篇
+第7章 Windows内核基础 290
+7.1 内核理论基础 290
+7.1.1 权限级别 290
+7.1.2 内存空间布局 291
+7.1.3 Windows与内核启动过程 292
+7.1.4 Windows R3与R0通信 294
+7.1.5 内核函数 296
+7.1.6 内核驱动模块 297
+7.2 内核重要数据结构 298
+7.2.1 内核对象 298
+7.2.2 SSDT 300
+7.2.3 TEB 302
+7.2.4 PEB 304
+7.3 内核调试基础 306
+7.3.1 使用WinDbg搭建双机调试环境 306
+7.3.2 加载内核驱动并设置符号表 308
+7.3.3 SSDT与Shadow SSDT的查看 311
+第8章 Windows下的异常处理 313
+8.1 异常处理的基本概念 313
+8.1.1 异常列表 313
+8.1.2 异常处理的基本过程 314
+8.2 SEH的概念及基本知识 319
+8.2.1 SEH的相关数据结构 319
+8.2.2 SEH处理程序的安装和卸载 320
+8.2.3 SEH实例跟踪 321
+8.3 SEH异常处理程序原理及设计 325
+8.3.1 异常分发的详细过程 325
+8.3.2 线程异常处理 330
+8.3.3 异常处理的栈展开 336
+8.3.4 MSC编译器对线程异常处理的增强 342
+8.3.5 顶层异常处理 349
+8.3.6 异常处理程序的安全性 357
+8.4 向量化异常处理 361
+8.4.1 向量化异常处理的使用 361
+8.4.2 VEH与SEH的异同 362
+8.4.3 向量化异常处理的新内容 363
+8.5 x64平台上的异常处理 363
+8.5.1 原生x64程序的异常分发 364
+8.5.2 WOW64下的异常分发 366
+8.6 异常处理程序设计中的注意事项 367
+8.7 异常处理的实际应用 368
+8.7.1 使用SEH对用户输入进行验证 368
+8.7.2 SEH在加密与解密中的应用 369
+8.7.3 用VEH实现API Hook 371
+8.8 本章小结 371
+第9章 Win32调试API 372
+9.1 调试相关函数简要说明 372
+9.2 调试事件 375
+9.3 创建并跟踪进程 377
+9.4 调试循环体 378
+9.5 处理调试事件 379
+9.6 线程环境 380
+9.7 将代码注入进程 382
+第10章 VT技术 384
+10.1 硬件虚拟化的基本概念 384
+10.1.1 概述 384
+10.1.2 相关结构和汇编指令 385
+10.1.3 EPT机制 388
+10.2 VT技术的应用 389
+10.2.1 编译运行ShadowWalker 389
+10.2.2 分析Hypervisor 390
+10.2.3 检测VT支持情况 392
+10.2.4 VMCS的配置 393
+10.2.5 EPT的配置 396
+10.2.6 开启VT 399
+10.2.7 内存隐藏的实现 399
+10.3 VT调试方法 401
+第11章 PE文件格式 404
+11.1 PE的基本概念 405
+11.1.1 基地址 405
+11.1.2 虚拟地址 406
+11.1.3 相对虚拟地址 406
+11.1.4 文件偏移地址 407
+11.2 MS-DOS头部 407
+11.3 PE文件头 408
+11.3.1 Signature字段 408
+11.3.2 IMAGE_FILE_HEADER结构 409
+11.3.3 IMAGE_OPTIONAL_HEADER结构 410
+11.4 区块 415
+11.4.1 区块表 415
+11.4.2 常见区块与区块合并 417
+11.4.3 区块的对齐值 419
+11.4.4 文件偏移与虚拟地址的转换 419
+11.5 输入表 421
+11.5.1 输入函数的调用 421
+11.5.2 输入表的结构 422
+11.5.3 输入地址表 424
+11.5.4 输入表实例分析 424
+11.6 绑定输入 428
+11.7 输出表 429
+11.7.1 输出表的结构 430
+11.7.2 输出表实例分析 431
+11.8 基址重定位 432
+11.8.1 基址重定位的概念 432
+11.8.2 基址重定位表的结构 433
+11.8.3 基址重定位表实例分析 434
+11.9 资源 435
+11.9.1 资源结构 435
+11.9.2 资源结构实例分析 438
+11.9.3 资源编辑工具 440
+11.10 TLS初始化 440
+11.11 调试目录 441
+11.12 延迟载入数据 441
+11.13 程序异常数据 442
+11.14 .NET头部 442
+11.15 编写PE分析工具 443
+11.15.1 检查文件格式 443
+11.15.2 读取FileHeader和OptionalHeader的内容 444
+11.15.3 得到数据目录表信息 445
+11.15.4 得到区块表信息 446
+11.15.5 得到输出表信息 447
+11.15.6 得到输入表信息 448
+第12章 注入技术 450
+12.1 DLL注入方法 450
+12.1.1 通过干预输入表处理过程加载目标DLL 450
+12.1.2 改变程序运行流程使其主动加载目标DLL 466
+12.1.3 利用系统机制加载DLL 484
+12.2 DLL注入的应用 491
+12.3 DLL注入的防范 491
+12.3.1 驱动层防范 491
+12.3.2 应用层防范 493
+第13章 Hook技术 497
+13.1 Hook概述 497
+13.1.1 IAT Hook篡改MessageBox消息 497
+13.1.2 Inline Hook篡改指定MessageBox消息 499
+13.2 Hook的分类 500
+13.2.1 Address Hook 501
+13.2.2 Inline Hook 511
+13.2.3 基于异常处理的Hook 513
+13.2.4 不是Hook的Hook 514
+13.3 Hook位置的挑选 515
+13.4 Hook的典型过程 519
+13.4.1 Address Hook的实施过程 519
+13.4.2 Inline Hook的实施过程 526
+13.4.3 基于异常处理的Hook实施过程 529
+13.4.4 二次Hook的注意事项 532
+13.4.5 通用Hook引擎的实现 533
+13.5 Detour函数的典型用法 533
+13.6 Hook中的注意事项 536
+13.7 Hook在x64平台上的新问题 541
+13.8 Hook技术的应用 543
+13.9 Hook的检测、恢复与对抗 544
+13.9.1 Hook的检测与恢复 544
+13.9.2 Hook的对抗 545
+13.10 本章小结 546
+漏洞篇
+第14章 漏洞分析技术 548
+14.1 软件漏洞原理 548
+14.1.1 缓冲区溢出漏洞 548
+14.1.2 整型溢出漏洞 553
+14.1.3 UAF漏洞 555
+14.2 Shellcode 555
+14.2.1 Shellcode的结构 556
+14.2.2 Shellcode通用技术 559
+14.2.3 实战Shellcode编写 560
+14.3 漏洞利用 566
+14.3.1 漏洞利用基本技术 567
+14.3.2 漏洞利用高级技术 570
+14.4 漏洞样本 572
+14.5 样本分析 573
+14.5.1 准备工作 573
+14.5.2 静态分析 574
+14.5.3 动态调试 576
+14.5.4 追根溯源 581
+14.5.5 小结 585
+脱壳篇
+第15章 专用加密软件 588
+15.1 认识壳 588
+15.1.1 壳的概念 588
+15.1.2 压缩引擎 589
+15.2 压缩壳 589
+15.2.1 UPX 589
+15.2.2 ASPack 590
+15.3 加密壳 590
+15.3.1 ASProtect 590
+15.3.2 Armadillo 590
+15.3.3 EXECryptor 591
+15.3.4 Themida 591
+15.4 虚拟机保护软件 592
+15.4.1 虚拟机介绍 592
+15.4.2 VMProtect简介 592
+第16章 脱壳技术 594
+16.1 基础知识 594
+16.1.1 壳的加载过程 594
+16.1.2 脱壳机 595
+16.1.3 手动脱壳 596
+16.2 寻找OEP 596
+16.2.1 根据跨段指令寻找OEP 596
+16.2.2 用内存访问断点寻找OEP 600
+16.2.3 根据栈平衡原理寻找OEP 601
+16.2.4 根据编译语言特点寻找OEP 602
+16.3 抓取内存映像 603
+16.3.1 Dump原理 603
+16.3.2 反Dump技术 604
+16.4 重建输入表 606
+16.4.1 输入表重建的原理 606
+16.4.2 确定IAT的地址和大小 607
+16.4.3 根据IAT重建输入表 608
+16.4.4 用Import REC重建输入表 611
+16.4.5 输入表加密概括 614
+16.5 DLL文件脱壳 615
+16.5.1 寻找OEP 615
+16.5.2 Dump映像文件 617
+16.5.3 重建DLL的输入表 618
+16.5.4 构造重定位表 619
+16.6 附加数据 621
+16.7 PE文件的优化 623
+16.8 压缩壳 626
+16.8.1 UPX外壳 626
+16.8.2 ASPack外壳 629
+16.9 加密壳 633
+16.10 静态脱壳 637
+16.10.1 外壳Loader分析 637
+16.10.2 编写静态脱壳器 641
+保护篇
+第17章 软件保护技术 644
+17.1 防范算法求逆 644
+17.1.1 基本概念 644
+17.1.2 堡垒战术 645
+17.1.3 游击战术 646
+17.2 抵御静态分析 647
+17.2.1 花指令 647
+17.2.2 SMC技术实现 649
+17.2.3 信息隐藏 653
+17.2.4 简单的多态变形技术 654
+17.3 文件完整性检验 655
+17.3.1 磁盘文件校验的实现 655
+17.3.2 校验和 657
+17.3.3 内存映像校验 657
+17.4 代码与数据结合 659
+17.4.1 准备工作 660
+17.4.2 加密算法的选用 661
+17.4.3 手动加密代码 661
+17.4.4 使 .text区块可写 662
+17.5 关于软件保护的若干忠告 663
+第18章 反跟踪技术 665
+18.1 由BeingDebugged引发的蝴蝶效应 665
+18.1.1 BeingDebugged 665
+18.1.2 NtGlobalFlag 669
+18.1.3 Heap Magic 671
+18.1.4 从源头消灭BeingDebugged 676
+18.2 回归Native：用户态的梦魇 676
+18.2.1 CheckRemoteDebuggerPresent 677
+18.2.2 ProcessDebugPort 677
+18.2.3 ThreadHideFromDebugger 680
+18.2.4 DebugObject 682
+18.2.5 SystemKernelDebuggerInformation 686
+18.2.6 Native API 688
+18.2.7 Hook和AntiHook 693
+18.3 真正的奥秘：小技巧一览 696
+18.3.1 SoftICE检测方法 696
+18.3.2 OllyDbg检测方法 698
+18.3.3 调试器漏洞 700
+18.3.4 防止调试器附加 701
+18.3.5 父进程检测 703
+18.3.6 时间差 703
+18.3.7 通过Trap Flag检测 704
+18.3.8 双进程保护 704
+第19章 外壳编写基础 705
+19.1 外壳的结构 705
+19.2 加壳主程序 706
+19.2.1 判断文件是否为PE格式 706
+19.2.2 文件基本数据读入 706
+19.2.3 附加数据的读取 708
+19.2.4 输入表的处理 708
+19.2.5 重定位表的处理 711
+19.2.6 文件的压缩 713
+19.2.7 资源数据的处理 716
+19.2.8 区块的融合 720
+19.3 用汇编写外壳部分 721
+19.3.1 外壳的加载过程 721
+19.3.2 自建输入表 722
+19.3.3 外壳引导段 723
+19.3.4 外壳第2部分 726
+19.3.5 将外壳部分添加至原程序 731
+19.4 用C++编写外壳部分 734
+第20章 虚拟机的设计 739
+20.1 虚拟机保护技术原理 739
+20.1.1 反汇编引擎 739
+20.1.2 指令分类 739
+20.2 启动框架和调用约定 740
+20.2.1 调度器 740
+20.2.2 虚拟环境 741
+20.2.3 平衡栈vBegin和vCheckESP 742
+20.3 Handler的设计 743
+20.3.1 辅助Handler 743
+20.3.2 普通Handler和指令拆解 744
+20.3.3 标志位问题 745
+20.3.4 相同作用的指令 745
+20.3.5 转移指令 746
+20.3.6 转移跳转指令的另一种实现 747
+20.3.7 call指令 748
+20.3.8 retn指令 748
+20.3.9 不可模拟指令 749
+20.4 托管代码的异常处理 749
+20.4.1 VC++的异常处理 749
+20.4.2 Delphi的异常处理 754
+20.5 本章小结 757
+第21章 VMProtect逆向和还原浅析 758
+21.1 VMProtect逆向分析 758
+21.1.1 VMProtect虚拟执行引擎的全景图 758
+21.1.2 VMProtect虚拟引擎的基本架构 763
+21.1.3 指令分类 763
+21.2 VMProtect的还原 765
+21.2.1 虚拟执行系统 766
+21.2.2 生成完整的字节码流程图 767
+21.2.3 给Handler命名并添加语义动作 774
+21.2.4 将字节码的低级描述转换为中级描述 775
+21.2.5 清除无用的字节码 776
+21.2.6 用真值表化简逻辑指令 776
+21.2.7 从特征中建立部分寄存器映射信息 779
+21.2.8 其他无法确定的寄存器的图着色算法 785
+21.2.9 使用DAG匹配生成指令 788
+21.2.10 其他问题 791
+软件重构篇
+第22章 补丁技术 794
+22.1 文件补丁 794
+22.2 内存补丁 795
+22.2.1 跨进程内存存取机制 795
+22.2.2 Debug API机制 797
+22.2.3 利用调试寄存器机制 800
+22.2.4 利用DLL注入技术 803
+22.2.5 利用Hook技术 807
+22.2.6 利用VT技术 810
+22.3 SMC补丁技术 813
+22.3.1 单层SMC补丁技术 813
+22.3.2 多层SMC补丁技术 814
+22.4 补丁工具 816
+第23章 代码的二次开发 818
+23.1 数据对齐 818
+23.2 增加空间 818
+23.2.1 区块间隙 818
+23.2.2 手动构造区块 819
+23.2.3 工具辅助构造区块 820
+23.3 获得函数的调用信息 820
+23.3.1 增加输入函数 820
+23.3.2 显式链接调用DLL 821
+23.4 代码的重定位 822
+23.4.1 修复重定位表 822
+23.4.2 代码的自定位技术 824
+23.5 增加输出函数 825
+23.6 消息循环 826
+23.6.1 WndProc函数 826
+23.6.2 寻找消息循环 827
+23.6.3 WndProc汇编形式 828
+23.7 菜单扩展 829
+23.7.1 扩充WndProc 829
+23.7.2 扩充Exit菜单的功能 830
+23.7.3 扩充Open菜单的功能 830
+23.8 DLL扩展 833
+23.8.1 扩展接口 833
+23.8.2 扩展消息循环 834
+语言和平台篇
+第24章 .NET平台加解密 838
+24.1 .NET概述 838
+24.1.1 什么是 .NET 838
+24.1.2 基本概念 839
+24.1.3 第1个 .NET程序 840
+24.2 MSIL与元数据 841
+24.2.1 PE结构的扩展 841
+24.2.2 .NET下的汇编MSIL 847
+24.2.3 MSIL与元数据的结合 849
+24.3 代码分析与修改技术 851
+24.3.1 静态分析 851
+24.3.2 动态调试 853
+24.3.3 代码修改 855
+24.4 .NET代码保护技术及其逆向 857
+24.4.1 强名称 857
+24.4.2 名称混淆 859
+24.4.3 流程混淆 863
+24.4.4 压缩 865
+24.4.5 加密 869
+24.4.6 其他保护手段 875
+24.5 本章小结 876
+取证篇
+第25章 数据取证技术 878
+25.1 硬盘数据的获取和固定 878
+25.1.1 硬盘数据的获取 878
+25.1.2 电子数据的固定 882
+25.2 硬盘的分区和数据恢复 882
+25.2.1 分区的解析 884
+25.2.2 基于文件系统的数据恢复原理 886
+25.3 内存分析 890
+25.3.1 内存镜像的获取 891
+25.3.2 内存镜像的分析 894
+25.4 动态仿真技术 897
+25.4.1 仿真专用硬件 897
+25.4.2 软件仿真 898
+25.5 注册表 900
+25.5.1 Hive文件 900
+25.5.2 注册表中的时间 901
+25.5.3 USB移动存储设备 902
+25.6 文件格式 903
+25.6.1 文件修复和特征码 903
+25.6.2 基于文件的数据恢复技术 904
+25.6.3 数据隐藏的分析 906
+术语表 909
+参考文献 911</p>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../Practical%20Malware%20Analysis/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Practical Malware Analysis" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Practical Malware Analysis
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B%E6%A0%B8%E5%BF%83%E5%8E%9F%E7%90%86/" class="md-footer__link md-footer__link--next" aria-label="Next: 逆向工程核心原理" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              逆向工程核心原理
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      COMPASS & SUSTech 2022 CTF team
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "search.suggest", "search.highlight", "search.share"], "search": "../../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      
+    
+  </body>
+</html>
