@@ -8,7 +8,7 @@ This file is an archive of all the competitions we joined. Both great ones and n
 
 | Competition       | Time           | Rank |
 | ----------------- | -------------- | ---- |
-| 强网杯 2022        | Jul 30, 2022   | #74 |
+| 强网杯 2022        | Jul 30, 2022   | #55 |
 | DiceCTF 2022      | Jul 24, 2022   | #21  |
 | 广东省赛 2022      | Mar 21, 2022   | #9  |
 | 虎符CTF 2022      | Mar 19, 2022   | #36  |
@@ -22,6 +22,7 @@ This file is an archive of all the competitions we joined. Both great ones and n
 
 ### 强网杯 2022
 
+![img](assets/qwb2022p.png)
 ![img](assets/qwb2022.png)
 
 ### DiceCTF 2022
