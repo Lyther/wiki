@@ -58,6 +58,9 @@ nav:
     - Meeting/CTF Week Meeting 2022-07-07.md
     - Meeting/CTF Week Meeting 2022-07-14.md
     - Meeting/CTF Week Meeting 2022-07-21.md
+    - Meeting/CTF Week Meeting 2022-07-28.md
+    - Meeting/CTF Week Meeting 2022-08-04.md
+    - Meeting/CTF Week Meeting 2022-08-11.md
   - CTF:
     - CTF/abstract.md
     - CTF/structure.md
@@ -220,6 +223,7 @@ nav:
   - Writeup/虎符CTF2022/COMPASS WriteUp.md
   - Writeup/COMPASS CTF2021/COMPASS_CTF_2021_ALLwp.md
   - Writeup/DiceCTF 2022.md
+  - Writeup/DiceCTF Hope.md
   - Binary Exploitation:
     - Writeup/Binary Exploitation/beginner-generic-pwn-number-0.md
     - Writeup/Binary Exploitation/collision.md
