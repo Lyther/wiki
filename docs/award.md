@@ -8,6 +8,7 @@ This file is an archive of all the competitions we joined. Both great ones and n
 
 | Competition       | Time           | Rank |
 | ----------------- | -------------- | ---- |
+| 巅峰极客 2022      | Aug 17, 2022   | #14 |
 | 强网杯 2022        | Jul 30, 2022   | #55 |
 | DiceCTF 2022      | Jul 24, 2022   | #21  |
 | 广东省赛 2022      | Mar 21, 2022   | #9  |
@@ -19,6 +20,10 @@ This file is an archive of all the competitions we joined. Both great ones and n
 | DefCamp 2022      | Feb 11, 2022   | #194 |
 | Real World CTF    | Jan 21, 2022   | #159 |
 | KnightCTF 2022    | Jan 20, 2022   | #140 |
+
+### 巅峰极客 2022
+
+![img](assets/dfjk2022q.jpg)
 
 ### 强网杯 2022
 
