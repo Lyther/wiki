@@ -6,17 +6,39 @@ This file is an archive of all the competitions we joined. Both great ones and n
 
 ## 2022
 
-| Competition       | Time                 | Rank |
-| ----------------- | -------------------- | ---- |
-| KnightCTF 2022    | January 20, 2022     | #140 |
-| Real World CTF    | JAN 21 21:00, 2022   | #159 |
-| DefCamp 2022      | 11-13 February, 2022 | #194 |
-| VU CYBERTHON 2022 | 18 Feb 2022          | #78  |
-| TQLCTF 2022       | 2022-02-19           | #37  |
-| CODEGATE 2022     | 26 Feb 2022          | #29  |
-| ECTF 2022         | 5th March 3:00 PM    | #31  |
-| 虎符CTF 2022      | 5th March 3:00 PM    | #36  |
-| 广东省赛 2022      | 5th March 3:00 PM    | #9   |
+| Competition       | Time           | Rank |
+| ----------------- | -------------- | ---- |
+| 网鼎杯 2022 青龙初赛| Aug 26, 2022  |  #7  |
+| 巅峰极客 2022 决赛 | Aug 24, 2022   | #11 |
+| 巅峰极客 2022      | Aug 17, 2022   | #12 |
+| 强网杯 2022        | Jul 30, 2022   | #55 |
+| DiceCTF 2022      | Jul 24, 2022   | #21  |
+| 广东省赛 2022      | Mar 21, 2022   | #9  |
+| 虎符CTF 2022      | Mar 19, 2022   | #36  |
+| ECTF 2022         | Mar 05, 2022   | #31  |
+| CODEGATE 2022     | Feb 26, 2022   | #29  |
+| TQLCTF 2022       | Feb 19, 2022   | #37  |
+| VU CYBERTHON 2022 | Feb 18, 2022   | #78  |
+| DefCamp 2022      | Feb 11, 2022   | #194 |
+| Real World CTF    | Jan 21, 2022   | #159 |
+| KnightCTF 2022    | Jan 20, 2022   | #140 |
+
+### 网鼎杯 2022
+![img](assets/2022wdbs1.jpg)
+
+### 巅峰极客 2022
+
+![img](assets/dfjkks2022.jpg)
+![img](assets/dfjk2022q.jpg)
+
+### 强网杯 2022
+
+![img](assets/qwb2022p.png)
+![img](assets/qwb2022.png)
+
+### DiceCTF 2022
+
+![img](assets/dice2022.jpg)
 
 ### 广东省赛 2022
 
