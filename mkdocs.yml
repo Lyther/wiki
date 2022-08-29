@@ -61,6 +61,7 @@ nav:
     - Meeting/CTF Week Meeting 2022-07-28.md
     - Meeting/CTF Week Meeting 2022-08-04.md
     - Meeting/CTF Week Meeting 2022-08-11.md
+    - Meeting/CTF Week Meeting 2022-08-18.md
   - CTF:
     - CTF/abstract.md
     - CTF/structure.md
@@ -110,22 +111,23 @@ nav:
     - Book/Security/Rootkit.md
     - Book/Security/漏洞战争.md
 - CS315:
-  - CS315/Overview.md
-  - CS315/Week 1.md
-  - CS315/Week 2.md
-  - CS315/Week 3.md
-  - CS315/Week 4.md
-  - CS315/Week 5.md
-  - CS315/Week 6.md
-  - CS315/Week 7.md
-  - CS315/Week 8.md
-  - CS315/Week 9.md
-  - CS315/Week 10.md
-  - CS315/Week 11.md
-  - CS315/Week 12.md
-  - CS315/Week 13.md
-  - CS315/Week 14.md
-  - CS315/Exercise Solutions.md
+  - 2021:
+    - CS315/2021/Overview.md
+    - CS315/2021/Week 1.md
+    - CS315/2021/Week 2.md
+    - CS315/2021/Week 3.md
+    - CS315/2021/Week 4.md
+    - CS315/2021/Week 5.md
+    - CS315/2021/Week 6.md
+    - CS315/2021/Week 7.md
+    - CS315/2021/Week 8.md
+    - CS315/2021/Week 9.md
+    - CS315/2021/Week 10.md
+    - CS315/2021/Week 11.md
+    - CS315/2021/Week 12.md
+    - CS315/2021/Week 13.md
+    - CS315/2021/Week 14.md
+    - CS315/2021/Exercise Solutions.md
 - Paper:
   - Artificial Intelligence:
     - Paper/Artificial Intelligence/Cert-RNN Towards Certifying the Robustness of Recurrent.md
@@ -229,14 +231,6 @@ nav:
   - Writeup/DiceCTF 2022.md
   - Writeup/DiceCTF Hope.md
   - Writeup/COMPASS 2022 Summer.md
-  - Binary Exploitation:
-    - Writeup/Binary Exploitation/beginner-generic-pwn-number-0.md
-    - Writeup/Binary Exploitation/collision.md
-    - Writeup/Binary Exploitation/fd.md
-    - Writeup/Binary Exploitation/printf-please.md
-    - Writeup/Binary Exploitation/ret2generic-flag-reader.md
-    - Writeup/Binary Exploitation/ret2the-unknown.md
-    - Writeup/Binary Exploitation/simultaneity.md
   - Cryptography:
     - Writeup/Cryptography/blowfishgame.md
     - Writeup/Cryptography/Dachshund Attacks.md
@@ -250,16 +244,8 @@ nav:
     - Writeup/Cryptography/scissor.md
     - Writeup/Cryptography/secret share.md
     - Writeup/Cryptography/simpleRSA.md
-  - Forensics:
-    - Writeup/Forensics/Disk, disk, sleuth! II.md
-    - Writeup/Forensics/Disk, disk, sleuth!.md
-    - Writeup/Forensics/MacroHard WeakEdge.md
-    - Writeup/Forensics/Milkslap.md
-    - Writeup/Forensics/Wireshark doo dooo do doo.md
   - General Skills:
-    - Writeup/General Skills/2Warm.md
     - Writeup/General Skills/ChieftainsSecret.md
-    - Writeup/General Skills/Lets Warm Up.md
     - Writeup/General Skills/shuffle_code.md
     - Writeup/General Skills/xixixi.md
     - Writeup/General Skills/到点了.md
@@ -270,15 +256,6 @@ nav:
     - Writeup/General Skills/鸣雏恋.md
   - Reverse Engineering:
     - Writeup/Reverse Engineering/apk1.md
-    - Writeup/Reverse Engineering/bread-making.md
-    - Writeup/Reverse Engineering/dimensionality.md
     - Writeup/Reverse Engineering/re1.md
-    - Writeup/Reverse Engineering/Shop.md
-    - Writeup/Reverse Engineering/speeds and feeds.md
-    - Writeup/Reverse Engineering/wstrings.md
   - Web Exploitation:
-    - Writeup/Web Exploitation/Cookies.md
-    - Writeup/Web Exploitation/inspect-me.md
-    - Writeup/Web Exploitation/It is my Birthday.md
-    - Writeup/Web Exploitation/Most Cookies.md
-    - Writeup/Web Exploitation/Scavenger Hunt.md
+    - Writeup/Web Exploitation/easy_game.md
