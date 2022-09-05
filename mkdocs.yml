@@ -4,7 +4,11 @@ repo_name: lyther/wiki
 repo_url: https://github.com/lyther/wiki
 site_description: Wiki project for COMPASS CTF, for usage of information sharing, collection, and reference. The contents are contributed by the students of COMPASS CTF team.
 copyright: COMPASS & SUSTech 2022 CTF team
-
+extra:
+  analytics:
+    provider: google
+    property: G-PJ9W2F97F4
+  
 theme:
   name: material
   language: en
