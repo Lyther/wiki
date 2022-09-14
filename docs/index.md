@@ -8,7 +8,7 @@ Visit our lab website: [COMPASS](http://compass.sustech.edu.cn/)
 
 ## Activities
 
-* Daily challenge: challenges are published every day. You can log into [Challenge Platform](http://ctf.infury.org:8000/) and finish our daily challenges.
+* Daily challenge: challenges are published every day. You can log into [Intranet Challenge Platform](http://detroit.sustech.edu.cn/) and finish our daily challenges.
 * Weekly meeting: every week we would have a meeting to synchronize our progress and plans for the next week. The meeting time is 4 pm, Thursday.
   * If you are interested, join our meeting channel: https://meeting.tencent.com/p/4484894504
 
