@@ -65,8 +65,8 @@ nav:
     - Meeting/CTF Week Meeting 2022-07-28.md
     - Meeting/CTF Week Meeting 2022-08-04.md
     - Meeting/CTF Week Meeting 2022-08-11.md
-    - Meeting/CTF Week Meeting 2022-08-18.md
     - Meeting/CTF Week Meeting 2022-09-08.md
+    - Meeting/CTF Week Meeting 2022-09-15.md
   - CTF:
     - CTF/abstract.md
     - CTF/structure.md
@@ -118,6 +118,7 @@ nav:
 - CS315:
   - CS315/Introduction.md
   - CS315/Lab 1 Packet Sniffing and Wireshark.md
+  - CS315/Lab 2 Secure Coding and Buffer Overflows.md
   - 2021:
     - CS315/2021/Overview.md
     - CS315/2021/Week 1.md
