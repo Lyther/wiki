@@ -1,6 +1,6 @@
 # 2022巅峰极客决赛
 
-Rank: 11
+Rank: 10
 
 # StrangeTemporature
 
