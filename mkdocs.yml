@@ -121,6 +121,9 @@ nav:
   - CS315/Introduction.md
   - CS315/Lab 1 Packet Sniffing and Wireshark.md
   - CS315/Lab 2 Secure Coding and Buffer Overflows.md
+  - CS315/Lab 3 Secure Coding and Format-String Vulnerability.md
+  - CS315/Lab 4 Scanning, Reconnaissance, and Penetration Testing.md
+  - CS315/Lab 5 Reverse Engineering and Obfuscation.md
   - 2021:
     - CS315/2021/Overview.md
     - CS315/2021/Week 1.md
