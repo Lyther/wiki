@@ -70,6 +70,7 @@ nav:
     - Meeting/CTF Week Meeting 2022-09-22.md
     - Meeting/CTF Week Meeting 2022-09-30.md
     - Meeting/CTF Week Meeting 2022-10-06.md
+    - Meeting/CTF Week Meeting 2022-10-13.md
   - CTF:
     - CTF/abstract.md
     - CTF/structure.md
@@ -209,6 +210,7 @@ nav:
     - Training/Material/OS.md
     - Training/Material/Penetration.md
     - Training/Material/Reverse.md
+    - Training/Material/X86_Assembly.pdf
   - Schedule:
     - Training/Schedule/2021Summer.md
     - Training/Schedule/2021Fall.md
