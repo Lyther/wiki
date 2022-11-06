@@ -71,10 +71,7 @@ nav:
     - Meeting/CTF Week Meeting 2022-09-30.md
     - Meeting/CTF Week Meeting 2022-10-06.md
     - Meeting/CTF Week Meeting 2022-10-13.md
-  - CTF:
-    - CTF/abstract.md
-    - CTF/structure.md
-- Book:
+- Book Collection:
   - Book/CTF竞赛入门指南.md
   - Book/从0到1：CTFer成长之路.md
   - Computer and System:
@@ -119,7 +116,7 @@ nav:
     - Book/Security/Gray Hat Hacking.md
     - Book/Security/Rootkit.md
     - Book/Security/漏洞战争.md
-- CS315:
+- CS315 Material:
   - CS315/Introduction.md
   - CS315/Lab 1 Packet Sniffing and Wireshark.md
   - CS315/Lab 2 Secure Coding and Buffer Overflows.md
@@ -144,6 +141,9 @@ nav:
     - CS315/2021/Week 13.md
     - CS315/2021/Week 14.md
     - CS315/2021/Exercise Solutions.md
+- CTF Practice to Principle:
+  - CTF/abstract.md
+  - CTF/structure.md
 - Paper:
   - Artificial Intelligence:
     - Paper/Artificial Intelligence/Cert-RNN Towards Certifying the Robustness of Recurrent.md
@@ -162,7 +162,7 @@ nav:
     - Paper/PWN/Preventing Dynamic Library Compromise on Node.js via RWX-Based Privilege Reduction.md
   - Reverse Engineering:
     - Paper/Reverse Engineering/Search-based Approaches for Local Black-Box Code Deobfuscation Understand, Improve and Mitigate.md
-- Tool:
+- Tool Collection:
   - AWD:
     - Tool/AWD/AoiAWD.md
     - Tool/AWD/Auto-AWD.md
@@ -202,7 +202,7 @@ nav:
     - Tool/Forensics/exiftool.md
     - Tool/Forensics/foremost.md
     - Tool/Forensics/stegsolve.md
-- Training:
+- Training and Tutorial:
   - Training/校队竞赛训练模式.md
   - Material:
     - Training/Material/Binary Exploitation.md
@@ -218,7 +218,12 @@ nav:
     - Training/Schedule/2022Spring.md
     - Training/Schedule/2022Summer.md
     - Training/Schedule/2022Fall.md
-- Website:
+  - Tutorial:
+    - Misc:
+      - Training/Tutorial/Misc/Docker.md
+    - Reverse Engineering:
+      - Training/Tutorial/Reverse/ARM32_1.md
+- Website Collection:
   - Forum:
     - Website/Forum/kanxue.md
   - Platform:
