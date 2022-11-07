@@ -10,7 +10,7 @@ Teams of competitors (or just individuals) are pitted against each other in a te
 
 Very often CTFs are the beginning of one's cyber security career due to their team building nature and competitive aspect. In addition, there isn't a lot of commitment required beyond a weekend.
 
-![ctftime](../assets/ctftime1.png)
+![ctftime](../../assets/ctftime1.png)
 
 Figure: CTFs on the CTFtime website.
 
