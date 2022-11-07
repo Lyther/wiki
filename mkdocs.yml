@@ -79,25 +79,25 @@ nav:
     - Meeting/CTF Week Meeting 2022-10-06.md
     - Meeting/CTF Week Meeting 2022-10-13.md
 - Book Collection:
-  - Book/CTF竞赛入门指南.md
-  - Book/从0到1：CTFer成长之路.md
+  - Book/CTF Competition Starter Guide.md
+  - Book/From 0 to 1 The CTFer Growth Path.md
   - Computer and System:
-    - Book/Computer and System/Android Dalvik虚拟机结构及机制剖析.md
+    - Book/Computer and System/Android Dalvik virtual machine structure and mechanism anatomy.md
     - Book/Computer and System/Android Internals.md
-    - Book/Computer and System/Android系统源代码情景分析.md
+    - Book/Computer and System/Android system source code scenario analysis.md
     - Book/Computer and System/Code.md
     - Book/Computer and System/Computer Systems.md
     - Book/Computer and System/Linux Kernel Development.md
     - Book/Computer and System/Mac OS X and iOS Internals.md
     - Book/Computer and System/Understanding the Linux Kernel.md
     - Book/Computer and System/Windows Internals.md
-    - Book/Computer and System/代码揭秘.md
-    - Book/Computer and System/深入理解Android内核设计思想.md
+    - Book/Computer and System/Code Reveal.md
+    - Book/Computer and System/In-depth understanding of Android kernel design ideas.md
   - Cryptography:
     - Book/Cryptography/Foundations of Cryptography.md
     - Book/Cryptography/Introduction to Modern Cryptography.md
     - Book/Cryptography/Understanding Cryptography.md
-    - Book/Cryptography/图解密码技术.md
+    - Book/Cryptography/Graphical cryptography.md
   - Network:
     - Book/Network/Computer Networking.md
     - Book/Network/Practical Packet Analysis.md
@@ -114,15 +114,15 @@ nav:
       - Book/Programming/C++/C++ Primer.md
   - PWN:
     - Book/PWN/Practical Malware Analysis.md
-    - Book/PWN/加密与解密.md
-    - Book/PWN/逆向工程核心原理.md
+    - Book/PWN/Encryption and Decryption.md
+    - Book/PWN/Core Principles of Reverse Engineering.md
   - Security:
-    - Book/Security/0day安全.md
+    - Book/Security/0day Security.md
     - Book/Security/A Guide to Kernel Exploitation.md
     - Book/Security/Fuzzing for Software Security Testing and Quality Assurance.md
     - Book/Security/Gray Hat Hacking.md
     - Book/Security/Rootkit.md
-    - Book/Security/漏洞战争.md
+    - Book/Security/Vulnerability War.md
 - CS315 Material:
   - CS315/Introduction.md
   - CS315/Lab 1 Packet Sniffing and Wireshark.md
@@ -211,7 +211,7 @@ nav:
     - Tool/Forensics/foremost.md
     - Tool/Forensics/stegsolve.md
 - Training and Tutorial:
-  - Training/校队竞赛训练模式.md
+  - Training/Varsity Competition Training Model.md
   - Material:
     - Training/Material/Binary Exploitation.md
     - Training/Material/Cryptography.md
