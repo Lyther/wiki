@@ -8,8 +8,9 @@ This file is an archive of all the competitions we joined. Both great ones and n
 
 | Competition       | Time           | Rank |
 | ----------------- | -------------- | ---- |
+| 2022美团挑战赛     | Sep 18, 2022  |  #19  |
 | 网鼎杯 2022 青龙初赛| Aug 26, 2022  |  #7  |
-| 巅峰极客 2022 决赛 | Aug 24, 2022   | #11 |
+| 巅峰极客 2022 决赛 | Aug 24, 2022   | #10 |
 | 巅峰极客 2022      | Aug 17, 2022   | #12 |
 | 强网杯 2022        | Jul 30, 2022   | #55 |
 | DiceCTF 2022      | Jul 24, 2022   | #21  |
