@@ -101,11 +101,11 @@ For example: flag{深圳-欢乐谷}
 
 ### (3 - Medium) Home
 
-A photo that was taken from someone's house. A lovely place to live in.
+A photo that was someone's house. A lovely place to live in. However, I want to know the location where this photo was taken.
 
 Flag format: flag{[location name]}
 
-For example: flag{荔园}
+For example: flag{无人机}
 
 [Attachment](static/3.zip)
 
