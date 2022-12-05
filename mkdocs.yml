@@ -136,6 +136,7 @@ nav:
   - CS315/Lab 8 Forensics and Steganography Part II.md
   - CS315/Lab 9 Open-Source Intelligence.md
   - CS315/Lab 10 Public Key Cryptography.md
+  - CS315/Lab 11 Return-to-libc & Return Oriented Programming.md
   - 2021:
     - CS315/2021/Overview.md
     - CS315/2021/Week 1.md
