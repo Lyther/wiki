@@ -500,3 +500,12 @@ A tutorial to the ROP.
 Do you know return to libc?
 
 [Attachment](static/51db1d4bd7c1413265556a89ec92881a.zip)
+
+### eBPF
+
+A challenge, a real challenge, for your last CTF for this semester! 🎶🎶🎶
+
+`nc 103.125.216.173 9009`
+
+[Attachment](static/rootfs.cpio)
+
