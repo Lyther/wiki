@@ -8,6 +8,7 @@ This file is an archive of all the competitions we joined. Both great ones and n
 
 | Competition       | Time           | Rank |
 | ----------------- | -------------- | ---- |
+| 2022春秋杯冬季赛   | Dec 23, 2022  |  #1  |
 | 2022美团挑战赛     | Sep 18, 2022  |  #19  |
 | 网鼎杯 2022 青龙初赛| Aug 26, 2022  |  #7  |
 | 巅峰极客 2022 决赛 | Aug 24, 2022   | #10 |
@@ -23,6 +24,9 @@ This file is an archive of all the competitions we joined. Both great ones and n
 | DefCamp 2022      | Feb 11, 2022   | #194 |
 | Real World CTF    | Jan 21, 2022   | #159 |
 | KnightCTF 2022    | Jan 20, 2022   | #140 |
+
+### 春秋杯 2022 冬季赛
+![img](assets/cqb2022.png)
 
 ### 网鼎杯 2022
 ![img](assets/2022wdbs1.jpg)
