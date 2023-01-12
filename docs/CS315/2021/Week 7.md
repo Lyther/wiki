@@ -187,7 +187,7 @@ A simple packet fuzzer with multiple packet sources and a nice set of modifiers.
 
 ***Airgeddon*** offers most of the attacks proposed in the previous comments:
 
-![img](../assets/Week 7-1.png)
+![img](../../assets/Week 7-1.png)
 
 ## WPS
 
@@ -242,7 +242,7 @@ Some really bad implementations allowed the Null PIN to connect (very weird also
 
 All the proposed WPS attacks can be easily performed using ***airgeddon.\***
 
-![img](../assets/Week 7-2.png)
+![img](../../assets/Week 7-2.png)
 
 - 5 and 6 lets you try **your custom PIN** (if you have any)
 - 7 and 8 perform the **Pixie Dust attack**
@@ -254,7 +254,7 @@ All the proposed WPS attacks can be easily performed using ***airgeddon.\***
 
 So broken and disappeared that I am not going to talk about it. Just know that ***airgeddon\*** have a WEP option called "All-in-One" to attack this kind of protection. More tools offer similar options.
 
-![img](../assets/Week 7-3.png)
+![img](../../assets/Week 7-3.png)
 
 ## WPA/WPA2 PSK
 
@@ -326,7 +326,7 @@ aireplay-ng -0 0 -a 64:20:9F:15:4F:D7 wlan0 #Send generic deauth packets, not al
 
 Once in the` airodump-ng` appears some handshake information this means that the handshake was captured and you can stop listening:
 
-![img](../assets/Week 7-4.png)
+![img](../../assets/Week 7-4.png)
 
 Once the handshake is captured you can **crack** it with `aircrack-ng`:
 
@@ -389,7 +389,7 @@ Reading https://tools.ietf.org/html/rfc3748#page-27 it looks like if you are usi
 
 Even using one of the most secure of authentication methods: **PEAP-EAP-TLS**, it is possible to **capture the username sent in the EAP protocol**. To do so, **capture a authentication communication** (start `airodump-ng` inside a channel and `wireshark `in the same interface) and filter the packets by`eapol`. Inside the "**Response, Identity**" packet, the **username** of the client will appear.
 
-![img](../assets/Week 7-5.png)
+![img](../../assets/Week 7-5.png)
 
 ### Anonymous Identities
 
@@ -557,7 +557,7 @@ You could also create an Evil Twin using **eaphammer** (notice that to create ev
 
 Or using Airgeddon: `Options: 5,6,7,8,9 (inside Evil Twin attack menu).`
 
-![img](../assets/Week 7-6.png)
+![img](../../assets/Week 7-6.png)
 
 Please, notice that by default if an ESSID in the PNL is saved as WPA protected, the device won't connect automatically to an Open evil Twin. You can try to DoS the real AP and hope that the user will connect manually to your Open evil twin, or you could DoS the real AP an use a WPA Evil Twin to capture the handshake (using this method you won't be able to let the victim connect to you as you don't know the PSK, but you can capture the handshake and try to crack it).
 
@@ -617,7 +617,7 @@ Or you could also use:
 
 `Airgeddon `can use previously generated certificated to offer EAP authentication to WPA/WPA2-Enterprise networks. The fake network will downgrade the connection protocol to EAP-MD5 so it will be able to **capture the user and the MD5 of the password**. Later, the attacker can try to crack the password. `Airggedon `offers you the possibility of a **continuous Evil Twin attack (noisy)** or **only create the Evil Attack until someone connects (smooth).**
 
-![img](../assets/Week 7-7.png)
+![img](../../assets/Week 7-7.png)
 
 ### Debugging PEAP and EAP-TTLS TLS tunnels in Evil Twins attacks
 
@@ -631,11 +631,11 @@ Now or later (when you have already captured some authentication intents) you ca
 
 Add a new entry and fill the form with this values: **IP address = any** -- **Port = 0** -- **Protocol = data** -- **Key File** (**select your key file**, to avoid problems select a key file **without being password protected**).
 
-![img](../assets/Week 7-8.png)
+![img](../../assets/Week 7-8.png)
 
 And look at the new **"Decrypted TLS" tab**:
 
-![img](../assets/Week 7-9.png)
+![img](../../assets/Week 7-9.png)
 
 ## KARMA, MANA, Loud MANA and Known beacons attack
 
@@ -643,7 +643,7 @@ And look at the new **"Decrypted TLS" tab**:
 
 The following table lists the different type of MFACLs (Management Frame Access Control Lists) available, as well their effects when used:
 
-![img](../assets/Week 7-10.png)
+![img](../../assets/Week 7-10.png)
 
 ```
 # example EAPHammer MFACL file, wildcards can be used78:f0:97:fc:b5:369a:35:e1:01:4f:cf69:19:14:60:20:45ce:52:b8:*:*:*

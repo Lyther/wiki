@@ -1,10 +1,11 @@
-# CTF Week Meeting 2022-07-21
+# CTF Week Meeting 2022-07-28
 
-1. Events register.
-1. Summer schedule update.
-1. Guangdong Province CTF 2nd Final.
+1. QiangWang Cup event update.
+1. DiceCTF rank and ctftime team rank.
+1. Guangdong CTF 2nd Final notes.
+1. Summer schedule.
 
-## Events register
+## QiangWang Cup event update
 
 https://bm.ichunqiu.com/2022qwb
 
@@ -40,23 +41,47 @@ Team2: kfccrazythursdayvme50yuan
 | Member | 王乙   |
 | Member | 金扬   |
 
-The first team is registered, and the second team is waiting for all the phone numbers to be signed up.
+Please join the corresponding notion group to co-operate in the competition.
 
-Later today, I will collect some recent challenges and their writeups.
+We have a discord group for voice chat:
 
-采取在线解题（Jeopardy）模式，主要面向国内高校、企业、机构等网络安全力量，每队不超过10名参赛队员和1名赛队指导。赛题内容主要涉及二进制程序逆向分析、密码分析、智能终端安全、信息隐藏、人工智能等网络安全领域的主要知识与技能，重点考察参赛人员网络安全知识的综合运用能力和网络安全技能的创新实践能力。比赛时间2022年7月30日-31日。
-
-一等奖 第1-3名 3万RMB/队
-
-二等奖 第4-10名 2万RMB/队
-
-三等奖 第11-32名 1万RMB/队
-
-最佳题目奖 共1名 2万RMB/题
-
-优秀题目奖 共6名 5000元RMB/题
+* https://discord.gg/Cy2vCpsB
 
 竞赛官方QQ群：856775704
+
+Hope you enjoy this competition!
+
+## DiceCTF rank and ctftime team rank
+
+![rank](../../assets/DiceCTF2022.png)
+
+@Frankss @Monad, we won 21 rank in the DiceCTF 2022.
+
+Yet another win against pkucc and n03tAck QwQ.
+
+The competition has some very interesting challenges and tricks, I'll collect them and publish on the Detroit CTF platform.
+
+In the meanwhile, we got 27.853 ctftime scores. The coutry rank of our team is updated to 21st place.
+
+Congratulations every member! 🎉🎉🎉
+
+## Guangdong CTF 2nd Final notes
+
+We've participated Guangdong CTF 2nd final meeting yesterday.
+
+The key information:
+
+* The final round would be in DAWD (DataCon AWD).
+* The players can't reach the inner server.
+* The players can push **patch** and **exp** to the server.
+* EDR and rootkit are not valid. But WAF is valid.
+
+We may need to try:
+
+* Reverse shell to get the operation privilege in the inner server.
+* Anonymous EDR for local service.
+* Network traffic analysis and block: replace flag.
+* Store a trojan in our own patch and image file.
 
 ## Summer schedule update
 
@@ -68,40 +93,19 @@ The past training:
 | July, 3rd  | Web Challenges and Databases (Basics)       | Ability to learn computer networks and hack websites. Know HTTP & HTTPS in protocol, and tools to capture / modify packets. | [Web Basics and Databases.pdf](https://wiki.compass.college/assets/Web_Basics_and_Databases.pdf) [OWASP vulnerabilities](https://owasp.org/www-community/vulnerabilities/) [PHP basics](https://www.tutorialspoint.com/php/index.htm) [HTML MDN](https://developer.mozilla.org/en-US/docs/Web/HTML) [CSS MDN](https://developer.mozilla.org/en-US/docs/Web/CSS) [JavaScript MDN](https://developer.mozilla.org/en-US/docs/Learn/JavaScript) |
 | July, 10th | Practice, Solving Web Challenges (Advanced) | Why websites are vulnerable, learn how to crack a website, and solve some web challenges. Find the weakness in the websites and common vulnerabilities. | [Advanced Web Hacking.pdf](https://wiki.compass.college/assets/Web_Challenges_Advanced.pdf) [Linux Basics](https://wiki.compass.college/assets/Linux_Basics.pdf) [BlackHat SSTI PDF](https://wiki.compass.college/assets/EN-Server-Side-Template-Injection-RCE-For-The-Modern-Web-App-BlackHat-15.pdf) [CTF101 Web](https://ctf101.org/web-exploitation/overview/) [Web learning notes](https://websec.readthedocs.io/zh/latest/vuln/index.html) |
 | July, 17th | Forensics & Steganography                   | Analyze the file format and hidden information. Packet or network traffic analysis as well. Several skills to check images. | [Forensics_Steganography.pdf](https://wiki.compass.college/assets/Forensics_Steganography.pdf) [CTF 101 Forensics](https://ctf101.org/forensics/overview/) [1earn Forensics](https://github.com/ffffffff0x/1earn/blob/master/1earn/Security/BlueTeam/取证.md) |
+| July, 24th | Modern Cryptography and Mathematics         | Asymmetric cryptography like RSA, ECC. A mathematic definition of security and attacks on modern cryptography. | [Cryptography.pptx](https://wiki.compass.college/assets/Cryptography.pptx) |
 
 The rest training:
 
-| July, 24th  | Modern Cryptography and Mathematics       | Asymmetric cryptography like RSA, ECC. A mathematic definition of security and attacks on modern cryptography. | [Cryptography.pptx](https://wiki.compass.college/assets/Cryptography.pptx) |
-| ----------- | ----------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | July, 31st  | Assembly Language and Reverse Engineering | Learn about some CISC knowledge. Use x86_64 as an example to do the assembly. Some reverse engineering skills are involved. | [Reverse.pdf](https://wiki.compass.college/assets/Reverse.pdf) |
+| ----------- | ----------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | August, 7th | Binary Exploitations                      | PWN challenges. Buffer overflows, shellcodes, ROP, and some pwn challenges. | [Binary Exploitation.pdf](https://wiki.compass.college/assets/Binary Exploitation.pdf) |
 
-This weekend, the engineering department would be powered off. The training schedule for this weekend may be online.
+I'm not at the campus currently. The training schedule for this weekend may be online.
 
-I've invited some 2022 new students to attend the cryptography training this weekend.
-
-## Guangdong Province CTF 2nd
-
-In the past qualification, the HED team has qualified for the final round.
-
-| role   | name   |
-| ------ | ------ |
-| Leader | 邬一帆 |
-| Member | 严文谦 |
-| Member | 朱弘   |
-| Member | 朱嘉楠 |
-
-![GD 2nd CTF](../assets/GD_CTF_Final.png)
-
-Before the competition, we would have several AWD training. The time can be arranged according to your schedule.
-
-* Acceptable time: any time in the summer / Sundays in September.
-* Training materials: AWD toolkit & AWD tricks.
-* PVP: https://ctf.bugku.com/pvp.html
-
-Better to be offline, in case we can have discussions about AWD.
+The CTF training is hard, but I hope you can learn something new, and enjoy the trip to the cybersecurity.
 
 ## Notes
 
-- [ ] AWD toolkit.
-- [ ] Register for the 2nd team.
+- [ ] Ready for the GD CTF 2nd Final script.
+- [ ] Move all the challenges to the Detroit server.

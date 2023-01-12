@@ -12,7 +12,7 @@ You may notice the awards we've got have been pushed to the wiki.
 
 We have participated in the eCTF for practice last week.
 
-![img](../assets/ECTF_1.png)
+![img](../../assets/ECTF_1.png)
 
 Challenge solving process:
 

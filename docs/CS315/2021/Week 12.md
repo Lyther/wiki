@@ -805,7 +805,7 @@ Environment setup should use `VirtualBox` history version (VirtualBox 6.1.28 has
 
 While the **Serial Ports** setting as follow (Port Mode set to `Disconnected`):
 
-![screenshot](../assets/Week 12-2.png)
+![screenshot](../../assets/Week 12-2.png)
 
 The virtual image should enter the following promption:
 
@@ -818,15 +818,15 @@ ubuntu-xenial login: _
 
 Open you terminal (powershell.exe in Windows), and use `ipconfig /all` to find your `Host-only NET` ip address.
 
-![img](../assets/Week 10-3.png)
+![img](../../assets/Week 10-3.png)
 
 Use any tool to scan the ip `192.168.xx.0/24` and you can find the virtual machine ip address. Otherwise, you can also use `arp -a` to find your `Host-only Network` address, and usually VM's ip address is followed.
 
-![img](../assets/Week 10-4.png)
+![img](../../assets/Week 10-4.png)
 
 Open your web browser, you can find this page in VM's ip address:
 
-![screenshot](../assets/Week 12-1.png)
+![screenshot](../../assets/Week 12-1.png)
 
 You are done with configuration, now you can hack the machine and solve the challenges!
 

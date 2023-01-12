@@ -466,7 +466,7 @@ Try to find `flag` in this file, the flag format is: `picoCTF{***}`
 
 Solved the network problem yesterday, but I found some guy was sniffing my network traffic. I need to be careful to protect my flag. Decide to use HTTPS to submit my flag to `web01.fruitinc.xyz`.
 
-![img](../assets/chall1-2.jpg)
+![img](../../assets/chall1-2.jpg)
 
 By the way, upload my **super☆secret☆file** to network disk.
 

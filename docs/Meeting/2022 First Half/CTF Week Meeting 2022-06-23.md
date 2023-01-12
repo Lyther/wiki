@@ -14,7 +14,7 @@ We have 2 new members for this summer.
 
 I'm working on the advertisement for all students.
 
-![poster](../assets/2022Summer.png)
+![poster](../../assets/2022Summer.png)
 
 ## Upcoming events
 

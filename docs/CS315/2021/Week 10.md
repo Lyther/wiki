@@ -1478,7 +1478,7 @@ Mirror: [https://pan.baidu.com/s/1D-YEa6cr3rcWXv49HgZtSw](https://pan.baidu.com/
 
 Environment setup should use `VirtualBox` history version (VirtualBox 6.1.28 has a bug with Hyper-V, I used VirtualBox 6.0.24 and worked properly). You should setup `Network` as the following:
 
-![img](../assets/Week 10-1.png)
+![img](../../assets/Week 10-1.png)
 
 The virtual image should enter the following promption:
 
@@ -1492,7 +1492,7 @@ The second line is the ip address of virtual machine.
 
 Open your web browser, you can find this page in VM's ip address:
 
-![img](../assets/Week 10-5.png)
+![img](../../assets/Week 10-5.png)
 
 You are done with configuration, now you can hack the machine and solve the challenges!
 
@@ -1500,11 +1500,11 @@ You are done with configuration, now you can hack the machine and solve the chal
 
 Open you terminal (powershell.exe in Windows), and use `ipconfig /all` to find your `Host-only NET` ip address.
 
-![img](../assets/Week 10-3.png)
+![img](../../assets/Week 10-3.png)
 
 Use any tool to scan the ip `192.168.xx.0/24` and you can find the virtual machine ip address. Otherwise, you can also use `arp -a` to find your `Host-only Network` address, and usually VM's ip address is followed.
 
-![img](../assets/Week 10-4.png)
+![img](../../assets/Week 10-4.png)
 
 #### (1 pt) Port scan
 

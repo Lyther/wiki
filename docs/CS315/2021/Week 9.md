@@ -76,11 +76,11 @@ It's not possible to take the previous "Brute-Force" approach but it's actually 
 
 The post https://0xpatrik.com/phishing-domains/ suggest that you can use Censys to search for certificates affecting a specific keyword and filter by date (only "new" certificates) and by the CA issuer "Let's Encrypt":
 
-![img](../assets/Week 9-1.png)
+![img](../../assets/Week 9-1.png)
 
 However, you can do "the same" using the free web [**crt.sh**](https://crt.sh/). You can **search for the keyword** and the **filter** the results **by date and CA** if you whish.
 
-![img](../assets/Week 9-2.png)
+![img](../../assets/Week 9-2.png)
 
 Using this last option you can even use the field Matching Identities to see if any identity from the real domain matches any of the suspicious domain (note that a suspicious domain can be a false positive).
 
@@ -108,7 +108,7 @@ DOCX files referencing a remote template (File –Options –Add-ins –Manage: 
 
 Go to: *Insert --> Quick Parts --> Field* ***Categories\****: Links and References,* ***Filed names\****: includePicture, and* ***Filename or URL\****:* http://%3Cip%3E/whatever
 
-![img](../assets/Week 9-3.png)
+![img](../../assets/Week 9-3.png)
 
 ### **Macros Code**
 

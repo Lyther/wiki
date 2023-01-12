@@ -20,14 +20,14 @@
     - [ezphp](#ezphp)
 
 非常幸运地摸了一个炫酷的名次，诚惶诚恐  
-![picture 5](images/90b1b759dcede421cedb05b9a41ba9dc5f349c5edd8e9a0fe0d9fd4ceeb02bd8.png)  
+![picture 5](../../assets/90b1b759dcede421cedb05b9a41ba9dc5f349c5edd8e9a0fe0d9fd4ceeb02bd8.png)  
 
 
 ## Misc [AK]
 
 ### reindeer game
 pyinstaller解包，直接调pyc里生成flag的函数：
-![picture 1](images/a1ecafabcadcb41aaea235af580c7f3b1f7707b100d32984ee97bfa4b0ec1edb.png)  
+![picture 1](../../assets/a1ecafabcadcb41aaea235af580c7f3b1f7707b100d32984ee97bfa4b0ec1edb.png)  
 
 ### 楠之勇者传
 轻松拿到魔法棒，然后按提示去 `/proc/self/mem` 找地方写sc  

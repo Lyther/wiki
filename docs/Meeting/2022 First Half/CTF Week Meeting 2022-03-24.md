@@ -26,7 +26,7 @@ Crypto: 朱嘉楠、周翰然、严文谦
 
 题目整理 & 同步：邬一帆、李照
 
-![img](../assets/HUFU_1.png)
+![img](../../assets/HUFU_1.png)
 
 ## T3N4CI0US CTF 2022
 

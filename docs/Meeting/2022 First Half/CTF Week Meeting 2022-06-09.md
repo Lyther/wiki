@@ -89,7 +89,7 @@ For example, if you got 3127 in the challenges and competitions, 155 in the rema
 
 ### 强国杯
 
-![img](../assets/强国杯.jpg)
+![img](../../assets/强国杯.jpg)
 
 https://www.qiangguobei.org.cn/
 

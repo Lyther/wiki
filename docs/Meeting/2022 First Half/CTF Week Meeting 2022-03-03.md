@@ -11,7 +11,7 @@
 
 We have achieved rank 29.
 
-![CODEGATE 2022](../assets/codegate_1.png)
+![CODEGATE 2022](../../assets/codegate_1.png)
 
 The rank is in the top tier 2 list. The top 20 teams are very famous `organizers`, `r3kpig`, `DiceGang`, `Oops`, and `perfect blue`. Our rank is along with `Super Guesser`. In the meanwhile, we have won `Redbud` for continuous 3 times.
 

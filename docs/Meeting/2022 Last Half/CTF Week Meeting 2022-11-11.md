@@ -1,10 +1,10 @@
 # CTF Week Meeting 2022-11-11
 
-1. Get ready to work on our challenge platform.
+1. Weekly training for this weekend.
 1. Cyber Security Tournament on Dec 3rd - Dec 4th.
 1. Upcoming events.
 
-## Get ready to work on our challenge platform
+## Weekly training for this weekend
 
 Topic: Modern cryptography, ECC, RC4, and AES.
 
@@ -18,7 +18,7 @@ If you are interested in the **zero-knowledge proof**, today we have a lecture a
 
 ## Cyber Security Tournament on Dec 3rd - Dec 4th
 
-![poster](../assets/CTF网络安全锦标赛2022.png)
+![poster](../../assets/CTF网络安全锦标赛2022.png)
 
 The idea is a brief now, if you have any challenges want to put in this game, please contact me.
 

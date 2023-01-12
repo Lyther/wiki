@@ -426,13 +426,13 @@ There are three new categories, four categories with naming and scoping changes,
 
 One of my friends loves Jiaran so, so much. I'm not so interested in Vtubers, but I do know vtubers would hide some `flag` in web.
 
-![img](../assets/Week 5-1.jpg)
+![img](../../assets/Week 5-1.jpg)
 
 Now we have the chat page of fans: `http://103.102.44.218:10003/`. Maybe you can find flag in this website.
 
 *Hint: as a fan web, the privilege check is broken.*
 
-[source.zip](../assets/Week 5-1.zip)
+[source.zip](../../assets/Week 5-1.zip)
 
 ### (5 pt) Do you like pickle?
 
@@ -442,7 +442,7 @@ Find some items to save Rick.
 
 `http://103.102.44.218:10004/`
 
-If you want to find some hints from source, here it is: [source.zip](../assets/Week 5-2.zip)
+If you want to find some hints from source, here it is: [source.zip](../../assets/Week 5-2.zip)
 
 ### (BONUS 5 pt) Jason is a cool guy
 
@@ -450,5 +450,5 @@ Seems this website is impossible to broken. But still, nothing can block you hac
 
 `https://81.68.223.245/`
 
-Here's the source code for you: [source.zip](../assets/Week 5-3.zip)
+Here's the source code for you: [source.zip](../../assets/Week 5-3.zip)
 

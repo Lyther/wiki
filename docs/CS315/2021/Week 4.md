@@ -548,7 +548,7 @@ Now, dragon-li cats just borrowed ours domain name to establish their website. O
 
 One day, when you step into TB2, an orange cat stopped you and begged, "humble human, please help us! We are losing the war."
 
-![img](../assets/Week 4-11.jpg)
+![img](../../assets/Week 4-11.jpg)
 
 "Find out what are those dragon-li cats hiding. If you can retrieve the flag behind the domain, I would allow you to pat my belly - for 2 seconds!"
 
@@ -566,7 +566,7 @@ Kittens are so lovely, you can't resist and start to discover DNS records...
 
 Two dragon-li cats are staring at you for a while, since the last cyber attack. After you step into the classroom in TB1, a dragon-li cat jumped on the desk and starts talking to you.
 
-![img](../assets/Week 4-12.jpg)
+![img](../../assets/Week 4-12.jpg)
 
 "Orange cats are greedy. Team with us dragon-li cats." That cat licks its claw, said, "TB1 is ours manor, if you team with us, you can always pat cats in TB1."
 
@@ -586,7 +586,7 @@ The dragon-li cats are settling in TB1 and dining hall, while the orange cats ar
 
 A black cat was so struggle with these fights. The cat, said, "we, we are cats. We slept 20 hours a day. Why do we bother fighting instead of sleeping?"
 
-![img](../assets/Week 4-13.jpg)
+![img](../../assets/Week 4-13.jpg)
 
 "Now you have a choice to stop the war," the black cat said, "everyone are looking at obvious things, but nobody cares about blind night."
 

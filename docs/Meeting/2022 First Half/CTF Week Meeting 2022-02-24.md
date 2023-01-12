@@ -55,9 +55,9 @@ Rank 78
 
 As an exercise competition got in the top 100.
 
-![1](../assets/VU_CTF_1.png)
+![1](../../assets/VU_CTF_1.png)
 
-![2](../assets/VU_CTF_2.png)
+![2](../../assets/VU_CTF_2.png)
 
 ### TQL CTF 2022
 
@@ -65,7 +65,7 @@ Rank 37
 
 Doesn't have enough participants. Maybe better.
 
-![3](../assets/TQL_CTF_1.png)
+![3](../../assets/TQL_CTF_1.png)
 
 ## First Offline Activity
 

@@ -761,7 +761,7 @@ I heard that some SUSTCers are really good at playing Touhou Project (東方proj
 
 Some one sent me this game and challenged me: if you can pass all 6 levels in `Lunatic` difficulty, you can have the flag.
 
-![img](../assets/Week 6-1.png)
+![img](../../assets/Week 6-1.png)
 
 Each time you finish a level in Lunatic difficulty, one part of flag is given to `flag.txt` under the game directory. I have several ideas for you to break this game:
 

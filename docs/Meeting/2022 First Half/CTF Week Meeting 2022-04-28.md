@@ -16,7 +16,7 @@ Invitation: all the students from SUSTech
 
 After the talk, we would arrange 2 pieces of training (introduction).
 
-![img](../assets/2nd_Guangdong_Hacking.png)
+![img](../../assets/2nd_Guangdong_Hacking.png)
 
 1. Online talk: https://meeting.tencent.com/p/4484894504
 2. Training activities: May 7th, May 14th.
