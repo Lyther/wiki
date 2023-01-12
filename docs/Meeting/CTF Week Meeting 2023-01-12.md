@@ -1,12 +1,12 @@
 # CTF Week Meeting 2023-01-12
 
-We are happy that we are here in 2023 and thank all members for their efforts in the past year. In the first (actually the second) all-volunteer weekly meeting this year, we will summarize the work and achievements of last year and designate the annual plan for 2023.
+We are happy that we are here in 2023 and thank all members for their efforts in the past year. In the first (actually the second) all-volunteer weekly meeting this year, <u>we will summarize the work and achievements of last year and designate the annual plan for 2023.</u>
 
 ## Work progress tracking
 
 1. COMPASS CTF 2022 - 60%
 2. Topic: CTF combined with research - 0% brief idea
-3. Multi-platform promotion of COMPASS CTF - 22%
+3. Multi-platform promotion of COMPASS CTF - 20%
 4. ~~COMPASS TEAM's public email - 100% done~~
 5. Training plan during winter break - 0%
 6. Member adjustment - 25%
@@ -14,6 +14,7 @@ We are happy that we are here in 2023 and thank all members for their efforts in
 8. Wiki page content adjustment - 20% brief idea
 9. CTFtime program: go hard and play CTF - 0% brief idea
 10. New Member Recruitment - 0% brief idea
+11. Apply for more ports with ITS on the Detroit server - 50%
 
 ## What we discussed this week
 
@@ -21,22 +22,21 @@ We are happy that we are here in 2023 and thank all members for their efforts in
 2. Wiki page file structure revision
 3. The 2022 year in Review
 4. The 2023 year plan
-5. Intra-team practice games and recent matches
-6. Call for competition challenges
+5. Intra-team practice games and upcoming matches
 
 ### 0x1. Weekly meeting restructuring
 
 Perhaps you have noticed that in this weekly meeting, I have restructured the weekly meeting. Based on the results of the previous questionnaire collection, I got some valuable suggestions about the weekly meetings.
 
-In the future, I will still use Markdown to design the document, compared to Latex, although Latex has a better presentation, Markdown saves a lot of time in writing the document, and our time is too precious to waste in compiling and adjusting the document, and I will not use PPT for the weekly meeting. The document for the weekly meeting will follow the following format.
+In the future, I will still use **Markdown** to design the document, compared to Latex, although Latex has a better presentation, <u>Markdown saves a lot of time in writing the document</u>, and our time is too precious to waste in compiling and adjusting the document, and I will not use PPT for the weekly meeting. The document for the weekly meeting will follow the following format.
 
-1. Work tracking: Many plans that were once confidently ready to be implemented were not completed due to a lack of progress tracking. In future meetings, I will add a progress tracking section to report on the progress of the work.
+1. **Work tracking**: Many plans that were once confidently ready to be implemented were not completed due to a lack of progress tracking. In future meetings, <u>I will add a progress tracking section to report on the progress of the work.</u>
 
-2. This week's content discussion: Keeping the style of the previous weekly meeting, I will list the discussion items for this week's weekly meeting, and hope to describe the details of each plan and item in detail while synchronizing the content follow-up. This is the discussion session, I hope everyone can actively give suggestions on the plans and matters, more discussion often means better results.
+2. **This week's content discussion**: Keeping the style of the previous weekly meeting, I will list the discussion items for this week's weekly meeting, and hope to describe the details of each plan and item in detail while synchronizing the content follow-up. This is the discussion session, <u>I hope everyone can actively give suggestions on the plans and matters, more discussion often means better results.</u>
 
-3. Summary: A final summary of the content of this week's weekly meeting. If you do not have time to attend the weekly meeting discussion and do not intend to read the lengthy details of the discussion items after the weekly meeting, you can quickly follow up on the progress of this week's weekly meeting discussion through the outline and summary of the content discussion.
+3. **Wrap-up (Summary)**: A final summary of the content of this week's weekly meeting. <u>If you do not have time to attend the weekly meeting discussion and do not intend to read the lengthy details of the discussion items after the weekly meeting, you can quickly follow up on the progress of this week's weekly meeting discussion through the outline and summary of the content discussion.</u>
 
-### 0x2. wiki page file structure revision
+### 0x2. Wiki page file structure revision
 
 I have restructured some of the documents, and the main elements include.
 
@@ -52,17 +52,16 @@ The initial work was to resize all the image files to a fraction of their origin
 
 I hope you can pay attention to the following conventions when submitting a Pull Request.
 
-1. All material files (images, attachments, etc.) should be placed under the assets/ folder as much as possible.
+1. **All material files (images, attachments, etc.) should be placed under the assets/ folder as much as possible.**
 
-2. For uncompressed high-quality images (such as direct screenshots or downloaded originals), please include the `_hd` field after the image name so that I can find the image that needs to be compressed when adjusting it.
+2. **For uncompressed high-quality images (such as direct screenshots or downloaded originals), please include the `_hd` field after the image name so that I can find the image that needs to be compressed when adjusting it.**
 
 Future work related to the wiki.
 
-1. adjust the bilingual language support: Mkdocs natively support multi-language localization, we only used English as a language when creating the wiki, as a first/second language that almost global users know, I considered the convenience. However, our first language is Chinese, and reading English documents is much slower than Chinese documents, I will consider adding Chinese support.
-
-    * Current planned solution: access to DeepL's API to generate a Chinese translation directly. As the Chinese with higher tolerance rate, the level of comprehension through English to Chinese translation will be better.
-
-1. adjust the content structure: wiki content structure today as a CTF all-in-one reference wiki, but there are still many shortcomings. I hope that while providing toolkits, web resource references, and writeups, more categories can be added to facilitate CTF learning.
+1. **adjust the bilingual language support**: Mkdocs natively support multi-language localization, we only used English as a language when creating the wiki, as a first/second language that almost global users know, I considered the convenience. <u>However, our first language is Chinese, and reading English documents is much slower than Chinese documents, I will consider adding Chinese support.</u>
+    * Current planned solution: **access to DeepL's API to generate a Chinese translation directly**. As the Chinese with higher tolerance rate, the level of comprehension through English to Chinese translation will be better.
+    
+1. **adjust the content structure**: wiki content structure today as a CTF all-in-one reference wiki, but there are still many shortcomings. I hope that while providing toolkits, web resource references, and writeups, more categories can be added to facilitate CTF learning.
 
 ### 0x3. The 2022 Year in Review
 
@@ -70,59 +69,60 @@ We have achieved some results in FY2022, but we also have some unfinished busine
 
 Memorable accomplishments.
 
-1. We participated in the "Top Geeks" competition held by the Chengdu government and came in 10th place in the finals.
+1. We participated in the "Top Geeks" competition held by the Chengdu government and came in **10th place in the finals**.
 
-2. We participated in the "Wangding Cup" competition held by the National Internet Information Office and the Ministry of Public Security, and got 8th place in the preliminary round and advanced to the final round.
+2. We participated in the "Wangding Cup" competition held by the National Internet Information Office and the Ministry of Public Security, and got **8th place in the preliminary round and advanced to the final round**.
 
-3. The HED team won first place in the "Winter Competition" of iChunqiu.
+3. The HED team won **1st place** in the "Winter Competition" of iChunqiu.
 
-4. We participated in the "Student Cyber Security Competition" held by Guangdong Provincial Government and advanced to the final round.
+4. We participated in the "Student Cyber Security Competition" held by Guangdong Provincial Government and **advanced to the final round**.
 
-5. In the CTFtime 2022 ranking, the COMPASS team achieved a total score of 83.569, ranking 32nd among Chinese teams.
+5. In the CTFtime 2022 ranking, the COMPASS team achieved a total score of **83.569**, ranking **32nd** among Chinese teams.
 
-6. We participated in the "Strong Network Cup" competition held by the State Internet Information Office and the Zhengzhou government, and both teams got the "Strong Network Pioneer" certificate.
+6. We participated in the "Strong Network Cup" competition held by the State Internet Information Office and the Zhengzhou government, and **both teams got the "Strong Network Pioneer" certificate**.
 
 Unfortunately, in 2022, we also have some matters that were once planned to go down the drain and remain unfinished. To review our 2022 objectively and fairly, I would like to summarize this part as well.
 
-1. CTF from practice to principles: I was inspired by Prof. Zhang in early 2022 to compile a book about CTF tutorials for true zero-based CTF beginners to make up for the shortcomings of today's CTF tutorial books that are still too difficult and the knowledge coverage fails to construct a big picture of CTF and network security. Unfortunately, so far I have only completed the outline and part of the first chapter of the book, and I hope to continue this work in 2023.
+1. **CTF from practice to principles**: I was inspired by Prof. Zhang in early 2022 to compile a book about CTF tutorials for true zero-based CTF beginners to make up for the shortcomings of today's CTF tutorial books that are still too difficult and the knowledge coverage fails to construct a big picture of CTF and network security. Unfortunately, so far I have only completed the outline and part of the first chapter of the book, and <u>I hope to continue this work in 2023.</u>
 
-2. Competition planning for new members: This is one of the main tasks of the varsity team, and despite our intensive weekly training, the number of members participating in competitions is still very insufficient. In the weekly meetings, I synchronize the competitions that will be held soon, but few new members intend to participate.
+2. **Competition planning for new members**: This is one of the main tasks of the varsity team, and despite our intensive weekly training, the number of members participating in competitions is still very insufficient. <u>In the weekly meetings, I synchronize the competitions that will be held soon, but few new members intend to participate.</u>
 
-3. Adjustment of the tournament platform: Unfortunately, although I had planned to adjust the topics and functions of the CTFd platform being used and made some rough proposals, this plan did not come to fruition in the end. After testing the new platform on 2023-01-07, I decided to use GZCTF as our new platform and abandon the original CTFd platform. I will transfer our original questions, entry test questions, and other high-quality tournament questions to GZCTF.
+3. **Adjustment of the tournament platform**: Unfortunately, although I had planned to adjust the topics and functions of the CTFd platform being used and made some rough proposals, this plan did not come to fruition in the end. After testing the new platform on 2023-01-07, I decided to use **GZCTF** as our new platform and abandon the original CTFd platform. <u>I will transfer our original questions, entry test questions, and other high-quality tournament questions to GZCTF.</u>
 
-4. Cooperation with the Information Center: At the beginning of the establishment of the varsity team, I communicated quite closely with a colleague from the Information Center ITS, would participate in each other's activities, and achieved some results in the construction of the network security. Unfortunately, after several lengthy and boring communications, annoying network problems, and a change in the attitude of the Information Center towards cyber security, ITS did not participate in many of the subsequent events we held. I regret that COMPASS TEAM's attempts to work with the Information Center to improve campus cybersecurity have largely failed, but I will still try to convince ITS to pursue this effort.
+4. **Cooperation with the Information Center**: At the beginning of the establishment of the varsity team, I communicated quite closely with a colleague from the Information Center ITS, would participate in each other's activities, and achieved some results in the construction of the network security. Unfortunately, after several lengthy and boring communications, annoying network problems, and a change in the attitude of the Information Center towards cyber security, ITS did not participate in many of the subsequent events we held. <u>I regret that COMPASS TEAM's attempts to work with the Information Center to improve campus cybersecurity have largely failed, but I will still try to convince ITS to pursue this effort.</u>
 
 ### 0x4. The 2023 year plan
 
 We've reached 2023, and in a brand new year, it's time to make a new annual plan.
 
-1. CTFtime race plan: In the new year, I will try not to miss any race that has a CTFtime rating, to raise the visibility of COMPASS TEAM on the biggest international platform in the CTF field, and to move towards DEF CON 31 in August.
+1. **CTFtime race plan**: In the new year, I will try not to miss any race that has a CTFtime rating, to raise the visibility of COMPASS TEAM on the biggest international platform in the CTF field, and to **move towards DEF CON 31** in August.
 
-2. Membership recruitment: We were very lucky to have two extremely talented new members of the class of 2022 join us before we even started our membership recruitment. In 2023, I will adjust the membership recruitment schedule and invite the best members to join us.
+2. **Membership recruitment**: We were very lucky to have two extremely talented new members of the class of 2022 join us before we even started our membership recruitment. In 2023, I will adjust the membership recruitment schedule and invite the best members to join us.
 
-3. Cross-platform science and awareness promotion: I am planning to create COMPASS TEAM social media accounts on multiple platforms, and I have chosen different content strategies for each different platform user group. Social media platforms are a great way to get the word out about our work, and those currently planned include.
-
+3. **Cross-platform science and awareness promotion**: I am planning to create COMPASS TEAM social media accounts on multiple platforms, and I have chosen different content strategies for each different platform user group. <u>Social media platforms are a great way to get the word out about our work</u>, and those currently planned include.
     * CSDN/Blog Garden: Reprint wiki content
-
+    
     * WeChat Public: Vulnerability analysis and summary
-
+    
     * Pediy (Kanxue) Forum: vulnerability recurrence and research
-
+    
     * Anquanke: technical summaries and tutorials
-
+    
     * Tiktok: Network Security Tips
-
+    
     * Twitter: publicity/results sharing
-
+    
     * Weibo: Activity dynamics and science popularization
-
+    
     * Zhihu account: writeup analysis
-
+    
     * Bilibili account: CTF science and teaching
+    
+    * 52pojie forum: Reverse engineering technologies sharing.
+    
+4. **CTF and research content combination**: I always aspire to publish academic results, and it is fun to share my brand-new work contribution with others. Before that, I had only done a small amount of scientific work and still knew very little about how to publish a paper. Recently I've been talking with Hongyi Lu about trying to combine CTF content with academic papers. Much of what we are exposed to in CTF (especially in cryptography) seems to be very cutting edge, and I used to think that CTF is not accurate to just reproduce what has already been done. <u>I hope to publish some work in 2023 as I explore the feasibility of combining CTF with research.</u>
 
-4. CTF and research content combination: I always aspire to publish academic results, and it is fun to share my brand-new work contribution with others. Before that, I had only done a small amount of scientific work and still knew very little about how to publish a paper. Recently I've been talking with Hongyi Lu about trying to combine CTF content with academic papers. Much of what we are exposed to in CTF (especially in cryptography) seems to be very cutting edge, and I used to think that CTF is not accurate to just reproduce what has already been done. I hope to publish some work in 2023 as I explore the feasibility of combining CTF with research.
-
-### 0x5. Intra-team practice games and recent matches
+### 0x5. Intra-team practice games and upcoming matches
 
 #### On-Campus Practice: X-MAS CTF 2022 Repeat
 
@@ -182,12 +182,13 @@ The official language of Ugra CTF is Russian, but you are welcome to participate
 
 ## Wrap-up
 
-In this week's weekly meeting, we adjusted the format and content format of the weekly meeting conducted after the day to facilitate work progress tracking and planning. I proposed a new planned content adjustment of the Wiki page, hoping to make the Wiki content more suitable for CTF beginners and players' reference.
+In this week's weekly meeting, **we adjusted the format and content format of the weekly meeting** conducted after the day to facilitate work progress tracking and planning. **I proposed a new planned content adjustment of the Wiki page**, hoping to make the Wiki content more suitable for CTF beginners and players' reference.
 
-In addition, we have reviewed the achievements of the 2022 varsity team, and also summarized the regrets and unfinished business of 2022, hoping to inspire us to continue our progress. At the same time, I have prepared many new plans for 2023.
+In addition, **we have reviewed the achievements of the 2022 varsity team**, and also **summarized the regrets and unfinished business of 2022**, hoping to inspire us to continue our progress. At the same time, **I have prepared many new plans for 2023**.
 
-The work on the new platform has been in the planning since the second half of 2022, from trying to adjust the CTFd, and gradually changing to the new platform GZCTF was chosen. In the test conducted last week, the stability and usability of GZCTF were tested, and I plan to change the tournament platform to GZCTF.
+The work on the new platform has been in the planning since the second half of 2022, from trying to adjust the CTFd, and gradually changing to the new platform GZCTF was chosen. In the test conducted last week, the stability and usability of GZCTF were tested, and **I plan to change the tournament platform to GZCTF**.
 
-Finally, about the recent tournament matters. There will be two competitions this week, both of which are international competitions of CTFtime, and the idekCTF of which has CTFtime score weighting, so I hope students who can learn will participate.
+Finally, about the recent tournament matters. **There will be two competitions this week**, both of which are international competitions of CTFtime, and <u>the idekCTF of which has CTFtime score weighting, so I hope students who can learn will participate.</u>
 
 The above is the content of this week's weekly meeting, if you have any comments/suggestions, please feel free to contact me.
+
