@@ -49,6 +49,7 @@ nav:
   - Meeting:
     - Meeting/CTF Week Meeting 2023-01-12.md
     - Meeting/CTF Week Meeting 2023-01-19.md
+    - Meeting/CTF Week Meeting 2023-02-02.md
     - 2022 First Half:
       - Meeting/2022 First Half/CTF Week Meeting 2022-02-17.md
       - Meeting/2022 First Half/CTF Week Meeting 2022-02-24.md
@@ -237,6 +238,7 @@ nav:
     - Training/Schedule/2022Spring.md
     - Training/Schedule/2022Summer.md
     - Training/Schedule/2022Fall.md
+    - Training/Schedule/2023Spring.md
   - Tutorial:
     - Misc:
       - Training/Tutorial/Misc/Docker.md
