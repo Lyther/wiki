@@ -19,3 +19,5 @@ Previous members of COMPASS CTF:
 ![5](assets/5_hd.png)
 
 ![6](assets/6_hd.png)
+
+![6](assets/7_hd.png)
