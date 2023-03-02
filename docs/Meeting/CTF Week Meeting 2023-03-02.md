@@ -1,6 +1,6 @@
 # CTF Week Meeting 2023-03-02
 
-Good afternoon, everyone. Welcome to this meeting. I hope you are all doing well today. We have a lot to cover, so let's get started. Let's make sure we respect each other's time, opinions, and ideas. Please be concise and stay on topic to ensure that we stay on schedule. And please feel free to ask questions or provide feedback at any time.
+Glad to have a new student who is interested in the CTF, I've talked with him a little bit. Let's start our meeting this week. Don't forget we would have our training this Sunday normally.
 
 ## Work progress tracking
 
@@ -60,7 +60,7 @@ Basic content training will be posted on a wiki and linked to online archiving p
 
 1. introduction to CTF basic content and future directions.
 2. the spirit of network security and how to search for information.
-3. how to install and use Linux systems. 3.
+3. how to install and use Linux systems.
 4. basic program development using Python.
 5. Data forensics and information steganography.
 6. Data encoding and cryptographic security.
@@ -162,7 +162,7 @@ For more details and specific arrangements, please refer to the "15th National S
 
 The target participants shall be full-time students (including senior high school, undergraduate and postgraduate students) with regular school registration in higher education institutions (undergraduate and senior high school institutions) nationwide, and the specific requirements are as follows
 
-(1) The maximum number of participants in each team shall not exceed 4, and the number of teams in each university shall not be limited, and no cross-college teams shall be allowed.
+(1) The maximum number of participants in each team shall **not exceed 4**, the number of teams in each university shall not be limited, and no cross-college teams shall be allowed.
 
 (2) Each person can only participate in one team (i.e. no team can be formed with others after individual participation, or no other team after individual participation in one team), and one instructor is allowed.
 
@@ -192,4 +192,6 @@ The target participants shall be full-time students (including senior high schoo
 
 ## Wrap-up
 
-I've talked about the COMPASS CTF 2022 Winners and Prizes, and invite the winners to our weekly meetings this week. Hope to see you this Sunday. For the research topics, I found more than 20 papers and selected 12 ideas about the CTF research, hope this can help you. Don't forget to join our weekly meeting this Sunday at 551 Meeting Room.
+We've talked about the AEG research idea about CTF this week. About the GZCTF, we've decided on the challenge categories and the data transmission rule. The new member recruiting project is ongoing, thanks for the advice for our poster. A book named "CTF From Practice to Principle" is now writing in order to give a brief idea to beginners in the CTF. At last, be sure you are prepared for the "National College Information Security Competition" **as a COMPASS team**.
+
+Looking forward to seeing you on Sunday.

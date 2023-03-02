@@ -1,5 +1,9 @@
 # Varsity Competition Training Model
 
+## The Latest Training Schedule
+
+View the training schedule on our wiki page: [2023 Spring Schedule](Schedule/2023Spring.md).
+
 ## Overview
 
 Varsity training is usually online + offline, usually at a fixed location and time. The goal of the training is to promote new members and to coach current varsity members to become proficient in a particular area. Training content may vary from school year to school year, depending on the schedule and staffing changes for that school year.
