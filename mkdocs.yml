@@ -165,10 +165,10 @@ nav:
     - CS315/2021/Week 13.md
     - CS315/2021/Week 14.md
     - CS315/2021/Exercise Solutions.md
-- CTF Practice to Principle:
-  - CTF/abstract.md
-  - CTF/structure.md
-- Paper:
+- CTF Basic and Tutorial:
+  - CTF/CTF and Hacker Attitude.md
+  - CTF/Docker.md
+- Research:
   - Artificial Intelligence:
     - Paper/Artificial Intelligence/Cert-RNN Towards Certifying the Robustness of Recurrent.md
     - Paper/Artificial Intelligence/Unleashing the Tiger Inference Attacks on Split Learning.md
@@ -226,7 +226,7 @@ nav:
     - Tool/Forensics/exiftool.md
     - Tool/Forensics/foremost.md
     - Tool/Forensics/stegsolve.md
-- Training and Tutorial:
+- Training Schedule:
   - Training/Varsity Competition Training Model.md
   - Material:
     - Training/Material/Binary Exploitation.md
@@ -236,6 +236,7 @@ nav:
     - Training/Material/Penetration.md
     - Training/Material/Reverse.md
     - Training/Material/X86_Assembly.md
+    - Training/Material/ARM32_1.md
   - Schedule:
     - Training/Schedule/2021Summer.md
     - Training/Schedule/2021Fall.md
@@ -243,11 +244,6 @@ nav:
     - Training/Schedule/2022Summer.md
     - Training/Schedule/2022Fall.md
     - Training/Schedule/2023Spring.md
-  - Tutorial:
-    - Misc:
-      - Training/Tutorial/Misc/Docker.md
-    - Reverse Engineering:
-      - Training/Tutorial/Reverse/ARM32_1.md
 - Website Collection:
   - Forum:
     - Website/Forum/kanxue.md
