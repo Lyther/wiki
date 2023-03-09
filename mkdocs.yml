@@ -170,6 +170,7 @@ nav:
   - CTF/Docker.md
   - CTF/Linux Basics.md
   - CTF/Python_1.md
+  - CTF/Python_2.md
 - Research:
   - Artificial Intelligence:
     - Paper/Artificial Intelligence/Cert-RNN Towards Certifying the Robustness of Recurrent.md

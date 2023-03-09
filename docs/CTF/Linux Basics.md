@@ -115,7 +115,7 @@ printf (3p) - print formatted output
 printf [builtins] (1) - bash built-in commands, see bash(1)
 ```
 
-We see that printf is available in both category 1 and category 3; the pages in category 1 are for help on command operations and executables; while 3 is for instructions on commonly used libraries; if we want to see the use of printf in C, we can specify to see the help in category 3: ``.
+We see that printf is available in both category 1 and category 3; the pages in category 1 are for help on command operations and executables; while 3 is for instructions on commonly used libraries; if we want to see the use of printf in C, we can specify to see the help in category 3:
 
 ```
 $man 3 printf
@@ -229,11 +229,11 @@ so that, using lsl, the files in the directory can be displayed sorted by modifi
 
 - Add an id number to the front of each file (for a neater look):
 
-  ```
-  >ls | cat -n
-  ```
+```
+> ls | cat -n
+```
 
-  > 1 a 2 a.out 3 app 4 b 5 bin 6 config
+\> 1 a 2 a.out 3 app 4 b 5 bin 6 config
 
 Note: .bashrc is stored as a hidden file under the /home/your username/ folder; you can check it with ls -a.
 
