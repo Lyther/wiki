@@ -78,7 +78,7 @@ For a large number of students who are currently still using Windows, if you hav
 
 First, depending on your version of Windows (64-bit or 32-bit), download the [64-bit installer](https://www.python.org/ftp/python/3.8.0/python-3.8.0-amd64.exe) or [32-bit installer](https://www.python.org/ftp/python/3.8.0/python-3.8.0.exe), then, run the downloaded exe installer:
 
-![install-py35](https://www.liaoxuefeng.com/files/attachments/1048401552601344/l)
+![install-py35](../assets/install-py35_hd.png)
 
 Pay special attention to checking `Add Python 3.8 to PATH`, and then click `Install Now` to complete the installation.
 
@@ -220,7 +220,7 @@ Type the command `python` in command line mode, you will see a bunch of text out
 └────────────────────────────────────────────────────────┘
 ```
 
-By typing ``exit()` and entering in Python interactive mode, you exit Python interactive mode and return to command line mode:
+By typing `exit()` and entering in Python interactive mode, you exit Python interactive mode and return to command line mode:
 
 ```ascii
 ┌────────────────────────────────────────────────────────┐
@@ -246,7 +246,7 @@ Once we understand how to start and exit Python's interactive mode, we can offic
 
 Before writing code, please *never* paste code from a page to your own computer using "copy"-"paste". In the process of writing code, beginners often make mistakes: incorrect spelling, incorrect capitalization, mixed use of English and Chinese punctuation, mixed use of spaces and tabs, so you need to check and cross-check carefully in order to master how to write programs as fast as possible.
 
-![simpson-learn-py3](https://www.liaoxuefeng.com/files/attachments/1017024373322432/l)
+![simpson-learn-py3](../assets/simpson-learn-py3_hd.jpg)
 
 At the interactive mode prompt `>>>`, type the code directly and press enter to get the code execution result immediately. Now, try typing `100+200` and see if the calculation results in 300.
 
@@ -443,7 +443,7 @@ The quick brown fox jumps over the lazy dog
 
 `print()` will print each string in turn, and will output a space when it encounters a comma ",", so that the output string is spelled out like this:
 
-![print-explain](https://www.liaoxuefeng.com/files/attachments/1017032122300544/l)
+![print-explain](../assets/print-explain_hd.png)
 
 `print()` can also print an integer, or the result of a calculation.
 

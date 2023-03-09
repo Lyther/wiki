@@ -156,7 +156,7 @@ $whereis command
 
 This command comes in handy when there are multiple versions of the same software installed on the system and you are not sure which version is being used.
 
-# File and directory management
+## File and directory management
 
 Directory
 
@@ -182,7 +182,7 @@ viewing file content is a big topic, and there are too many tools for us to use 
 
 Sometimes it is necessary to create an alias for a file, and we need to use ln, using this alias has the same effect as using the original file.
 
-## Create and delete
+### Create and delete
 
 - Create: mkdir
 - Delete: rm
@@ -203,7 +203,7 @@ Copy the directory:
 $cp -r source_dir dest_dir
 ```
 
-## Directory switching
+### Directory switching
 
 - Find the file/directory location: cd
 - Switch to the previous working directory: cd -
@@ -211,7 +211,7 @@ $cp -r source_dir dest_dir
 - Show current path: pwd
 - Change the current working path to path: $cd path
 
-## List directory entries
+### List directory entries
 
 - Display the files in the current directory ls
 - Show directory entries as a list, sorted by time ls -lrt
@@ -237,7 +237,7 @@ so that, using lsl, the files in the directory can be displayed sorted by modifi
 
 Note: .bashrc is stored as a hidden file under the /home/your username/ folder; you can check it with ls -a.
 
-## Find directories and files find/locate
+### Find directories and files find/locate
 
 Search for a file or directory:
 
@@ -271,7 +271,7 @@ $updatedb
 
 Unlike find, locate is not a real-time lookup. You need to update the database to get the latest file index information.
 
-## View file contents
+### View file contents
 
 To view the file: `cat vi head tail more`
 
@@ -317,7 +317,7 @@ Dynamically display the latest information in the text:
 $tail -f crawler.log
 ```
 
-## Find the contents of a file
+### Find the contents of a file
 
 Use egrep to query the contents of a file:
 
@@ -326,14 +326,14 @@ egrep '03.1\/CO\/AE' TSF_STAT_111130.log.012
 egrep 'A_LMCA777:C' TSF_STAT_111130.log.035 > co.out2
 ```
 
-## File and directory permission modification
+### File and directory permission modification
 
 - Change the owner of a file chown
 - Change file read, write, execute, etc. attributes chmod
 - Recursive subdirectory modification: chown -R tuxapp source/
 - Add script executable permissions: chmod a+x myscript
 
-## Add aliases to files
+### Add aliases to files
 
 Create symbolic/hard links:
 
@@ -342,7 +342,7 @@ ln cc ccAgain :hard link; delete one, will still be found.
 ln -s cc ccTo :symbolic link (soft link); delete the source, the other will not be available; (the latter ccTo is a newly created file)
 ```
 
-## Pipelines and Redirects
+### Pipelines and Redirects
 
 - Batch command concatenation execution, using |
 - Concatenation: use semicolon ;
@@ -385,7 +385,7 @@ Redirect:
 echo aa >> a.txt
 ```
 
-## Setting environment variables
+### Setting environment variables
 
 automatically executed after starting the account is the file .profile, through which you can then set your own environment variables.
 
@@ -395,7 +395,7 @@ The path of the installed software usually needs to be added to the path:
 PATH=$APPDIR:/opt/app/soft/bin:$PATH:/usr/local/bin:$TUXDIR/bin:$ORACLE_HOME/bin;export PATH
 ```
 
-## Bash shortcut input or delete
+### Bash shortcut input or delete
 
 Shortcut keys:
 
@@ -406,7 +406,7 @@ Ctl-H backspace, delete the character in front of the cursor
 Ctl-R match the closest file and output
 ```
 
-## Integrated Applications
+### Integrated Applications
 
 Find the total number of records in record.log that contain AAA, but not BBB:
 
@@ -414,7 +414,7 @@ Find the total number of records in record.log that contain AAA, but not BBB:
 cat -v record.log | grep AAA | grep -v BBB | wc -l
 ```
 
-# Text processing
+## Text processing
 
 Directory
 
@@ -452,7 +452,7 @@ Directory
 
 This section will introduce the most commonly used tools for working with text in the shell under Linux: find, grep, xargs, sort, uniq, tr, cut, paste, wc, sed, awk; the examples and arguments provided are all commonly used; my rule for shell scripts is to write a single line of command, try not to exceed 2 lines; if there are more more complex tasks, consider python.
 
-## Find file search
+### Find file search
 
 find txt and pdf files:
 
@@ -480,7 +480,7 @@ Specify the search depth, print out the files in the current directory (depth 1)
 find . -maxdepth 1 -type f
 ```
 
-### Custom search
+#### Custom search
 
 - Search by type
 
@@ -550,7 +550,7 @@ Find by user:
 find . -type f -user weber -print// Find files owned by user weber
 ```
 
-### Follow-up actions after finding
+#### Follow-up actions after finding
 
 - Delete
 
@@ -590,14 +590,14 @@ If you need to execute multiple commands subsequently, you can write multiple co
 -exec . /commands.sh {} \;
 ```
 
-### -print's delimiter
+#### -print's delimiter
 
 Use '\n' as the delimiter for the file by default.
 
 -print0 uses '\0' as the file delimiter so that it can search for files containing spaces.
 
 
-## Grep text search
+### Grep text search
 
 ```
 grep match_patten file // default access to matching lines
@@ -653,7 +653,7 @@ find Chinese example: project directory in utf-8 format and gb2312 format two ki
 
 Chinese character code lookup: http://bm.kdd.cc/
 
-## Xargs Command Line Parameter Conversion
+### Xargs Command Line Parameter Conversion
 
 xargs is able to convert input data into command line arguments for a specific command; in this way, it can be used in combination with many commands. e.g. grep, e.g. find; - Converting multi-line output to single-line output
 
@@ -690,7 +690,7 @@ find source_dir/ -type f -name "*.cpp" -print0 |xargs -0 wc -l
 . /redis-cli smembers $1 | awk '{print $1}'|xargs -I {} . /redis-cli get {}
 ```
 
-## Sort
+### Sort
 
 Field Description
 
@@ -705,7 +705,7 @@ sort -nrk 1 data.txt
 sort -bd data // ignore leading whitespace characters like spaces
 ```
 
-## Uniq Eliminate duplicate rows
+### Uniq Eliminate duplicate rows
 
 - Eliminate duplicate rows
 
@@ -727,7 +727,7 @@ sort unsort.txt | uniq -d
 
 You can specify the duplicates to be compared in each line: -s start position -w number of characters to compare
 
-## Converting with tr
+### Converting with tr
 
 - General usage
 
@@ -769,7 +769,7 @@ Usage: tr [:class:] [:class:]
 tr '[:lower:]' '[:upper:]'
 ```
 
-## Cut cut text by column
+### Cut cut text by column
 
 - Truncate the second and fourth columns of the file
 
@@ -810,7 +810,7 @@ Truncate columns 5 to 7 of the text
 $echo string | cut -c5-7
 ```
 
-## Paste Splice text by column
+### Paste Splice text by column
 
 Splices two pieces of text together by column;
 
@@ -836,7 +836,7 @@ paste file1 file2 -d ","
 2,book
 ```
 
-## Wc Tools for counting lines and characters
+### Wc Tools for counting lines and characters
 
 ```
 $wc -l file // count the number of lines
@@ -846,7 +846,7 @@ $wc -w file // count the number of words
 $wc -c file // count the number of characters
 ```
 
-## Sed text replacement tool
+### Sed text replacement tool
 
 - First substitution
 
@@ -915,7 +915,7 @@ String insertion character: converts each line of text (ABCDEF) to ABC/DEF:
 sed 's/^. \{3\}/&\/g' file
 ```
 
-## Awk data stream processing tool
+### Awk data stream processing tool
 
 - The awk script structure
 
@@ -955,7 +955,7 @@ print var1"-"var2"-"var3; }'
 $>v1-V2-v3
 ```
 
-### Special variables: NR NF $0 $1 $2
+#### Special variables: NR NF $0 $1 $2
 
 NR:indicates the number of records, corresponding to the line number that should precede it during execution.
 
@@ -990,7 +990,7 @@ echo -e "1\n 2\n 3\n 4\n" | awk 'BEGIN{num = 0 ;
 print "begin";} {sum += $1;} END {print "=="; print sum }'
 ```
 
-### Passing external variables
+#### Passing external variables
 
 ```
 var=1000
@@ -998,7 +998,7 @@ echo | awk '{print vara}' vara=$var # Input from stdin
 awk '{print vara}' vara=$var file # Input from file
 ```
 
-### Filter the lines processed by awk with the style
+#### Filter the lines processed by awk with the style
 
 ```
 awk 'NR < 5' # line number less than 5
@@ -1007,7 +1007,7 @@ awk '/linux/' # lines containing linux text (can be specified with regular expre
 awk '! /linux/' # lines that do not contain linux text
 ```
 
-### Set delimiters
+#### Set delimiters
 
 Use -F to set delimiters (default is spaces):
 
@@ -1015,7 +1015,7 @@ Use -F to set delimiters (default is spaces):
 awk -F: '{print $NF}' /etc/passwd
 ```
 
-### Read command output
+#### Read command output
 
 Use getline to read the output of an external shell command into the variable cmdout:
 
@@ -1023,7 +1023,7 @@ Use getline to read the output of an external shell command into the variable cm
 echo | awk '{"grep root /etc/passwd" | getline cmdout; print cmdout }'
 ```
 
-### Using loops in awk
+#### Using loops in awk
 
 ```
 for(i=0;i<10;i++){print $i;}
@@ -1057,13 +1057,13 @@ END{ for(;lno>-1;lno--){print lifo[lno];}
 } '
 ```
 
-### awk combined with grep finds the specified service and kills it
+#### awk combined with grep finds the specified service and kills it
 
 ```
 ps -fe| grep msv8 | grep -v MFORWARD | awk '{print $2}' | xargs kill -9;
 ```
 
-### awk implementation of head and tail commands
+#### awk implementation of head and tail commands
 
 - head
 
@@ -1078,7 +1078,7 @@ awk '{buffer[NR%10] = $0;} END{for(i=0;i<11;i++){ \
 print buffer[i %10]} } ' filename
 ```
 
-### Print the specified column
+#### Print the specified column
 
 - awk way to implement
 
@@ -1092,7 +1092,7 @@ ls -lrt | awk '{print $6}'
 ls -lrt | cut -f6
 ```
 
-### Print the specified text area
+#### Print the specified text area
 
 - Determine the line number
 
@@ -1115,7 +1115,7 @@ seq 100 | awk '/13/,/15/'
 cat /etc/passwd| awk '/mai.*mail/,/news.*news/'
 ```
 
-### awk common built-in functions
+#### awk common built-in functions
 
 index(string,search_string):return the position of search_string in string
 
@@ -1135,9 +1135,9 @@ printf is similar to printf in c, and formats the output:
 seq 10 | awk '{printf "->%4s\n", $1}'
 ```
 
-## Iterate over lines, words and characters in a file
+### Iterate over lines, words and characters in a file
 
-### Iterate over each line in the file
+#### Iterate over each line in the file
 
 - while loop method
 
@@ -1157,7 +1157,7 @@ cat file.txt | (while read line;do echo $line;done)
 cat file.txt| awk '{print}'
 ```
 
-### Iterate over each word in a line
+#### Iterate over each word in a line
 
 ```
 for word in $line;
@@ -1166,7 +1166,7 @@ echo $word;
 done
 ```
 
-### Iterate over each character
+#### Iterate over each character
 
 ${string:start_pos:num_of_chars}: extract a character from the string; (bash text slicing)
 

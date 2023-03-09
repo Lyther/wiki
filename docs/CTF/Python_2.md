@@ -124,7 +124,7 @@ The above is typed within the interactive command line, note that when typing mu
 └────────────────────────────────────────────────────────┘
 ```
 
-When the terminator ````` and the brackets `)` have been entered, the statement is executed and the result is printed.
+When the terminator `'''` and the brackets `)` have been entered, the statement is executed and the result is printed.
 
 If written as a program and saved as a `.py` file, it would be.
 
@@ -288,15 +288,15 @@ Is the last line printing out the contents of variable `b` as `'ABC'` or as `'XY
 
 Executing `a = 'ABC'`, the interpreter creates the string `'ABC'` and the variable `a`, and points `a` to `'ABC'`.
 
-![py-var-code-1](https://www.liaoxuefeng.com/files/attachments/923791878255456/0)
+![py-var-code-1](../assets/py-var-code-1_hd.png)
 
 Executing `b = a`, the interpreter creates the variable `b` and points `b` to the string `'ABC'` pointed to by `a`.
 
-![py-var-code-2](https://www.liaoxuefeng.com/files/attachments/923792058613440/0)
+![py-var-code-2](../assets/py-var-code-2_hd.png)
 
 Executing `a = 'XYZ'`, the interpreter creates the string `XYZ' and changes the pointing of `a` to `'XYZ'`, but `b` does not change.
 
-![py-var-code-3](https://www.liaoxuefeng.com/files/attachments/923792191637760/0)
+![py-var-code-3](../assets/py-var-code-3_hd.png)
 
 So, the final result of printing the variable `b` will naturally be `'ABC'`.
 
@@ -366,7 +366,7 @@ But to deal with Chinese, obviously, one byte is not enough, at least two bytes 
 
 As you can imagine, there are hundreds of languages in the world, Japan coded Japanese into `Shift_JIS`, Korea coded Korean into `Euc-kr`, and each country has its own standard, so there will be inevitable conflicts, and as a result, there will be garbled codes in the mixed text of multiple languages.
 
-![char-encoding-problem](https://www.liaoxuefeng.com/files/attachments/923930471927008/0)
+![char-encoding-problem](../assets/char-encoding-problem_hd.png)
 
 As a result, the Unicode character set was created. Unicode unifies all languages into one set of encodings so that there will be no more problems with garbled code.
 
@@ -399,11 +399,11 @@ In the computer memory, Unicode encoding is used uniformly, and when it needs to
 
 When editing with Notepad, UTF-8 characters read from a file are converted to Unicode characters in memory, and when editing is complete, Unicode is converted to UTF-8 and saved to the file when saving.
 
-![rw-file-utf-8](https://www.liaoxuefeng.com/files/attachments/923923787018816/0)
+![rw-file-utf-8](../assets/rw-file-utf-8_hd.png)
 
 When browsing the web, the server converts the dynamically generated Unicode content to UTF-8 before transferring it to the browser.
 
-![web-utf-8](https://www.liaoxuefeng.com/files/attachments/923923759189600/0)
+![web-utf-8](../assets/web-utf-8_hd.png)
 
 So you see a lot of web pages with something like `<meta charset="UTF-8" />` on the source code, indicating that the page is encoded exactly in UTF-8.
 
@@ -529,17 +529,17 @@ The second comment line is to tell the Python interpreter to read the source cod
 
 Asserting UTF-8 encoding does not mean that your `.py` file is UTF-8 encoded; you must and do make sure that the text editor is using UTF-8 without BOM encoding.
 
-![set-encoding-in-notepad++](https://www.liaoxuefeng.com/files/attachments/1008802356788736)
+![set-encoding-in-notepad++](../assets/set-encoding-in-notepad++_hd.png)
 
 If the `.py` file itself uses UTF-8 encoding and also declares `# -*- coding: utf-8 -*-`, opening a command prompt to test will display Chinese properly.
 
-![py-chinese-test-in-cmd](https://www.liaoxuefeng.com/files/attachments/1008802515054144)
+![py-chinese-test-in-cmd](../assets/py-chinese-test-in-cmd_hd.png)
 
 ### Formatting
 
 The last common problem is how to output a formatted string. We often output something like `'Hello dear xxx! Your phone bill for month xx is xx and your balance is xx'` and strings like that, and the contents of xxx are changing based on variables, so an easy way to format strings is needed.
 
-![py-str-format](https://www.liaoxuefeng.com/files/attachments/928817906446432/0)
+![py-str-format](../assets/py-str-format_hd.png)
 
 In Python, the formatting used is the same as in C, implemented with `%`, as an example.
 
@@ -819,11 +819,11 @@ This tuple is defined with 3 elements, `'a'`, `'b'` and a list. How come it chan
 
 Don't worry, let's first look at the definition of the tuples contain three elements: ``a'', ``b'' and a list.
 
-![tuple-0](https://www.liaoxuefeng.com/files/attachments/923973516787680/0)
+![tuple-0](../assets/tuple-0_hd.png)
 
 When we modify the elements `'A'` and `'B'` of the list to `'X'` and `'Y'`, the tuples become:
 
-![tuple-1](https://www.liaoxuefeng.com/files/attachments/923973647515872/0)
+![tuple-1](../assets/tuple-1_hd.png)
 
 On the surface, the elements of the tuples do change, but in fact, it is not the elements of the tuples that change, but the elements of the lists. tuples do not change the lists they point to in the beginning to other lists, so the so-called "unchanging" of tuples means that each element of the tuples points to the same list forever. The tuple's so-called "invariant" means that each element of the tuple points to the same element forever. That is, if you point to `'a'', you cannot change it to point to `'b'', and if you point to a list, you cannot change it to point to another object, but the list itself is mutable!
 
@@ -965,7 +965,7 @@ Conditional judgments allow the computer to make its own choices, Python's if...
 
 Conditional judgments match from the top down, executing the corresponding block when the condition is met, and subsequent elifs and else's are no longer executed.
 
-![python-if](https://www.liaoxuefeng.com/files/attachments/924016831038688/0)
+![python-if](../assets/python-if_hd.png)
 
 ### Reference source code
 
