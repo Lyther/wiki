@@ -200,6 +200,7 @@ nav:
     - Tool/Android/APKTool.md
     - Tool/Android/dex2jar.md
     - Tool/Android/LDPlayer.md
+    - Tool/Android/jadx.md
   - AWD:
     - Tool/AWD/AoiAWD.md
     - Tool/AWD/Auto-AWD.md
@@ -212,6 +213,7 @@ nav:
     - Tool/Cryptography/SageMathCell.md
     - Tool/Cryptography/RSAWiener.md
     - Tool/Cryptography/hashcat.md
+    - Tool/Cryptography/Ciphey.md
   - PWN:
     - Tool/PWN/PEiD.md
     - Tool/PWN/WinDbg.md
