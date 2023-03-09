@@ -169,6 +169,7 @@ nav:
   - CTF/CTF and Hacker Attitude.md
   - CTF/Docker.md
   - CTF/Linux Basics.md
+  - CTF/Python_1.md
 - Research:
   - Artificial Intelligence:
     - Paper/Artificial Intelligence/Cert-RNN Towards Certifying the Robustness of Recurrent.md
