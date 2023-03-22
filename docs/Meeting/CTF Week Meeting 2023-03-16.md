@@ -1,4 +1,4 @@
-# CTF Week Meeting 2023-03-09
+# CTF Week Meeting 2023-03-16
 
 This week we officially started the recruitment program, and the program is going very well, we have more than 20 new students who are learning the basic content tutorials, and when the basic content teaching is completed, April 1 and 2 will be tested. We are also looking forward to the participation of the varsity students in this week's training, which will be an introduction to the Ether and Solidity languages (blockchain).
 
@@ -16,6 +16,8 @@ This week we officially started the recruitment program, and the program is goin
 10. CTF from Practice to Principle - 3%
 11. National College Student Information Security Contest - 10%
 12. <u>Wangding Cup Semi-Final Competition - 20%</u>
+13. Wangding Cup & Guangdong CTF & AI Mid-Exam Time Conflict - 0% brief idea
+14. Discussions with Other Universities about National College Student Information Software Competition - 0% brief idea
 
 ## What we discussed this week
 
