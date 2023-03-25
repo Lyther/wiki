@@ -1,5 +1,9 @@
 # Python Programming Quick Guide - Functions
 
+> https://www.liaoxuefeng.com/wiki/1016959663602400/1017063413904832
+>
+> https://docs.python.org/3/tutorial/index.html
+
 ## Function
 
 We know that the formula for calculating the area of a circle is
