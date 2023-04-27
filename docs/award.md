@@ -1,6 +1,6 @@
 # Competition Awards
 
-COMPASS CTF team has participated in various competitions since 2021. In most of the competitions, we have achieved great rank, while some of them aren't.
+The COMPASS CTF team has participated in various competitions since 2021. In most of the competitions, we have achieved great ranks, while some of them aren't.
 
 This file is an archive of all the competitions we joined. Both great ones and normal ones are collected here.
 
@@ -8,9 +8,9 @@ This file is an archive of all the competitions we joined. Both great ones and n
 
 | Competition       | Time           | Rank |
 | ----------------- | -------------- | ---- |
-| 2022广东省赛决赛   | Apr 15, 2022  |  #1  |
+| 2022广东省赛决赛   | Apr 15, 2022  |  #1🥇  |
 | 2022网鼎杯半决赛   | Apr 14, 2022  |  #51  |
-| 2022春秋杯冬季赛   | Dec 23, 2022  |  #1  |
+| 2022春秋杯冬季赛   | Dec 23, 2022  |  #1🥇  |
 | 2022美团挑战赛     | Sep 18, 2022  |  #19  |
 | 网鼎杯 2022 青龙初赛| Aug 26, 2022  |  #7  |
 | 巅峰极客 2022 决赛 | Aug 24, 2022   | #10 |
