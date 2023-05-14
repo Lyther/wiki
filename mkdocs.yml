@@ -265,6 +265,8 @@ nav:
     - Training/Material/X86_Assembly.md
     - Training/Material/ARM32_1.md
     - Training/Material/pwn-stack-1.md
+    - Training/Material/pwn-stack-2.md
+    - Training/Material/pwn-stack-3.md
   - Schedule:
     - Training/Schedule/2021Summer.md
     - Training/Schedule/2021Fall.md

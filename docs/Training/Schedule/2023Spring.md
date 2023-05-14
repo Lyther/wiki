@@ -30,22 +30,20 @@ I will not recruit too many new members in this semester, and the final recruitm
 
 The number of recruits will be used to make up for the number of members who will graduate after this semester. The spring 2023 offline training and competition questions will be updated on this page.
 
-| Topic                               | Category     | Attachment                                                   | Date              |
-| ----------------------------------- | ------------ | ------------------------------------------------------------ | ----------------- |
-| Network Sniff: Introduction         | Web          | https://ithelp.ithome.com.tw/articles/10245117<br />https://ithelp.ithome.com.tw/articles/10245119<br />https://ithelp.ithome.com.tw/articles/10246315<br />https://ithelp.ithome.com.tw/articles/10246917 | Feb. 26th, 2023   |
-| Network Sniff: Multi-platform       | Web          | https://frida.re/docs/android/                               | March. 5th, 2023  |
-| Network Scan                        | Web          | https://websec.readthedocs.io/zh/latest/index.html           | March. 12th, 2023 |
-| Ethereum and Solidity: Introduction | Blockchain   | http://www.snowywar.top/?p=3848                              | March. 25th, 2023 |
-| Ethereum and Solidity: Practice     | Blockchain   | http://www.snowywar.top/?p=3848                              | April. 2nd, 2023  |
-| IoT Security                        | IoT          | https://paper.seebug.org/2048/                               | April. 16th, 2023 |
-| PWN: Stack                          | PWN          | https://ir0nstone.gitbook.io/notes/                          | April. 23th, 2023 |
-| PWN: Heap                           | PWN          | https://ir0nstone.gitbook.io/notes/                          | April. 30th, 2023 |
-| PWN: Kernel                         | PWN          | https://ir0nstone.gitbook.io/notes/<br />https://paper.seebug.org/2036/ | May. 7th, 2023    |
-| Reverse Enginnering                 | RE           | https://0xinfection.github.io/reversing/                     | May. 14th, 2023   |
-| Real-World Cryptography             | Cryptography | https://vitalik.ca/index.html                                | May. 21st, 2023   |
-| Real-World Security: Penetration    | RW           | https://www.ired.team/                                       | May. 28th, 2023   |
-| Real-World Security: Malware        | RW           | https://www.ired.team/                                       | June. 4th, 2023   |
-| Real-World Security: Summary        | RW           | https://www.ired.team/                                       | June. 11th, 2023  |
+| Topic                               | Category   | Attachment                                                   | Date              |
+| ----------------------------------- | ---------- | ------------------------------------------------------------ | ----------------- |
+| Network Sniff: Introduction         | Web        | https://ithelp.ithome.com.tw/articles/10245117<br />https://ithelp.ithome.com.tw/articles/10245119<br />https://ithelp.ithome.com.tw/articles/10246315<br />https://ithelp.ithome.com.tw/articles/10246917 | Feb. 26th, 2023   |
+| Network Sniff: Multi-platform       | Web        | https://frida.re/docs/android/                               | March. 5th, 2023  |
+| Network Scan                        | Web        | https://websec.readthedocs.io/zh/latest/index.html           | March. 12th, 2023 |
+| Ethereum and Solidity: Introduction | Blockchain | http://www.snowywar.top/?p=3848                              | March. 25th, 2023 |
+| Ethereum and Solidity: Practice     | Blockchain | http://www.snowywar.top/?p=3848                              | April. 2nd, 2023  |
+| IoT Security                        | IoT        | https://paper.seebug.org/2048/                               | May. 7th, 2023    |
+| PWN: Stack                          | PWN        | https://ir0nstone.gitbook.io/notes/                          | May. 14th, 2023   |
+| PWN: Heap                           | PWN        | https://ir0nstone.gitbook.io/notes/                          | May. 14th, 2023   |
+| PWN: Kernel                         | PWN        | https://ir0nstone.gitbook.io/notes/<br />https://paper.seebug.org/2036/ | May. 21st, 2023   |
+| Real-World Security: Penetration    | RW         | https://www.ired.team/                                       | May. 28th, 2023   |
+| Real-World Security: Malware        | RW         | https://www.ired.team/                                       | June. 4th, 2023   |
+| Real-World Security: Summary        | RW         | https://www.ired.team/                                       | June. 11th, 2023  |
 
 ## Summary
 
