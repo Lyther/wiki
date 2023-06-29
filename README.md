@@ -1,4 +1,8 @@
-# COMPASS CTF Wiki
+# COMPASS CTF Wiki 📒
+
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT) 
+[![Twitter Follow](https://img.shields.io/twitter/follow/karma9874?label=Follow&style=social)](https://twitter.com/EnderaoeL)
+[![GitHub followers](https://img.shields.io/github/followers/lyther?label=Follow&style=social)](https://github.com/lyther)
 
 This page is rendered by MkDocs and contains content needed in the daily activities of COMPASS CTF teams and updated Writeups information.
 

@@ -61,6 +61,7 @@ nav:
     - Meeting/CTF Week Meeting 2023-04-06.md
     - Meeting/CTF Week Meeting 2023-04-20.md
     - Meeting/CTF Week Meeting 2023-04-27.md
+    - Meeting/CTF Week Meeting 2023-05-11.md
     - 2022 First Half:
       - Meeting/2022 First Half/CTF Week Meeting 2022-02-17.md
       - Meeting/2022 First Half/CTF Week Meeting 2022-02-24.md
@@ -268,12 +269,14 @@ nav:
     - Training/Material/pwn-stack-2.md
     - Training/Material/pwn-stack-3.md
   - Schedule:
-    - Training/Schedule/2021Summer.md
-    - Training/Schedule/2021Fall.md
-    - Training/Schedule/2022Spring.md
-    - Training/Schedule/2022Summer.md
-    - Training/Schedule/2022Fall.md
-    - Training/Schedule/2023Spring.md
+    - Training/Schedule/2023Summer.md
+    - Archive:
+      - Training/Schedule/2021Summer.md
+      - Training/Schedule/2021Fall.md
+      - Training/Schedule/2022Spring.md
+      - Training/Schedule/2022Summer.md
+      - Training/Schedule/2022Fall.md
+      - Training/Schedule/2023Spring.md
 - Website Collection:
   - Forum:
     - Website/Forum/kanxue.md
