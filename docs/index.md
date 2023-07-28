@@ -4,7 +4,9 @@ COMPASS CTF is a CTF team belonging to the Southern University of Science and Te
 
 Visit our lab website: [COMPASS](http://compass.sustech.edu.cn/)
 
-![COMPASS](assets/logo.png)
+![COMPASS](assets/logo.png)  
+
+COMPASS CTF 在成立短短两年时间内获得多项国家级和省级网络安全[比赛奖项](/award/)，包括全国大学生信息安全竞赛一等奖、广东大学生网络安全攻防大赛特等奖（冠军），“巅峰极客”挑战赛“巅峰人才奖”（￥10000），春秋杯冠军等。
 
 ## Activities
 
