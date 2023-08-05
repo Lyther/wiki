@@ -123,13 +123,13 @@ The timeline and the topics of the training schedule are as below:
 | Date      | Topic                     | Attachment                                                   |
 | --------- | ------------------------- | ------------------------------------------------------------ |
 | Aug. 3rd  | 1: introduction/Linux     | [CTF_tutorial_1___introduction](../../assets/CTF_tutorial_1___introduction.pdf) |
-| Aug. 6th  | 2: web1                   | 啊？                                                         |
-| Aug. 7th  | 3: web2                   | Ah？                                                         |
+| Aug. 6th  | 2: web1                   | [CTF_tutorial_2___web](../../assets/CTF_tutorial_2___web.pdf) |
+| Aug. 8th  | 3: web2                   | Ah？                                                         |
 | Aug. 10th | 4: forensics              | あ？                                                         |
 | Aug. 13th | 5: crypto/Python          | 앗？                                                         |
-| Aug. 14th | 6: reverse                | Hamud？                                                      |
+| Aug. 15th | 6: reverse                | Hamud？                                                      |
 | Aug. 17th | 7: pwn1                   | آه？                                                         |
 | Aug. 20th | 8: pwn2                   | አህ？                                                         |
-| Aug. 21st | 9: penetration/bug bounty | 5ZWK？                                                       |
+| Aug. 22nd | 9: penetration/bug bounty | 5ZWK？                                                       |
 | Aug. 24th | 10: awd                   | -----BEGIN PGP MESSAGE-----<br/>Version: Keybase OpenPGP v2.1.15<br/>Comment: https://keybase.io/crypto<br/><br/>wcBMA3ffNJS1q05yAQf9HwBZU1UsQ5m9vzr8sZKGqRE0hXz0tL/4fn+53z0ZPtPZ<br/>pMC8+Lqf2LUvuxy+e7kkGQ8+9TYG0+dRXzrTqB2XLswFVYVlQYE3kPggBopuvOmY<br/>C2jbYElBs5BJReAtwMwfryF3zHi1QvES2McAlPie5t7UOZplu4+TneCzXclL07yz<br/>3Ipw6se5h+VXUEXrPpF43tCXRj3dakpTFlpiVd62WB/NlNYf8LUDWDceOqC/flwL<br/>0CEC9Jm/sCM5aynzjFuEyVSTXz5+2ppappkqyrnlhRkJWE/Tvvcg1Nw03rnpffSa<br/>T5e76JhYPNgko/Pe7NFD19xeVpyjE4KgZIGNdndEX9JDAeIYls88jN3dpaVTvPJz<br/>FP5xmvLVsEhj+g8bfCydR0vVJXirmdr7G1hdMpIYLd9R87PhW9E2TtT6AX0myaze<br/>DMSaHA==<br/>=fUNF<br/>-----END PGP MESSAGE----- |
 
