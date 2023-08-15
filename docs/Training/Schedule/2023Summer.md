@@ -126,7 +126,7 @@ The timeline and the topics of the training schedule are as below:
 | Aug. 6th  | 2: web1                   | [CTF_tutorial_2___web](../../assets/CTF_tutorial_2___web.pdf) |
 | Aug. 8th  | 3: web2                   | [CTF_tutorial_3___web\_\_\_sql](../../assets/CTF_tutorial_3___web___sql.pdf)<br />[CTF_tutorial_3___web\_\_\_file](../../assets/CTF_tutorial_3___web___file.pdf)<br />[CTF_tutorial_3___web\_\_\_ssrf](../../assets/CTF_tutorial_3___web___ssrf.pdf) |
 | Aug. 10th | 4: forensics              | [CTF_tutorial_4___forensics](../../assets/CTF_tutorial_4___forensics.pdf) |
-| Aug. 13th | 5: crypto/Python          | 앗？                                                         |
+| Aug. 13th | 5: crypto/Python          | [CTF_tutorial_5___cryptography](../../assets/CTF_tutorial_5___cryptography.pdf) |
 | Aug. 15th | 6: reverse                | [CTF_tutorial_6___reverse](../../assets/CTF_tutorial_6___reverse.pdf) |
 | Aug. 17th | 7: pwn1                   | [CTF_tutorial_7___pwn](../../assets/CTF_tutorial_7___pwn.pdf) |
 | Aug. 20th | 8: pwn2                   | አህ？                                                         |
