@@ -6,13 +6,13 @@ Visit our lab website: [COMPASS](http://compass.sustech.edu.cn/)
 
 ![COMPASS](assets/logo.png)  
 
-COMPASS CTF 在成立短短两年时间内获得多项国家级和省级网络安全[比赛奖项](/award/)，包括全国大学生信息安全竞赛一等奖、广东大学生网络安全攻防大赛特等奖（冠军），“巅峰极客”挑战赛“巅峰人才奖”（￥10000），春秋杯冠军等。
+Within a short period of two years since its establishment, COMPASS CTF has already won multiple national and provincial cybersecurity [competition awards](/award/), including the first prize in the National College Student Information Security Competition, the special prize (champion) in the Guangdong College Student Cybersecurity Offense and Defense Competition, the "Peak Geek" Challenge "Peak Talent Award" (¥10,000), and the champion of the Spring and Autumn Cup.
 
 ## Activities
 
 * Daily challenge: challenges are published every day. You can log into [Intranet Challenge Platform](http://detroit.sustech.edu.cn/) and finish our daily challenges.
 * Weekly meeting: every week we would have a meeting to synchronize our progress and plans for the next week. The meeting time is 4 pm, Thursday.
-  * If you are interested, join our meeting channel: https://meeting.tencent.com/p/4484894504
+  * If you are interested, join our meeting channel: [Tencent Meeting](https://meeting.tencent.com/p/4484894504)
 
 * Weekly training: every week we would have trained together that let us learn and share information about CTF. The training time is 2 pm, Saturday.
 
@@ -32,4 +32,3 @@ If you are interested, please send to Email address: liz33#mail.sustech.edu.cn
 It's highly recommended to pull requests about new content and anything you find useful for Wiki.
 
 Our docs are based on the GitHub pages and MkDocs engine, use markdown to format our website. Modify a new file and pull it to the repository. We highly appreciate your contribution!
-
