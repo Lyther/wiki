@@ -270,7 +270,7 @@ nav:
     - Training/Material/pwn-stack-2.md
     - Training/Material/pwn-stack-3.md
   - Schedule:
-    - Training/Schedule/2023Summer.md
+    - Training/Schedule/2023Winter.md
     - Archive:
       - Training/Schedule/2021Summer.md
       - Training/Schedule/2021Fall.md
@@ -279,7 +279,6 @@ nav:
       - Training/Schedule/2022Fall.md
       - Training/Schedule/2023Spring.md
       - Training/Schedule/2023Summer.md
-      - Training/Schedule/2023Winter.md
 - Website Collection:
   - Forum:
     - Website/Forum/kanxue.md
